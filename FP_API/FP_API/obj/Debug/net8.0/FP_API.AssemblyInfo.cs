@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FP_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f4fa807eff9259bf0287f12f11484a92474d42d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e83d294ac5737805d5238a6bca0965923638f078")]
 [assembly: System.Reflection.AssemblyProductAttribute("FP_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FP_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
