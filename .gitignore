@@ -5,3 +5,4 @@
 /.vs
 /.gitignore
 /FP_API/.vs/FP_API
+obj/
