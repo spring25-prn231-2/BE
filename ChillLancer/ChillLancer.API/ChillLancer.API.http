@@ -1,0 +1,6 @@
+@ChillLancer.API_HostAddress = http://localhost:5182
+
+GET {{ChillLancer.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
