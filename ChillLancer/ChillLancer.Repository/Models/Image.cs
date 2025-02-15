@@ -14,7 +14,6 @@ namespace ChillLancer.Repository.Models
         public DateTime UploadDate { get; set; } = DateTime.UtcNow;
 
         //======================[ Foreign Key ]======================
-        public virtual Account? User { get; set; }  //set as Avatar if not null
         public virtual ICollection<ProposalImage>? ProposalImages { get; set; }
     }
 }
