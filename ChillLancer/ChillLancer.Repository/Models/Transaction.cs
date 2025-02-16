@@ -20,6 +20,7 @@ namespace ChillLancer.Repository.Models
         public DateTime HandleDate { get; set; } = DateTime.UtcNow;
         public decimal FeePrice { get; set; } = 0;
         public decimal TotalPrice { get; set; } = 0;
+        public string? Note { get; set; }
 
         [MaxLength(30)]
         public string PayMethod { get; set; } = "Transfer";

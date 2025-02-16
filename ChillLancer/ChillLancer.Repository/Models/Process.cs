@@ -9,6 +9,7 @@ namespace ChillLancer.Repository.Models
         [Required, MaxLength(150)]
         public string TaskName { get; set; } = null!;
         public string? TaskDescription { get; set; }
+        public string? Note { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public decimal Cost { get; set; } = 0;

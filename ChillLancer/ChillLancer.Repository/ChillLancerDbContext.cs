@@ -7,8 +7,16 @@ namespace ChillLancer.Repository
 {
     public class ChillLancerDbContext : DbContext
     {
-        //Constructor
-        public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
+        /**/
+        /**/
+        /*Uncomment after migration to use with Dependency Injection*/
+
+        //============[ Constructor ]============
+        //public ChillLancerDbContext() { }
+        //public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
+
+        /**/
+        /**/
 
         //Declare Object
         public virtual DbSet<Account> Accounts { get; set; }
@@ -29,17 +37,25 @@ namespace ChillLancer.Repository
         public virtual DbSet<ProposalSkill> ProposalSkills { get; set; }
         public virtual DbSet<ProposalImage> ProposalImages { get; set; }
 
-        //private string GetConnectionString()
-        //{
-        //    IConfiguration configuration = new ConfigurationBuilder()
-        //        .SetBasePath(Directory.GetCurrentDirectory())   //Path.Combine(Directory.GetCurrentDirectory(),"ProjectName.Api")
-        //        .AddJsonFile("appsettings.json", true, true).Build();
-        //    return configuration["ConnectionStrings:LocalSQL"];
-        //}
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //    => optionsBuilder.UseSqlServer(GetConnectionString());
+        private string GetConnectionString()
+        {
+            string root = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName ?? "";
+            string apiDirectory = Path.Combine(root, "ChillLancer.API");
+            IConfiguration configuration = new ConfigurationBuilder()
+                //.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()))
+                .SetBasePath(apiDirectory)
+                .AddJsonFile("appsettings.json", true, true).Build();
+            return configuration["ConnectionStrings:LocalSQL"]!;
+        }
+        /**/
+        /**/
+        //Comment Method OnConfiguring(...) after migration to avoid conflic in Dependency Injection
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            => optionsBuilder.UseSqlServer(GetConnectionString());
 
-        //optionsBuilder.UseSqlServer("Server=(local);Uid=sa;Pwd=12345;Database=ChillLancer;TrustServerCertificate=True;");
+        /**/
+        /**/
+
         protected override void OnModelCreating(ModelBuilder optionsBuilder)
         {
             optionsBuilder.Entity<Account>(entity =>
@@ -55,14 +71,6 @@ namespace ChillLancer.Repository
                 entity.HasMany(a => a.AccountLanguages)
                 .WithOne(al => al.Account)
                 .HasForeignKey("AccountId");
-
-                entity.HasMany(a => a.Transactions)
-                .WithOne(trans => trans.Freelancer)
-                .HasForeignKey("FreelancerId");
-
-                entity.HasMany(a => a.Transactions)
-                .WithOne(trans => trans.Employer)
-                .HasForeignKey("EmployerId");
 
                 entity.HasMany(a => a.ProjectContracts)
                 .WithOne(projCon => projCon.Freelancer)
@@ -92,6 +100,8 @@ namespace ChillLancer.Repository
 
             optionsBuilder.Entity<RateCode>(entity =>
             {
+                entity.Property(raco => raco.Percentage).HasColumnType("DECIMAL(5,2)");
+
                 entity.HasMany(raco => raco.SystemFeeTransactions)
                 .WithOne(sysfeeTran => sysfeeTran.SystemFee)
                 .HasForeignKey("SystemFeeId");
@@ -101,13 +111,19 @@ namespace ChillLancer.Repository
                 .HasForeignKey("PromotionId");
             });
 
-            optionsBuilder.Entity<Package>()
-                .HasMany(pack => pack.Transactions)
+            optionsBuilder.Entity<Package>(entity => {
+                entity.Property(p => p.Price).HasColumnType("MONEY");
+
+                entity.HasMany(pack => pack.Transactions)
                 .WithOne(trans => trans.Package)
                 .HasForeignKey("PackageId");
+            });
 
             optionsBuilder.Entity<ProjectContract>(entity =>
             {
+                entity.Property(projCon => projCon.TotalPay).HasColumnType("MONEY");
+                entity.Property(projCon => projCon.Paid).HasColumnType("MONEY");
+
                 entity.HasOne(projCon => projCon.Project)
                 .WithMany(proj => proj.ProjectContracts)
                 .HasForeignKey("ProjectId");
@@ -120,6 +136,9 @@ namespace ChillLancer.Repository
                 .WithOne(proces => proces.ProjectContract)
                 .HasForeignKey("ProjectContractId");
             });
+
+            optionsBuilder.Entity<Process>().Property(proc => proc.Cost).HasColumnType("MONEY");
+            optionsBuilder.Entity<Project>().Property(proj => proj.Budget).HasColumnType("MONEY");
 
             optionsBuilder.Entity<ProjectSkill>(entity =>
             {
@@ -136,6 +155,8 @@ namespace ChillLancer.Repository
 
             optionsBuilder.Entity<Proposal>(entity =>
             {
+                entity.Property(prop => prop.Price).HasColumnType("MONEY");
+
                 entity.HasOne(prop => prop.Project)
                 .WithMany(proj => proj.Proposals)
                 .HasForeignKey("ProjectId");
@@ -185,6 +206,20 @@ namespace ChillLancer.Repository
                 entity.HasOne(propImg => propImg.Image)
                 .WithMany(img => img.ProposalImages)
                 .HasForeignKey(propImg => propImg.ImageId);
+            });
+
+            optionsBuilder.Entity<Transaction>(entity =>
+            {
+                entity.Property(trans => trans.FeePrice).HasColumnType("MONEY");
+                entity.Property(trans => trans.TotalPrice).HasColumnType("MONEY");
+
+                entity.HasOne(trans => trans.Freelancer)
+                .WithMany(frel => frel.TransactionsAsFreelancer)
+                .HasForeignKey("FreelancerId");
+
+                entity.HasOne(trans => trans.Employer)
+                .WithMany(emp => emp.TransactionsAsEmployer)
+                .HasForeignKey("EmployerId");
             });
 
             optionsBuilder.Entity<Language>().HasData(GetLanguages());
