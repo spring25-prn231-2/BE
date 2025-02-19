@@ -15,7 +15,7 @@ namespace ChillLancer.API
         public static IServiceCollection DependencyInjectionServices(this IServiceCollection services, IConfiguration configuration)
         {
             //System Services
-            //services.InjectDbContext(configuration);
+            services.InjectDbContext(configuration);
             services.InjectBusinessServices();
             services.InjectRepository();
             services.ConfigCORS();
@@ -37,6 +37,7 @@ namespace ChillLancer.API
         private static IServiceCollection InjectBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
             //Add other BusinessServices here...
 
@@ -48,6 +49,7 @@ namespace ChillLancer.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             //Add other Repository here...
 
