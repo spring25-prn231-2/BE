@@ -6,6 +6,8 @@ namespace ChillLancer.Repository.Models
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
+
+        public string? AvatarUrl { get; set; }
         public string? FirebaseUid { get; set; }
         public string? FcmToken { get; set; }
         public string? GoogleId { get; set; }
@@ -56,9 +58,10 @@ namespace ChillLancer.Repository.Models
         public virtual ICollection<Education>? Educations { get; set; }
         public virtual ICollection<Proposal>? Proposals { get; set; }
         public virtual ICollection<Project>? Projects { get; set; }
-        public virtual ICollection<Image>? Image { get; set; }
-        public virtual ICollection<Transaction>? Transactions { get; set; }
-        public virtual ICollection<PersonalContract>? PersonalContracts { get; set; }
+        public virtual ICollection<Transaction>? TransactionsAsFreelancer { get; set; }
+        public virtual ICollection<Transaction>? TransactionsAsEmployer { get; set; }
         public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
+
+        //public virtual ICollection<PersonalContract>? PersonalContracts { get; set; }
     }
 }

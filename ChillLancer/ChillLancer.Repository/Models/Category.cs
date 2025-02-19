@@ -9,11 +9,11 @@ namespace ChillLancer.Repository.Models
         [Required, MaxLength(100)]
         public string MajorName { get; set; } = null!;
 
-        [MaxLength(100)]
-        public string? BriefName { get; set; }
+        [Required, MaxLength(100)]
+        public string BriefName { get; set; } = null!;
 
-        [MaxLength(100)]
-        public string? SpecializedName { get; set; }
+        [Required, MaxLength(100)]
+        public string SpecializedName { get; set; } = null!;
 
         [MaxLength(30)]
         public string Status { get; set; } = "Created";

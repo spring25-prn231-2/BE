@@ -26,6 +26,7 @@ namespace ChillLancer.Repository.Models
         public virtual Project? Project { get; set; }
         public virtual ICollection<ProposalSkill>? ProposalSkills { get; set; }
         public virtual ICollection<ProposalImage>? ProposalImages { get; set; }
-        public virtual ICollection<PersonalContract>? PersonalContracts { get; set; }
+
+        //public virtual ICollection<PersonalContracts>? PersonalContracts { get; set; }
     }
 }

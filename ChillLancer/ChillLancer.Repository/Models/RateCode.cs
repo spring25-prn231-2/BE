@@ -11,7 +11,7 @@ namespace ChillLancer.Repository.Models
         public string? Description { get; set; }
         [Required, MaxLength(30)]
         public string Type { get; set; } = "Promotion";//Operating Fee
-        public double Percentage { get; set; } = 0;// 99.99d = 99.99  %
+        public decimal Percentage { get; set; } = 0;// 99.99d = 99.99  %
         [MaxLength(30)]
         public string Status { get; set; } = "Active";
 
