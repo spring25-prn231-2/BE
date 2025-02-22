@@ -1,6 +1,7 @@
 ﻿using ChillLancer.Repository.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System.Reflection.Emit;
 
 namespace ChillLancer.Repository
@@ -59,7 +60,11 @@ namespace ChillLancer.Repository
         /**/
         //Comment Method OnConfiguring(...) after migration to avoid conflic in Dependency Injection
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(GetConnectionString());
+        {
+            optionsBuilder.UseSqlServer(GetConnectionString())
+                          .LogTo(Console.WriteLine, LogLevel.Information)  // Ghi log truy vấn
+                          .EnableSensitiveDataLogging();  // Hiển thị tham số truy vấn
+        }
 
         /**/
         /**/

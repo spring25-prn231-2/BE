@@ -4,6 +4,8 @@ using ChillLancer.BusinessService.Services;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Repositories;
+using Mapster;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
@@ -15,7 +17,7 @@ namespace ChillLancer.API
         public static IServiceCollection DependencyInjectionServices(this IServiceCollection services, IConfiguration configuration)
         {
             //System Services
-            //services.InjectDbContext(configuration);
+            services.InjectDbContext(configuration);
             services.InjectBusinessServices();
             services.InjectRepository();
             services.ConfigCORS();
@@ -30,7 +32,12 @@ namespace ChillLancer.API
         private static IServiceCollection InjectDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("LocalSQL");
-            services.AddDbContext<ChillLancerDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ChillLancerDbContext>(options => options
+            .LogTo(Console.WriteLine, LogLevel.Information) // Enable logging for EF
+            .EnableSensitiveDataLogging()
+            .UseSqlServer(connectionString));
+            Console.WriteLine($"Connection String: {connectionString}");
+
             return services;
         }
 
@@ -79,7 +86,8 @@ namespace ChillLancer.API
 
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
-            //services.AddMapster();
+            services.AddSingleton(TypeAdapterConfig.GlobalSettings);
+            services.AddScoped<IMapper, ServiceMapper>();
             //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
             //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
             //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);
