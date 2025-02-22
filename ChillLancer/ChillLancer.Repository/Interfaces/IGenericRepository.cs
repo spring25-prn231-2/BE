@@ -25,6 +25,8 @@ namespace ChillLancer.Repository.Interfaces
 
         Task DeleteRangeAsync(IEnumerable<T> TEntities);
 
+        IQueryable<T> GetAll();
+
         Task<bool> SaveChangeAsync();
     }
 }

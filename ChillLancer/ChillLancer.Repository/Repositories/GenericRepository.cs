@@ -28,6 +28,7 @@ namespace ChillLancer.Repository.Repositories
         {
             return await _context.Set<T>().Where(expression).ToListAsync();
         }
+        public IQueryable<T> GetAll() => Entities.AsQueryable();
 
         public async Task<T?> GetOneAsync(Expression<Func<T, bool>> expression, bool hasTrackings = true)
         {
