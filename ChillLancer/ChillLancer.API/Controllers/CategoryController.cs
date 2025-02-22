@@ -32,6 +32,13 @@ namespace ChillLancer.API.Controllers
             return Ok(categoryInfo);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> AllCategories()
+        {
+            var categoryInfo = await _categoryService.GetAllCategories();
+            return Ok(categoryInfo);
+        }
+
         [HttpGet("list")]
         public async Task<IActionResult> GetListCategory([FromQuery] QueryBM queryString)
         {

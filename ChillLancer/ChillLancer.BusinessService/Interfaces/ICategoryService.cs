@@ -6,6 +6,7 @@ namespace ChillLancer.BusinessService.Interfaces
     {
         Task<bool> CreateCategory(CategoryBM inputData);
         Task<CategoryBM> ViewCategory(Guid id);
+        Task<List<CategoryBM>> GetAllCategories();
         Task<PagedResult<CategoryBM>> FilterCategory(QueryBM queryCondition);
         Task<bool> UpdateCategory(CategoryBM newData);
         Task<bool> DeleteCategory(Guid id);

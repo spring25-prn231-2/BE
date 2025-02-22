@@ -36,6 +36,11 @@ namespace ChillLancer.BusinessService.Services
 
             return existCategory.Adapt<CategoryBM>();
         }
+        public async Task<List<CategoryBM>> GetAllCategories()
+        {
+            var listResult = await _categoryRepository.GetListAsync(cate => cate.Status.ToLower().Equals("created"));
+            return listResult.Adapt<List<CategoryBM>>();
+        }
 
         public async Task<PagedResult<CategoryBM>> FilterCategory(QueryBM queryCondition)
         {
@@ -66,13 +71,13 @@ namespace ChillLancer.BusinessService.Services
                 ?? throw new NotFoundException("This Category is not existed!");
 
             newData.Adapt(existCategory);
-            return await _categoryRepository.SaveChangeAsync(); 
+            return await _categoryRepository.SaveChangeAsync();
         }
 
         public async Task<bool> DeleteCategory(Guid id)
         {
             var existCategory = await _categoryRepository.GetOneAsync(cate => cate.Id == id)
-                ??throw new NotFoundException("This Category is not existed!");
+                ?? throw new NotFoundException("This Category is not existed!");
 
             existCategory.Status = "Deleted";
             return await _categoryRepository.SaveChangeAsync();
