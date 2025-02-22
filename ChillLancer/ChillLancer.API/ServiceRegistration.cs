@@ -15,7 +15,7 @@ namespace ChillLancer.API
         public static IServiceCollection DependencyInjectionServices(this IServiceCollection services, IConfiguration configuration)
         {
             //System Services
-            //services.InjectDbContext(configuration);
+            services.InjectDbContext(configuration);
             services.InjectBusinessServices();
             services.InjectRepository();
             services.ConfigCORS();
