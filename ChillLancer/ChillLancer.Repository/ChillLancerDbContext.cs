@@ -12,8 +12,8 @@ namespace ChillLancer.Repository
         /*Uncomment after migration to use with Dependency Injection*/
 
         //============[ Constructor ]============
-        public ChillLancerDbContext() { }
-        public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
+        //public ChillLancerDbContext() { }
+        //public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
 
 
         //Declare Object
@@ -27,13 +27,13 @@ namespace ChillLancer.Repository
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Proposal> Proposals { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
-        public virtual DbSet<ProjectContract> ProjectContracts { get; set; }
         public virtual DbSet<Package> Packages { get; set; }
         public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<AccountLanguage> AccountLanguages { get; set; }
         public virtual DbSet<ProjectSkill> ProjectSkills { get; set; }
         public virtual DbSet<ProposalSkill> ProposalSkills { get; set; }
         public virtual DbSet<ProposalImage> ProposalImages { get; set; }
+        //public virtual DbSet<ProjectContract> ProjectContracts { get; set; }
 
         private string GetConnectionString()
         {
@@ -48,8 +48,9 @@ namespace ChillLancer.Repository
         /**/
         /**/
         //Comment Method OnConfiguring(...) after migration to avoid conflic in Dependency Injection
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //    => optionsBuilder.UseSqlServer(GetConnectionString());
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            => optionsBuilder.UseSqlServer(GetConnectionString());
 
         /**/
         /**/
@@ -70,9 +71,9 @@ namespace ChillLancer.Repository
                 .WithOne(al => al.Account)
                 .HasForeignKey("AccountId");
 
-                entity.HasMany(a => a.ProjectContracts)
-                .WithOne(projCon => projCon.Freelancer)
-                .HasForeignKey("FreelancerId");
+                //entity.HasMany(a => a.ProjectContracts)
+                //.WithOne(projCon => projCon.Freelancer)
+                //.HasForeignKey("FreelancerId");
 
                 entity.HasMany(a => a.Projects)
                 .WithOne(proj => proj.Employer)
@@ -109,7 +110,8 @@ namespace ChillLancer.Repository
                 .HasForeignKey("PromotionId");
             });
 
-            optionsBuilder.Entity<Package>(entity => {
+            optionsBuilder.Entity<Package>(entity =>
+            {
                 entity.Property(p => p.Price).HasColumnType("MONEY");
 
                 entity.HasMany(pack => pack.Transactions)
@@ -117,23 +119,23 @@ namespace ChillLancer.Repository
                 .HasForeignKey("PackageId");
             });
 
-            optionsBuilder.Entity<ProjectContract>(entity =>
-            {
-                entity.Property(projCon => projCon.TotalPay).HasColumnType("MONEY");
-                entity.Property(projCon => projCon.Paid).HasColumnType("MONEY");
+            //optionsBuilder.Entity<ProjectContract>(entity =>
+            //{
+            //    entity.Property(projCon => projCon.TotalPay).HasColumnType("MONEY");
+            //    entity.Property(projCon => projCon.Paid).HasColumnType("MONEY");
 
-                entity.HasOne(projCon => projCon.Project)
-                .WithMany(proj => proj.ProjectContracts)
-                .HasForeignKey("ProjectId");
+            //    entity.HasOne(projCon => projCon.Project)
+            //    .WithMany(proj => proj.ProjectContracts)
+            //    .HasForeignKey("ProjectId");
 
-                entity.HasOne(projCon => projCon.Transaction)
-                .WithMany(trans => trans.ProjectContracts)
-                .HasForeignKey("TransactionId");
+            //    entity.HasOne(projCon => projCon.Transaction)
+            //    .WithMany(trans => trans.ProjectContracts)
+            //    .HasForeignKey("TransactionId");
 
-                entity.HasMany(projCon => projCon.Processes)
-                .WithOne(proces => proces.ProjectContract)
-                .HasForeignKey("ProjectContractId");
-            });
+            //    entity.HasMany(projCon => projCon.Processes)
+            //    .WithOne(proces => proces.ProjectContract)
+            //    .HasForeignKey("ProjectContractId");
+            //});
 
             optionsBuilder.Entity<Process>().Property(proc => proc.Cost).HasColumnType("MONEY");
             optionsBuilder.Entity<Project>().Property(proj => proj.Budget).HasColumnType("MONEY");
@@ -166,6 +168,14 @@ namespace ChillLancer.Repository
                 entity.HasMany(cat => cat.ProposalImages)
                 .WithOne(propI => propI.Proposal)
                 .HasForeignKey(propI => propI.ProposalId);
+
+                entity.HasOne(projCon => projCon.Transaction)
+                .WithMany(trans => trans.Proposals)
+                .HasForeignKey("TransactionId");
+
+                entity.HasMany(projCon => projCon.Processes)
+                .WithOne(proces => proces.Proposal)
+                .HasForeignKey("ProposalId");
             });
 
             optionsBuilder.Entity<ProposalSkill>(entity =>

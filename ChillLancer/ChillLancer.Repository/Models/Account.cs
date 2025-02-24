@@ -60,8 +60,8 @@ namespace ChillLancer.Repository.Models
         public virtual ICollection<Project>? Projects { get; set; }
         public virtual ICollection<Transaction>? TransactionsAsFreelancer { get; set; }
         public virtual ICollection<Transaction>? TransactionsAsEmployer { get; set; }
-        public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
 
+        //public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
         //public virtual ICollection<PersonalContract>? PersonalContracts { get; set; }
     }
 }

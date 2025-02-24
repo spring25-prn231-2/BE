@@ -32,8 +32,10 @@ namespace ChillLancer.Repository.Models
         public virtual Account? Employer { get; set; }
         public virtual RateCode SystemFee { get; set; } = null!;
         public virtual RateCode? Promotion { get; set; }
-        public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
         public virtual Package? Package { get; set; }
+        public virtual ICollection<Proposal>? Proposals { get; set; }
+
+        //public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
         //public virtual PersonalContract? PersonalContract { get; set; }
     }
 }

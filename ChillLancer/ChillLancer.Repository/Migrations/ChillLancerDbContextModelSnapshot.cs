@@ -181,7 +181,7 @@ namespace ChillLancer.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0633e80b-122b-470e-80f1-3ed734fb286a"),
+                            Id = new Guid("74e2954c-80da-47b8-bba8-99616f44f899"),
                             BriefName = "Logo & Brand Identity",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Logo Design",
@@ -189,7 +189,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c9aa409-3ce1-49b5-8687-c30edaf478b4"),
+                            Id = new Guid("5b23445e-e1b3-41d5-8ffb-e341e182efdd"),
                             BriefName = "Logo & Brand Identity",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Brand Style Guides",
@@ -197,7 +197,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ca655fc3-49fe-43ae-a750-8af3f5914924"),
+                            Id = new Guid("e591971a-cda9-4b92-855e-8c33d5671a67"),
                             BriefName = "Logo & Brand Identity",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Business Cards & Stationery",
@@ -205,7 +205,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3193fa9c-3ef4-4db8-8a95-6c740dc5b348"),
+                            Id = new Guid("c068b800-36e8-4c00-a253-d93731a172df"),
                             BriefName = "Logo & Brand Identity",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Fonts & Typography",
@@ -213,7 +213,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bd0c1534-3f9e-42e0-ac09-56cb5ab41240"),
+                            Id = new Guid("05005e9a-7c3e-41b4-89de-5328d12328bb"),
                             BriefName = "Logo & Brand Identity",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Logo Maker Tool",
@@ -221,7 +221,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9f3cd7ca-0549-45a2-a1f8-8196712db2fc"),
+                            Id = new Guid("1411f1aa-b15b-4418-8942-dce083e0abe5"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Illustration",
@@ -229,7 +229,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dd83ffaa-6498-4d0b-8ab8-a69abbd92877"),
+                            Id = new Guid("7cd3789f-4a58-41e5-b7e0-7a5921649af2"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "AI Artists",
@@ -237,7 +237,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7e615bc5-595c-4adb-a70b-9d640e4b16c9"),
+                            Id = new Guid("24e4412f-8712-42d7-9280-497b9aefc3e1"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "AI Avatar Design",
@@ -245,7 +245,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("32a554bb-69f4-4fa1-b47c-fafd286bace7"),
+                            Id = new Guid("0cb07a87-9799-4dbd-9c2a-95b801e722e3"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Children's Book Illustration",
@@ -253,7 +253,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb2eb287-8b8f-4c3a-b7fc-e1c3c70b30db"),
+                            Id = new Guid("3a36ea22-e862-4fac-921e-9a9bf2bd32d1"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Portraits & Caricatures",
@@ -261,7 +261,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3b27fceb-4a14-47e2-9dd5-4195736658d9"),
+                            Id = new Guid("cbb9492c-25c1-42ed-a0b7-77714d5b4762"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Cartoons & Comics",
@@ -269,7 +269,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("85f58b7b-b9e6-440a-99d9-7b99e211fb4e"),
+                            Id = new Guid("3fbfc8e6-420d-4939-a32a-3bd637dc698b"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Pattern Design",
@@ -277,7 +277,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2ce489c1-e349-434e-91ce-3bc8b2c07656"),
+                            Id = new Guid("d483be97-8bd4-4337-b5c0-957655c1e8d2"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Tattoo Design",
@@ -285,7 +285,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("811c8717-91ad-4e61-8088-2e6e975d9081"),
+                            Id = new Guid("0b5fd278-d436-48de-b894-d872d1719abf"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Storyboards",
@@ -293,7 +293,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b5542ebb-45d1-4a44-8a42-683e0a43d08c"),
+                            Id = new Guid("afd0ccc7-bc5c-41fa-99ac-799f9262c8ce"),
                             BriefName = "Art & Illustration",
                             MajorName = "Graphics & Design",
                             SpecializedName = "NFT Art",
@@ -301,7 +301,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aefb94e7-a738-419c-a6ce-99cdc90aaded"),
+                            Id = new Guid("28bd104c-ba09-4eab-9061-ac487c6b3cf5"),
                             BriefName = "Miscellaneous",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Design Advice",
@@ -309,7 +309,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1308005c-e6c1-4187-96f9-50fd4ca755b8"),
+                            Id = new Guid("d61d4304-4146-436f-82d6-bc70601b3327"),
                             BriefName = "Web & App Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Website Design",
@@ -317,7 +317,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0afd08c8-3491-44ee-9017-c120f2c73860"),
+                            Id = new Guid("08ea9bc5-1d33-4342-bc04-dcb672c0d0e8"),
                             BriefName = "Web & App Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "App Design",
@@ -325,7 +325,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f90d6cf-d0bb-4533-b39a-9c623a5bb025"),
+                            Id = new Guid("69c8825f-e29a-486f-9a63-7b178febe405"),
                             BriefName = "Web & App Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "UX Design",
@@ -333,7 +333,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6839e85f-0b14-4ae1-adc4-73047bede2dd"),
+                            Id = new Guid("46a52ea7-3ee8-4577-80ba-5e97a4a71e11"),
                             BriefName = "Web & App Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Landing Page Design",
@@ -341,7 +341,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33e870d8-387b-4c14-825b-1f84812c6889"),
+                            Id = new Guid("2f20c376-6526-4de1-9a36-ce112d8d4427"),
                             BriefName = "Web & App Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Icon Design",
@@ -349,7 +349,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("245cb312-abba-45ae-a96d-bad9ec8ea32d"),
+                            Id = new Guid("c5675b57-c8fd-4494-8aa9-aa05aed8538c"),
                             BriefName = "Product & Gaming",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Industrial & Product Design",
@@ -357,7 +357,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9e07ed10-e149-43e0-8df5-2eeb656c1d58"),
+                            Id = new Guid("fc6d7da6-8113-492c-bbe3-56b9ae88d859"),
                             BriefName = "Product & Gaming",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Character Modeling",
@@ -365,7 +365,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("24eb8fbb-3d64-4e2c-9518-423b56fe8bbf"),
+                            Id = new Guid("89ec059c-1393-4d26-a223-53e06824d478"),
                             BriefName = "Product & Gaming",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Game Art",
@@ -373,7 +373,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc4b5f9f-2392-4e90-8bd4-2141505019b6"),
+                            Id = new Guid("3dd0f214-0dbc-4ad5-a5ff-84d1559f43c1"),
                             BriefName = "Product & Gaming",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Graphics for Streamers",
@@ -381,7 +381,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0462ba16-5140-4c85-9d7b-e8853175c9ac"),
+                            Id = new Guid("a6966f54-7eb3-4454-b427-743ab2a09f24"),
                             BriefName = "Print Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Flyer Design",
@@ -389,7 +389,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("024511fb-9f4a-47db-b83b-317f15bcd71e"),
+                            Id = new Guid("b06cb3a8-a0c4-4d5c-b490-3e938877a9ec"),
                             BriefName = "Print Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Brochure Design",
@@ -397,7 +397,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c4eb8472-d583-4ae8-9b2d-48e337cabc60"),
+                            Id = new Guid("3c387c9d-cf45-424e-baaf-1b412fd8e5f9"),
                             BriefName = "Print Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Poster Design",
@@ -405,7 +405,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("15d762a1-857f-4ea2-966b-3d7a97806da4"),
+                            Id = new Guid("8d6627d1-8969-4ab6-90a8-ebbf095ccc85"),
                             BriefName = "Print Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Catalog Design",
@@ -413,7 +413,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b7a3301e-208a-4f0a-a141-344925ddbb00"),
+                            Id = new Guid("f461b059-360f-4e8a-8820-1b0d4400a044"),
                             BriefName = "Print Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Menu Design",
@@ -421,7 +421,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c378771f-9ad9-43be-bd48-6a4b0d0572f8"),
+                            Id = new Guid("8b2877a7-fb4f-4d36-89e3-34ee178ce406"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Image Editing",
@@ -429,7 +429,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("610b52c6-cfe0-4696-b680-e0aa8735a926"),
+                            Id = new Guid("eaab6dba-68db-4a02-8955-12088ac53731"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "AI Image Editing",
@@ -437,7 +437,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cb0c1c0d-1373-455e-ab77-d0379e6e24a2"),
+                            Id = new Guid("dc8cdf8d-bc0d-4b15-92c6-de10990ffa1c"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Presentation Design",
@@ -445,7 +445,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8edb5486-9688-4027-ab26-954f3b8d6132"),
+                            Id = new Guid("65684a07-1315-4a5c-8b7f-a316c26a7fae"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Background Removal",
@@ -453,7 +453,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c3d1faa8-6706-45a8-940c-657448e16f2a"),
+                            Id = new Guid("0b9a3423-96a0-454d-b692-e647494c8cbc"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Infographic Design",
@@ -461,7 +461,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("69874cfc-4b47-495c-ba61-c69eb749a3ff"),
+                            Id = new Guid("801516dc-d4d7-4161-8439-4d6cc455af00"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Vector Tracing",
@@ -469,7 +469,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("229a66ad-bd7a-42fe-b85a-84f6bde6c3d3"),
+                            Id = new Guid("7ba023d2-fc31-4dd1-8e39-a2962c172398"),
                             BriefName = "Visual Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Resume Design",
@@ -477,7 +477,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("141fdd83-d4e8-4ecb-9f28-ab97672310b2"),
+                            Id = new Guid("cb9ee74b-692b-4a8b-949d-f86f81e5770b"),
                             BriefName = "Marketing Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Social Media Design",
@@ -485,7 +485,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("53e59d58-af62-4032-82f2-ba720e2a3968"),
+                            Id = new Guid("27cfb66f-8a09-4da8-a44d-1635fdb8c8a1"),
                             BriefName = "Marketing Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Social Posts & Banners",
@@ -493,7 +493,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9163baca-c31f-4a6c-be89-f24d4c0d0eb5"),
+                            Id = new Guid("ce073c14-39ae-4b08-a6c1-25741310bbf5"),
                             BriefName = "Marketing Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Email Design",
@@ -501,7 +501,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e11421d-ba07-4f2b-bcfb-f77542ca2714"),
+                            Id = new Guid("1513f504-0b07-438d-9134-d7c6555ce880"),
                             BriefName = "Marketing Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Web Banners",
@@ -509,7 +509,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("93f5110c-d217-40b0-ada0-c839f3c4eb47"),
+                            Id = new Guid("b578b772-7e76-40b8-8ce0-e214fe4b037d"),
                             BriefName = "Marketing Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Signage Design",
@@ -517,7 +517,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4df09262-3ef8-4c22-995d-f77a3f7f1b94"),
+                            Id = new Guid("143ef266-dd61-4345-b70b-5486aca5ca80"),
                             BriefName = "Packaging & Covers",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Packaging & Label Design",
@@ -525,7 +525,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7b379d75-f335-4a49-ae20-122a1ed44f9a"),
+                            Id = new Guid("a2235aeb-b7b1-4861-91f0-41a4db893135"),
                             BriefName = "Packaging & Covers",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Book Design",
@@ -533,7 +533,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7735e0b8-6572-44a3-8c10-724c763470dd"),
+                            Id = new Guid("3b6914ca-215e-452e-a948-a473b45c1a66"),
                             BriefName = "Packaging & Covers",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Book Covers",
@@ -541,7 +541,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5e3bc298-0146-478e-b036-b1f56c1fe438"),
+                            Id = new Guid("4b9a8565-8926-4888-8235-87357783c84c"),
                             BriefName = "Packaging & Covers",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Album Cover Design",
@@ -549,7 +549,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("97508b02-4917-420b-aadb-1b94eabe9c8c"),
+                            Id = new Guid("225bf86f-3218-46f9-bf43-d169e352d53c"),
                             BriefName = "Architecture & Building Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Architecture & Interior Design",
@@ -557,7 +557,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("da34056a-26ad-4e7b-be83-b36ad25a26d3"),
+                            Id = new Guid("1d01f762-118e-49a8-8ebd-b36ec4beccc7"),
                             BriefName = "Architecture & Building Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Landscape Design",
@@ -565,7 +565,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f6a590d1-1755-4682-b33e-fd4dbd5050a2"),
+                            Id = new Guid("442a114e-e073-4b3f-a639-0f8af08e40c9"),
                             BriefName = "Architecture & Building Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Building Engineering",
@@ -573,7 +573,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("16fcce26-6645-4f14-8603-9b340bc2b5b5"),
+                            Id = new Guid("5b86e8ff-2716-4c7f-b27f-d8086c654f32"),
                             BriefName = "Architecture & Building Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Lighting Design",
@@ -581,7 +581,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ba2ecc2f-2f82-45c1-a0f0-91e2a8da455e"),
+                            Id = new Guid("ae6a9ccb-d83e-4454-b268-4c266ec14523"),
                             BriefName = "Fashion & Merchandise",
                             MajorName = "Graphics & Design",
                             SpecializedName = "T-Shirts & Merchandise",
@@ -589,7 +589,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1e9a1661-41cb-47fb-bf4c-b187e525bf52"),
+                            Id = new Guid("f304774d-5de5-4d6b-8207-0b4c36a69226"),
                             BriefName = "Fashion & Merchandise",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Fashion Design",
@@ -597,7 +597,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("425e8025-f1ce-4d41-bcce-5a09e1d39cc0"),
+                            Id = new Guid("a0471918-b489-439a-a746-cd97a29134cc"),
                             BriefName = "Fashion & Merchandise",
                             MajorName = "Graphics & Design",
                             SpecializedName = "Jewelry Design",
@@ -605,7 +605,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("82af6d26-7041-4b77-b7d4-6e34c4755af7"),
+                            Id = new Guid("913ca504-1151-478d-be88-58f63baa83a2"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Architecture",
@@ -613,7 +613,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("700f5d07-cefe-45fb-9c8e-7f42343d5825"),
+                            Id = new Guid("15c2fee5-500c-47db-a1ac-bce25f673bf7"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Industrial Design",
@@ -621,7 +621,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6087859f-b51f-4000-8522-1d22d640b605"),
+                            Id = new Guid("27da61d9-f594-4309-a2d9-0aa243ef87b2"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Fashion & Garment",
@@ -629,7 +629,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9e073dc9-d25e-4336-924f-a8415fe47e5f"),
+                            Id = new Guid("33cd3525-4f5c-4fd3-aab7-b8ac55d60663"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Printing Characters",
@@ -637,7 +637,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0ff98438-9d6a-44f4-8d91-b6e567c68166"),
+                            Id = new Guid("b9c4c69d-7f6c-4b1d-bc00-aeddf7d6e325"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Landscape",
@@ -645,7 +645,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3c86722f-9de9-4fd8-8d0a-e77936120cf0"),
+                            Id = new Guid("5dc242a1-d656-4a43-9ac3-d0432111ae31"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Game Art",
@@ -653,7 +653,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2331523f-d1a9-4026-801f-39122f7e1ab1"),
+                            Id = new Guid("6e7005e3-be26-44ba-9c7b-2345c7cb873b"),
                             BriefName = "3D Design",
                             MajorName = "Graphics & Design",
                             SpecializedName = "3D Jewelry Design",
@@ -661,7 +661,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fd49d8d0-ab25-4796-9931-d6ac5c65ad57"),
+                            Id = new Guid("93aed937-565b-4b69-9f78-299ad26bceb8"),
                             BriefName = "Website Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Business Websites",
@@ -669,7 +669,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d390da1b-e1f4-481f-b6b4-14605b0da688"),
+                            Id = new Guid("2e731084-4176-4990-a3e2-51040b71f9e1"),
                             BriefName = "Website Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "E-Commerce Development",
@@ -677,7 +677,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3c109440-4bfd-44d2-b123-76e0d326667e"),
+                            Id = new Guid("4f55b097-1b24-4e74-8632-feffc1e4876e"),
                             BriefName = "Website Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Landing Pages",
@@ -685,7 +685,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3b01fdad-229d-460d-aec7-f8f5e940fab1"),
+                            Id = new Guid("955d1a02-93dc-4d6d-bb88-a3d627722d6c"),
                             BriefName = "Website Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Dropshipping Websites",
@@ -693,7 +693,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ee315bc-4d0c-4122-ade5-375075039b63"),
+                            Id = new Guid("26a0a8ab-aaee-4dbf-bcf7-8e6c1f02e554"),
                             BriefName = "Website Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Build a Complete Website",
@@ -701,7 +701,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6a047746-6eba-4788-b508-6dfc2c1c9730"),
+                            Id = new Guid("17ee774c-fcd5-4bdc-97be-0a75e2f01e18"),
                             BriefName = "Website Platforms",
                             MajorName = "Programming & Tech",
                             SpecializedName = "WordPress",
@@ -709,7 +709,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8c1e710a-188f-4e75-b59a-81badb0e6fab"),
+                            Id = new Guid("242457bb-7120-45cd-9b79-02fc52aea48f"),
                             BriefName = "Website Platforms",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Shopify",
@@ -717,7 +717,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("27dcc7c4-069c-4089-a823-9bff06334986"),
+                            Id = new Guid("4a061b69-eea2-4316-a085-2539f41ef3dc"),
                             BriefName = "Website Platforms",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Wix",
@@ -725,7 +725,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cfbc8779-b616-4f24-bab9-eac791b02287"),
+                            Id = new Guid("a161a963-f0eb-45b5-99cb-180d26fee939"),
                             BriefName = "Website Platforms",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Custom Websites",
@@ -733,7 +733,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("41671a28-8567-4736-a678-994b8f450654"),
+                            Id = new Guid("3b591f92-35e0-4e91-be13-de18698cf368"),
                             BriefName = "Website Platforms",
                             MajorName = "Programming & Tech",
                             SpecializedName = "GoDaddy",
@@ -741,7 +741,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ba6ecc14-788c-403e-a37d-a8e495cc5063"),
+                            Id = new Guid("a58d1783-974b-48e0-bc54-7a93320c1972"),
                             BriefName = "Website Maintenance",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Website Customization",
@@ -749,7 +749,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8835da99-6782-42f7-9803-3b5923eabc08"),
+                            Id = new Guid("cd5a2b2a-75d9-4349-8383-fa491c902497"),
                             BriefName = "Website Maintenance",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Bug Fixes",
@@ -757,7 +757,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f9c89a4-215c-4c3d-bcef-df9bd31d1288"),
+                            Id = new Guid("d7f43097-5dbb-4de4-aeda-3ff2b7eae30b"),
                             BriefName = "Website Maintenance",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Backup & Migration",
@@ -765,7 +765,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dd4cee3a-8d1b-4798-92bc-4914697f0059"),
+                            Id = new Guid("283d4d21-de34-4054-8081-7039fe05f288"),
                             BriefName = "Website Maintenance",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Speed Optimization",
@@ -773,7 +773,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0acccd9e-7303-4c78-82ab-a9a43ea5af7e"),
+                            Id = new Guid("18b390db-a0b1-4b68-8fdc-51bd8c2cf479"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Websites & Software",
@@ -781,7 +781,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("92be461f-b1ba-4598-b5aa-d80fee414592"),
+                            Id = new Guid("a5d08268-d9cd-431e-b9f1-234c78351c5b"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Mobile Apps",
@@ -789,7 +789,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1f62d95e-37fe-4b01-94db-9f27e6b34553"),
+                            Id = new Guid("d19a2bd5-b64f-4560-9648-26aba459869f"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Integrations",
@@ -797,7 +797,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a935468e-0e38-4f87-b051-a9c0460be45b"),
+                            Id = new Guid("617ff17c-31eb-463b-a664-706cfaa49894"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Agents",
@@ -805,7 +805,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("66cb31ec-71be-4906-a1ed-ad54f7cafcae"),
+                            Id = new Guid("bdac07db-729d-4f5c-835e-26b1061d2ddc"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Fine-Tuning",
@@ -813,7 +813,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7b9e754f-889f-4c8f-acf4-b113f69258cf"),
+                            Id = new Guid("2d56e851-d4c6-4f03-aaa5-5d16e4283046"),
                             BriefName = "AI Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Technology Consulting",
@@ -821,7 +821,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63793325-b30e-4aa1-aa6d-121e2e7b2329"),
+                            Id = new Guid("20989b70-7b03-4ce8-8fdd-9ac87757f6b4"),
                             BriefName = "Chatbot Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "AI Chatbot",
@@ -829,7 +829,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ebc47f80-45cb-4c35-bc1e-481940c24910"),
+                            Id = new Guid("93c25529-20f6-4034-9ace-2f3b964c36a9"),
                             BriefName = "Chatbot Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Rules Based Chatbot",
@@ -837,7 +837,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("878e4578-779d-4537-abfb-96c7829f9ce5"),
+                            Id = new Guid("bdb2f671-7d76-400d-b8c5-a3272e8f9bf0"),
                             BriefName = "Chatbot Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Discord",
@@ -845,7 +845,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4151f9ca-fd65-4f11-bc94-8160adde52be"),
+                            Id = new Guid("7709c802-ae2a-4b0f-a3a3-2c62d933198f"),
                             BriefName = "Chatbot Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Telegram",
@@ -853,7 +853,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1765d4c9-f934-416d-aa0a-6f748fb78925"),
+                            Id = new Guid("cbaaadcf-43ea-49b8-969b-2b32d55d21cc"),
                             BriefName = "Game Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Gameplay Experience & Feedback",
@@ -861,7 +861,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7634a42e-e63d-484b-9da4-d058a29c0b3d"),
+                            Id = new Guid("eb59191e-352b-4728-a634-022fee7a096e"),
                             BriefName = "Game Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "PC Games",
@@ -869,7 +869,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a03e7b9-1e64-42a3-a044-4834a53d63e3"),
+                            Id = new Guid("f4d25048-069b-4a6f-a589-7ac99ccfad9e"),
                             BriefName = "Game Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Mobile Games",
@@ -877,7 +877,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e1c82a18-8ee7-4de5-ba39-07e02ff2f8c7"),
+                            Id = new Guid("391b6cd6-7e08-48b6-ba55-4921525aa1a4"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Cross-platform Development",
@@ -885,7 +885,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1883cf42-5f46-47ba-a536-d96bf5d205e0"),
+                            Id = new Guid("b1a23375-6aec-4536-9123-c439e6f26127"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Android App Development",
@@ -893,7 +893,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aee7dac0-eca1-4010-be12-943e11cf4981"),
+                            Id = new Guid("373fea1d-9911-4e88-91d9-2f818bec813d"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "iOS App Development",
@@ -901,7 +901,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8f62c8eb-9bf3-414d-ba48-c899b8f763a0"),
+                            Id = new Guid("6867c94e-6990-429b-9fb2-680b58e0c979"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Website to App",
@@ -909,7 +909,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("deb30f9f-5f33-442b-92de-d2799f962b07"),
+                            Id = new Guid("b7b7d8a8-bef6-4625-ad56-d93c64a29069"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Mobile App Maintenance",
@@ -917,7 +917,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b36c28ee-80e3-45bf-aa08-5cdf7d9d73f9"),
+                            Id = new Guid("564af26b-8f9f-4056-9417-9a28fe6cb2ae"),
                             BriefName = "Mobile App Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "VR & AR Development",
@@ -925,7 +925,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b2ff6bc6-813b-44c4-95b0-ee1611d4137e"),
+                            Id = new Guid("a487a1f9-0594-41a3-8ac1-6d5360da40a3"),
                             BriefName = "Cloud & Cybersecurity ",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Cloud Computing",
@@ -933,7 +933,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0063735-3495-41ff-8dc2-30a2394c8705"),
+                            Id = new Guid("79576a41-4378-48ab-9aaa-3533613b8478"),
                             BriefName = "Cloud & Cybersecurity ",
                             MajorName = "Programming & Tech",
                             SpecializedName = "DevOps Engineering",
@@ -941,7 +941,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("329ee27e-f7dd-4583-b6dd-9be275cc25c1"),
+                            Id = new Guid("bd3a3f3e-c74b-4123-9dc3-d48055d40d0c"),
                             BriefName = "Cloud & Cybersecurity ",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Cybersecurity",
@@ -949,7 +949,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("adab5b55-7052-4384-bbca-eb5441b1ec4a"),
+                            Id = new Guid("5d662d4d-2f82-493e-8a71-213a259f1e55"),
                             BriefName = "Data Science & ML",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Machine Learning",
@@ -957,7 +957,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b12cfe53-3904-40b6-b00a-d9236af13b8f"),
+                            Id = new Guid("1f5fff1d-58b1-454f-bbad-777dbc5c8ad3"),
                             BriefName = "Data Science & ML",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Computer Vision",
@@ -965,7 +965,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("228101d1-f703-469f-b692-1a392d837bbc"),
+                            Id = new Guid("3d9d0463-77f9-4523-844b-fbb66d4f2f5d"),
                             BriefName = "Data Science & ML",
                             MajorName = "Programming & Tech",
                             SpecializedName = "NLP",
@@ -973,7 +973,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3aa79ebb-7246-4e58-a82a-ab7ae6e6f73b"),
+                            Id = new Guid("ee9c4d8c-0211-4c85-b8e9-0535c51830d1"),
                             BriefName = "Data Science & ML",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Deep Learning",
@@ -981,7 +981,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d2679026-67d8-4f5d-bdfb-8d6227b7cab0"),
+                            Id = new Guid("7650afd3-ac2e-4813-ac6a-66c630307c4a"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Web Applications",
@@ -989,7 +989,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4021d335-4638-41b3-a7a6-6f87af3be550"),
+                            Id = new Guid("84ebe8d8-bba1-4006-8f0f-79eaf1a1de23"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Desktop Applications",
@@ -997,7 +997,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0c145f3d-ad6d-4a62-8238-41f1f7adb823"),
+                            Id = new Guid("5f996a00-1458-43e1-ba48-fa0696762e40"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Automations & Workflows",
@@ -1005,7 +1005,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7741d9ae-b58e-4cfe-90cb-0c75acb5bfd1"),
+                            Id = new Guid("b218eb50-6011-46d3-9937-5d63855905f5"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "APIs & Integrations",
@@ -1013,7 +1013,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("79aef99a-e70c-4bd1-a7da-c738aa6d5217"),
+                            Id = new Guid("ad3de52c-d964-405c-9bdc-f2fc7c8d8e4c"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Databases",
@@ -1021,7 +1021,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("15d30ad3-ec8e-485e-a105-6caa46e4836b"),
+                            Id = new Guid("ba8385de-809c-4f49-be84-e9d5627c2c99"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Scripting",
@@ -1029,7 +1029,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2303fe16-41a6-454c-b25e-1ad3d7c54454"),
+                            Id = new Guid("4e526e51-6864-45a2-9c07-5f5ae43361df"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "QA & Review",
@@ -1037,7 +1037,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc5c7da5-4abd-466e-9224-62dd28f60912"),
+                            Id = new Guid("41882243-b670-4a7b-8674-79d0176a5049"),
                             BriefName = "Software Development",
                             MajorName = "Programming & Tech",
                             SpecializedName = "User Testing",
@@ -1045,7 +1045,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ddf1011e-7f1a-41b1-9a81-1467b3e68cc6"),
+                            Id = new Guid("19430e85-a399-44ac-803f-c9d029e3b815"),
                             BriefName = "Blockchain & Cryptocurrency",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Decentralized Apps (dApps)",
@@ -1053,7 +1053,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a49ee775-688f-4ab4-9a87-351b80a45839"),
+                            Id = new Guid("ba488ec3-2982-415c-88f8-e8d6e97ca005"),
                             BriefName = "Blockchain & Cryptocurrency",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Cryptocurrencies & Tokens",
@@ -1061,7 +1061,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d5f122c5-58a1-4003-9d2b-c42c37c4f5f8"),
+                            Id = new Guid("d475ab12-71f1-488c-b20d-be25c0b05356"),
                             BriefName = "Blockchain & Cryptocurrency",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Exchange Platforms",
@@ -1069,7 +1069,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f6dac2d3-a67d-4355-a9b9-ea58bfab3f0d"),
+                            Id = new Guid("f032906a-85af-4cdd-b975-80ef080e358e"),
                             BriefName = "Miscellaneous",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Electronics Engineering",
@@ -1077,7 +1077,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e4d92b6c-5ae2-4820-aff1-7bd2ec128c58"),
+                            Id = new Guid("6467263d-d5f0-42e9-b22f-24dc8e49fbae"),
                             BriefName = "Miscellaneous",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Support & IT",
@@ -1085,7 +1085,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4290d5a2-9e70-4022-a2a4-c86d2d77a02f"),
+                            Id = new Guid("da03c31b-9308-4d48-afbe-795ab197ba98"),
                             BriefName = "Miscellaneous",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Discord Server Setup",
@@ -1093,7 +1093,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2cb270e3-ad8b-46bc-b4e9-724e93dcb96d"),
+                            Id = new Guid("28bf2119-6dd5-4b7c-8768-ecf5bb76958d"),
                             BriefName = "Miscellaneous",
                             MajorName = "Programming & Tech",
                             SpecializedName = "Convert Files",
@@ -1101,7 +1101,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1e5799c1-9f18-4322-9db5-fdba82774392"),
+                            Id = new Guid("6efc2547-d119-468d-a270-754e49b75cbd"),
                             BriefName = "Search",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Search Engine Optimization (SEO)",
@@ -1109,7 +1109,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f30c6e94-89c3-4c1f-a4c5-395ccb56e0a7"),
+                            Id = new Guid("b6b6e5be-2ad9-4c81-9a4f-ccd444a90d84"),
                             BriefName = "Search",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Search Engine Marketing (SEM)",
@@ -1117,7 +1117,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("30a66dee-61fd-44f7-8e26-8f1ef96c2aa5"),
+                            Id = new Guid("e2f05143-f39d-43f5-a776-0b431aff968a"),
                             BriefName = "Search",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Local SEO",
@@ -1125,7 +1125,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1149ecb6-8139-4da4-9209-5884f7231c17"),
+                            Id = new Guid("f7b1757c-0a20-422e-8ce3-6a7f51a249ae"),
                             BriefName = "Search",
                             MajorName = "Digital Marketing",
                             SpecializedName = "E-Commerce SEO",
@@ -1133,7 +1133,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f751108f-18b2-4e73-a789-ccd235b267dc"),
+                            Id = new Guid("64ad404c-e8be-4472-bbb6-5d444e74478b"),
                             BriefName = "Search",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Video SEO",
@@ -1141,7 +1141,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9cb90276-12fe-4859-9bb8-2e505b07a5b5"),
+                            Id = new Guid("e8d93ea0-3768-459e-b8c3-46fc0da85045"),
                             BriefName = "Social",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Social Media Marketing",
@@ -1149,7 +1149,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b8bc7680-e5f8-4356-ae3c-1650cb215abf"),
+                            Id = new Guid("c24df8ae-4c93-4b03-9669-cafaa6a168a7"),
                             BriefName = "Social",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Paid Social Media",
@@ -1157,7 +1157,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("665549f2-a9cc-4128-a628-1d7c78faea2c"),
+                            Id = new Guid("442cda70-9a22-4269-aef7-c6d0ee58c140"),
                             BriefName = "Social",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Social Commerce ",
@@ -1165,7 +1165,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f325e23c-1e7c-4451-8c06-9f705811612f"),
+                            Id = new Guid("af0612d3-638d-4523-a206-2c83e0dd5c6a"),
                             BriefName = "Social",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Influencer Marketing",
@@ -1173,7 +1173,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("64360889-53de-4ad9-99e6-9c4dd1f3d9ac"),
+                            Id = new Guid("6ac0dd05-d462-4cf7-8bb1-5d08af3a17e7"),
                             BriefName = "Social",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Community Management",
@@ -1181,7 +1181,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9fc788eb-bc98-4339-8cca-7d4b21732794"),
+                            Id = new Guid("c27e75a5-9fb0-4541-ae57-a5a2a37eac18"),
                             BriefName = "Channel Specific ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "TikTok Shop",
@@ -1189,7 +1189,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9062bacc-8c10-41e2-876d-2d2e8be0dc25"),
+                            Id = new Guid("f657a939-09a6-4480-9ecd-b742b3cc606f"),
                             BriefName = "Channel Specific ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Facebook Ads Campaign",
@@ -1197,7 +1197,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f657ab22-1a74-4ff8-9086-e8520c34742c"),
+                            Id = new Guid("561d7752-a486-4c54-93ed-7df9103104fd"),
                             BriefName = "Channel Specific ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Instagram Marketing",
@@ -1205,7 +1205,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b08e95fa-7e49-41be-a649-8c4193cf483e"),
+                            Id = new Guid("83f42ba5-a1e1-4604-b852-4857b401a513"),
                             BriefName = "Channel Specific ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Google SEM",
@@ -1213,7 +1213,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bad3acb2-4a56-4bb1-9df1-f5cd870beb3f"),
+                            Id = new Guid("72cf3182-39fa-4038-bc15-169dfff402da"),
                             BriefName = "Channel Specific ",
                             MajorName = "Digital Marketing",
                             SpecializedName = " Shopify Marketing",
@@ -1221,7 +1221,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("81d6aa0b-e2ec-4496-bf42-c982c3ba662c"),
+                            Id = new Guid("128eeaf0-af42-4002-a5cb-bfacdb78e645"),
                             BriefName = "Industry & Purpose-Specific",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Music Promotion",
@@ -1229,7 +1229,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f9e8d8b-e393-4e1f-8d6e-c2e7987491e1"),
+                            Id = new Guid("f61301ba-1197-4237-af7f-64ba09af2ce0"),
                             BriefName = "Industry & Purpose-Specific",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Podcast Marketing",
@@ -1237,7 +1237,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ac8ec69-c4fe-4594-80a0-53b28ae3a7db"),
+                            Id = new Guid("71d44b5a-3714-4a34-9907-3f5ca420a4c4"),
                             BriefName = "Industry & Purpose-Specific",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Book & eBook Marketing",
@@ -1245,7 +1245,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0d4c7394-a0ad-44e9-b67f-ff4971b217db"),
+                            Id = new Guid("1c42e97a-d62b-4aaf-8039-38ae5ec3fa2e"),
                             BriefName = "Industry & Purpose-Specific",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Mobile App Marketing",
@@ -1253,7 +1253,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f27f46b0-7998-4aec-89c7-a41282cd2fdd"),
+                            Id = new Guid("0fe4d599-4273-4135-9c50-e963b478bbf9"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Video Marketing",
@@ -1261,7 +1261,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("136cea6c-61f9-4fbd-b4c0-b173ebbeaa26"),
+                            Id = new Guid("a320d29f-7893-4166-8363-b3138baf8107"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "E-Commerce Marketing",
@@ -1269,7 +1269,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51a1a17a-b27e-40cd-b174-c48ca67cf3e3"),
+                            Id = new Guid("d8de6830-e788-49e2-8d95-51c3e6c91831"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Email Marketing",
@@ -1277,7 +1277,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fafbd6dc-5e7e-4554-bad0-504d7bb9abd2"),
+                            Id = new Guid("07cb0101-b41e-4729-8cdd-cb109ae71f52"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Email Automations",
@@ -1285,7 +1285,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ec11fb59-630d-4576-a8b2-3969696194ff"),
+                            Id = new Guid("fb6ed897-8f3b-4a13-b903-c2c369e024de"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Guest Posting",
@@ -1293,7 +1293,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b2b95105-6d4f-44ce-80cd-e33921f63d4f"),
+                            Id = new Guid("3364c0df-c19c-4da1-ade3-27f44276b28c"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Affiliate Marketing",
@@ -1301,7 +1301,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3a338699-ca05-40a4-af89-771eb43f9c9f"),
+                            Id = new Guid("dc630931-9b59-4b17-b7c3-ae7e3fdce213"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Display Advertising ",
@@ -1309,7 +1309,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("333c2df9-ef94-4f87-b99b-f76c72d57692"),
+                            Id = new Guid("8a17b4d9-313e-4cc8-b0f6-63f6519912f9"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Public Relations",
@@ -1317,7 +1317,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1a463334-6718-4704-81f4-f01897d8f850"),
+                            Id = new Guid("626508ea-c36b-42dc-86d1-41750c494ca0"),
                             BriefName = "Methods & Techniques ",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Text Message Marketing",
@@ -1325,7 +1325,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b4f4ed0f-fe44-4270-8cf0-22c6f1dae88c"),
+                            Id = new Guid("b7bd4410-2c1c-494b-9dbd-dfd8d5a449c0"),
                             BriefName = "Analytics & Strategy",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Marketing Strategy",
@@ -1333,7 +1333,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4455a433-2b81-4a37-a49d-87cef44b9e1a"),
+                            Id = new Guid("08384924-0b4f-43b6-b4de-4eec9e41f207"),
                             BriefName = "Analytics & Strategy",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Marketing Concepts & Ideation",
@@ -1341,7 +1341,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bfece900-c0c5-44cf-a2d3-b3b904d946d5"),
+                            Id = new Guid("573248b2-b20f-450f-a17d-fceacc7bb5d9"),
                             BriefName = "Analytics & Strategy",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Marketing Advice",
@@ -1349,7 +1349,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d3d55a63-3e2d-4cf1-9008-9f4e6241280e"),
+                            Id = new Guid("e1669f51-c35c-42d6-8c39-e4562bcf9df3"),
                             BriefName = "Analytics & Strategy",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Web Analytics",
@@ -1357,7 +1357,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("808f8d3e-63c8-4413-acb3-4a48e0b86615"),
+                            Id = new Guid("da60106e-bf70-41e6-881d-635814390e6b"),
                             BriefName = "Analytics & Strategy",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Conversion Rate Optimization (CRO)",
@@ -1365,7 +1365,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2fbbbaa2-e0b2-4c57-b3bf-45abe4cedc88"),
+                            Id = new Guid("6c8c5921-49be-4892-b824-00366e13d942"),
                             BriefName = "Miscellaneous",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Crowdfunding",
@@ -1373,7 +1373,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("125ca2f0-7ab7-4e79-80ad-a952231c9545"),
+                            Id = new Guid("b792433c-4530-44ba-bbc0-8f82580730e5"),
                             BriefName = "Miscellaneous",
                             MajorName = "Digital Marketing",
                             SpecializedName = "Other",
@@ -1381,7 +1381,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d89b1d9b-3fd7-4a47-8284-4a0ff9d2e492"),
+                            Id = new Guid("4d36a4b7-1891-4128-9143-5d09d7e0922a"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Video Editing",
@@ -1389,7 +1389,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e0063150-cdcc-474b-aaf8-103bed363afd"),
+                            Id = new Guid("3f3944ae-3be7-4d87-b414-ea36cc0a4ef6"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Visual Effects",
@@ -1397,7 +1397,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf997d61-26e8-43b7-86e3-7052ebf8867d"),
+                            Id = new Guid("26963e19-e4b7-4058-86d1-3c9b933295fe"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Video Art",
@@ -1405,7 +1405,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d9852f33-03bf-4197-adb7-9c0de0b0e31d"),
+                            Id = new Guid("68c3f8af-5e72-42f2-839c-b2d6d2ddcc04"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Intro & Outro Videos",
@@ -1413,7 +1413,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5362f0c9-fd74-4571-83dc-9ff8a0f11986"),
+                            Id = new Guid("04ef788b-b62f-42ef-8988-9e36f1a9c32c"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Video Templates Editing",
@@ -1421,7 +1421,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("748905a7-d66e-4d4d-bc7b-753cd42d3bd1"),
+                            Id = new Guid("f6bdfab3-a733-4cad-9a8e-32c87d05296a"),
                             BriefName = "Editing & Post-Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Subtitles & Captions",
@@ -1429,7 +1429,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("416cc606-4931-4de5-b0b5-06efae1bfec0"),
+                            Id = new Guid("44e0faf1-ff0a-4504-9898-f160e6da254c"),
                             BriefName = "Social & Marketing Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Video Ads & Commercials ",
@@ -1437,7 +1437,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b26ffdc6-ecf8-443e-b17a-4f26d8218547"),
+                            Id = new Guid("31ffa828-3588-4e21-863f-fa20f4a4a188"),
                             BriefName = "Social & Marketing Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Social Media Videos",
@@ -1445,7 +1445,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c8bde219-7646-4833-8b79-56ad4fbb6bd5"),
+                            Id = new Guid("a974c36f-90f3-4ef5-814a-de5418450b81"),
                             BriefName = "Social & Marketing Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Music Videos",
@@ -1453,7 +1453,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f8dae4b5-f1e0-4200-8bc8-69cf935104c3"),
+                            Id = new Guid("e658cfc9-c72a-434b-b278-4980d0922d8a"),
                             BriefName = "Social & Marketing Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Slideshow Videos",
@@ -1461,7 +1461,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ff09bed8-b6c5-47d2-86a3-a1709687a404"),
+                            Id = new Guid("19b8ec92-5bff-4f9f-acb5-2140df3b872e"),
                             BriefName = "Motion Graphics",
                             MajorName = "Video & Animation",
                             SpecializedName = "Logo Animation",
@@ -1469,7 +1469,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7deefb89-db0e-47d1-8bf5-e3c21a6f19b8"),
+                            Id = new Guid("8592caeb-a0f3-4dd3-81d0-d23a792bc57d"),
                             BriefName = "Motion Graphics",
                             MajorName = "Video & Animation",
                             SpecializedName = "Lottie & Web Animation",
@@ -1477,7 +1477,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3b24a00b-6d6c-4c96-be4a-4f1f7f50802a"),
+                            Id = new Guid("aa1525a0-ad38-4cee-af13-da953916a692"),
                             BriefName = "Motion Graphics",
                             MajorName = "Video & Animation",
                             SpecializedName = "Text Animation",
@@ -1485,7 +1485,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1a10bc44-ed16-4603-bc58-696231e46cc9"),
+                            Id = new Guid("d7186e42-3256-4c32-97d5-39eefa52ad85"),
                             BriefName = "Presenter Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "UGC Videos ",
@@ -1493,7 +1493,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2b5d7edf-625a-4c72-be2a-5ecfd6b863e9"),
+                            Id = new Guid("6b30d47d-4b51-4bce-b492-be49a5f2bca1"),
                             BriefName = "Presenter Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Spokesperson Videos",
@@ -1501,7 +1501,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9c273a1-1998-4ec6-963d-52994e355e20"),
+                            Id = new Guid("52df5359-7f46-46a9-aa18-7d6785a174b0"),
                             BriefName = "Presenter Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "UGC Ads",
@@ -1509,7 +1509,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0d5e1ab9-b53b-4a55-9842-1653437546d7"),
+                            Id = new Guid("d293aea0-fc84-4d5e-ae9b-2806499abccc"),
                             BriefName = "Presenter Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "TikTok UGC Videos",
@@ -1517,7 +1517,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dbb7ac3-f3fd-42a1-b357-47561fd5cb8f"),
+                            Id = new Guid("6e8fc5b9-47e5-42fa-af6e-4c1cdae69a91"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "Character Animation",
@@ -1525,7 +1525,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8be8d848-085d-41aa-b1b5-e45ebf6027f2"),
+                            Id = new Guid("a9075a03-5c27-4f6c-b855-b2ec598f5433"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "Animated GIFs",
@@ -1533,7 +1533,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("507f0609-6ea1-4ac4-96f5-f62c3cbe024b"),
+                            Id = new Guid("6fc605be-6ddf-41f5-a402-030cddbb928e"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "Animation for Kids",
@@ -1541,7 +1541,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f259f42d-7794-4fd1-84bf-d63df798e52e"),
+                            Id = new Guid("d367d93e-e7a6-46b9-84b3-d9a2cbf0d96e"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "Animation for Streamers",
@@ -1549,7 +1549,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9cabcf9b-8465-40d8-9b0b-f2ce8dbb9b8d"),
+                            Id = new Guid("cffae4a5-a140-4c5f-a6d8-cd84755080a7"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "Rigging",
@@ -1557,7 +1557,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dde2536-0762-46d0-bd9e-77042328f186"),
+                            Id = new Guid("27e5086b-f630-4467-a67b-7e8a53d6c758"),
                             BriefName = "Animation",
                             MajorName = "Video & Animation",
                             SpecializedName = "NFT Animation",
@@ -1565,7 +1565,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58f4ff0f-59a5-4004-9b81-df8a56d1c831"),
+                            Id = new Guid("4f89b3bf-0fc6-4d3d-b220-7dc02d7a6664"),
                             BriefName = "Filmed Video Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Videographers",
@@ -1573,7 +1573,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8b18fd3-8b97-453f-8366-11897bf0705c"),
+                            Id = new Guid("3c5e48d8-0911-4e3a-81b8-d17ed68e0443"),
                             BriefName = "Filmed Video Production",
                             MajorName = "Video & Animation",
                             SpecializedName = "Filmed Video Production",
@@ -1581,7 +1581,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("253e3ff5-aa1f-44fb-b114-a4ce83cedcaa"),
+                            Id = new Guid("11716924-3b00-43aa-92fe-267accec355d"),
                             BriefName = "Explainer Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Animated Explainers",
@@ -1589,7 +1589,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f3f5d1a0-9b33-4ab7-9dd9-0175d9236b35"),
+                            Id = new Guid("9e039a39-ae97-4c31-ad34-e4ceca594640"),
                             BriefName = "Explainer Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Live Action Explainers",
@@ -1597,7 +1597,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("74f3df84-96dc-4b37-be90-d87c06dbe5b6"),
+                            Id = new Guid("4e463f26-61b3-4957-98e9-129eec9bff4e"),
                             BriefName = "Explainer Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Screencasting Videos",
@@ -1605,7 +1605,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f004829f-203c-49f2-8652-916b6fcdf86d"),
+                            Id = new Guid("6014b3f7-d368-4d26-99ac-09b42fc6b768"),
                             BriefName = "Explainer Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "eLearning Video Production",
@@ -1613,7 +1613,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1b15962e-f4be-4297-8981-6862d6b0f9a8"),
+                            Id = new Guid("34c157d3-d787-47d7-8f64-525a7eae40b8"),
                             BriefName = "Explainer Videos",
                             MajorName = "Video & Animation",
                             SpecializedName = "Crowdfunding Videos",
@@ -1621,7 +1621,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f6530b6e-3b48-4d0a-85a3-6b12b58073fd"),
+                            Id = new Guid("d28497ef-c66f-447b-97e1-62342655ef32"),
                             BriefName = "Product Videos ",
                             MajorName = "Video & Animation",
                             SpecializedName = "3D Product Animation",
@@ -1629,7 +1629,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f509ef5a-fa21-478d-96f6-25f4da2c6a21"),
+                            Id = new Guid("c56cdaa0-f746-400c-b814-68dbe05155b4"),
                             BriefName = "Product Videos ",
                             MajorName = "Video & Animation",
                             SpecializedName = "E-Commerce Product Videos",
@@ -1637,7 +1637,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9cadcded-1f83-4de0-9b88-e39663094359"),
+                            Id = new Guid("9114772e-c636-479e-8fb3-5922d3d91a48"),
                             BriefName = "Product Videos ",
                             MajorName = "Video & Animation",
                             SpecializedName = "Corporate Videos",
@@ -1645,7 +1645,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0978ee52-18a8-49ed-9c15-9bd00e8b1067"),
+                            Id = new Guid("c8ab7a94-7cd3-44d2-96b2-1e18952700e0"),
                             BriefName = "Product Videos ",
                             MajorName = "Video & Animation",
                             SpecializedName = "App & Website Previews",
@@ -1653,7 +1653,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("637a1cbf-11c9-487c-911f-73bb633773af"),
+                            Id = new Guid("dfc3af8b-71d9-457b-b3ed-d2390195c959"),
                             BriefName = "AI Video ",
                             MajorName = "Video & Animation",
                             SpecializedName = "AI Video Art",
@@ -1661,7 +1661,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7a7035c5-ddb0-4371-afea-9957c9db731f"),
+                            Id = new Guid("50cd6c9a-de61-49e8-9f66-a03eefefb1c8"),
                             BriefName = "AI Video ",
                             MajorName = "Video & Animation",
                             SpecializedName = "AI Music Videos",
@@ -1669,7 +1669,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("784092d9-2845-482f-99da-46d2e7ccf496"),
+                            Id = new Guid("55ec289e-3aa0-4290-9513-c7fed3f5fe8d"),
                             BriefName = "AI Video ",
                             MajorName = "Video & Animation",
                             SpecializedName = " AI Video Avatars",
@@ -1677,7 +1677,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ef322a3-03e6-4b44-ae48-eacee2e04d1e"),
+                            Id = new Guid("3ab68665-2266-4a6a-866d-3dd9d9f502ae"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Virtual & Streaming Avatars",
@@ -1685,7 +1685,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("77ef5449-fa6c-4773-82b9-204776584def"),
+                            Id = new Guid("1f07ce63-2a98-4eaf-a0b9-8075545f02a0"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Article to Video",
@@ -1693,7 +1693,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("91055ccd-e0e7-4457-9fac-f74372b4cf46"),
+                            Id = new Guid("e7a4bda5-d663-4c68-82f0-f6c0bb0d6138"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Game Trailers",
@@ -1701,7 +1701,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("241eb5e7-ae00-49a7-a22c-733bee407f76"),
+                            Id = new Guid("51091059-b5c5-4b6e-9a32-acaae7993b27"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Game Recordings & Guides",
@@ -1709,7 +1709,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1d685e8d-b3a1-448f-92c8-a303842cbd8d"),
+                            Id = new Guid("90cdbefb-30d2-4ddc-becc-c767118f9b44"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Meditation Videos",
@@ -1717,7 +1717,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("754ad355-978a-4bef-a58c-c26831a19e4b"),
+                            Id = new Guid("f54d5ba8-b631-4084-9d57-aff12bf39ece"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Real Estate Promos",
@@ -1725,7 +1725,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ea40e0d-0e05-413e-a902-17f451532f39"),
+                            Id = new Guid("3926060f-740c-42fa-aeb3-b95d1e56543b"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Book Trailers",
@@ -1733,7 +1733,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b17fc2dc-c330-4bad-b614-7e0d80dc1559"),
+                            Id = new Guid("a06003cc-a27c-45bd-a6f2-71ce141835ad"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Video Advice",
@@ -1741,7 +1741,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aae0e001-e3ae-4e61-8e61-befee5afa57d"),
+                            Id = new Guid("0a2e37b3-be1c-4d3c-b590-673e32adbb23"),
                             BriefName = "Miscellaneous",
                             MajorName = "Video & Animation",
                             SpecializedName = "Other",
@@ -1749,7 +1749,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c0668c36-e5e5-4d0b-b6b9-5279e4655ac9"),
+                            Id = new Guid("b992001c-6819-4fea-887e-c14e3584eeab"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Articles & Blog Posts",
@@ -1757,7 +1757,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("22f402bd-00e8-4b64-8d95-341419eeba2f"),
+                            Id = new Guid("b54f5f87-c9b6-4543-93ee-fa85337b361d"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Content Strategy",
@@ -1765,7 +1765,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2923ccfd-4c86-4806-995e-b2afeb9579d1"),
+                            Id = new Guid("c2c0e6d3-e6e3-415e-9907-f6c5b3e3dab9"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Website Content",
@@ -1773,7 +1773,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d2874c61-dcaa-43e2-9950-23d3d51e86bc"),
+                            Id = new Guid("b60f16a2-4f39-4d98-9f67-aafb9e41d77d"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Scriptwriting",
@@ -1781,7 +1781,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c931e8c0-add6-4f5c-b835-0833ef9d14cc"),
+                            Id = new Guid("64c52e62-66f3-45f9-a559-fbaa04371769"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Creative Writing",
@@ -1789,7 +1789,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4007c6f1-e0ef-42c7-a548-6f470153b6df"),
+                            Id = new Guid("07928f94-7f00-4fdd-8f90-297bd1049f87"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Podcast Writing",
@@ -1797,7 +1797,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("608c17a4-d3ae-42f9-8e89-f86ec45ce0f3"),
+                            Id = new Guid("392576ba-f9bf-4f4e-9006-a2eafc24cf0b"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Speechwriting",
@@ -1805,7 +1805,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("19ab3fd6-595a-46fb-9ef4-f362e2169284"),
+                            Id = new Guid("fcd7742b-71dd-4c9c-8666-cc9aea61d638"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Research & Summaries",
@@ -1813,7 +1813,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3fdc22cb-7fea-406e-aa90-dd8442584345"),
+                            Id = new Guid("a8699482-8d2e-477d-a9cd-efd58361bb1e"),
                             BriefName = "Content Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Find an Expert Writer",
@@ -1821,7 +1821,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2099b9b6-7055-4605-87a1-4ad1fd24985b"),
+                            Id = new Guid("70eec0c5-c35c-4bbe-86ee-1e23c437f9ca"),
                             BriefName = "Editing & Critique",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Proofreading & Editing",
@@ -1829,7 +1829,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42322c19-55f9-4e3e-a2a1-6280e21423af"),
+                            Id = new Guid("4676ad6f-c8a2-4256-9717-bbae6b034870"),
                             BriefName = "Editing & Critique",
                             MajorName = "Writing & Translation",
                             SpecializedName = "AI Content Editing",
@@ -1837,7 +1837,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a76c3df9-e748-44c4-ab80-a683a0b420be"),
+                            Id = new Guid("4f7eb4e3-96bd-401c-8928-f6b7dc808a19"),
                             BriefName = "Editing & Critique",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Writing Advice",
@@ -1845,7 +1845,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d3ccb575-2aab-419a-b958-c599f7a6f527"),
+                            Id = new Guid("4057c408-4dd2-4b71-b1c8-1de84e52ca6e"),
                             BriefName = " Book & eBook Publishing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Book & eBook Writing",
@@ -1853,7 +1853,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7c8f992e-4340-4e93-abda-f496831b9735"),
+                            Id = new Guid("114879ce-de93-433b-9947-0bb2f505c55b"),
                             BriefName = " Book & eBook Publishing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Book Editing",
@@ -1861,7 +1861,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("80f8caac-2b51-4760-ab22-3b65f56e079d"),
+                            Id = new Guid("43e200e5-aa4e-48e1-941c-c38d6272995d"),
                             BriefName = " Book & eBook Publishing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Beta Reading",
@@ -1869,7 +1869,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0e4bc10-534d-4ae3-84e4-f97adf7f4b70"),
+                            Id = new Guid("aff95f17-07d2-4b06-8992-94285b7dbb65"),
                             BriefName = " Book & eBook Publishing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Self-Publish Your Book",
@@ -1877,7 +1877,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("50b30aa4-7527-4f88-a9fa-145c211960b9"),
+                            Id = new Guid("7e95cefa-dc7c-4ca4-be9b-28552c29bdea"),
                             BriefName = "Career Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Resume Writing",
@@ -1885,7 +1885,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc076d82-040f-46af-81a1-d5302ee48e74"),
+                            Id = new Guid("8b4c2d5a-857a-4dc9-bf6c-502ef3c34051"),
                             BriefName = "Career Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Cover Letters",
@@ -1893,7 +1893,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8a521d52-1e86-41ce-97d8-ace45f686535"),
+                            Id = new Guid("f3681bf1-665f-45d6-ba00-b0d78dcb1bca"),
                             BriefName = "Career Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "LinkedIn Profiles",
@@ -1901,7 +1901,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0dc0a25f-d37f-4dba-a220-dc0fac46062c"),
+                            Id = new Guid("20b71398-c6b6-4a0f-977f-1dbb936450ac"),
                             BriefName = "Career Writing",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Job Descriptions",
@@ -1909,7 +1909,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dd0aaa5-dc1f-4ffe-ba4f-33528b10f30f"),
+                            Id = new Guid("d2942f4b-1118-4167-8979-e2c60eb0bf7f"),
                             BriefName = "Miscellaneous",
                             MajorName = "Writing & Translation",
                             SpecializedName = "eLearning Content Development",
@@ -1917,7 +1917,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6004423d-44da-4a55-a082-1512131795fc"),
+                            Id = new Guid("0660446a-28bb-44dc-be9d-a68d5d6b136c"),
                             BriefName = "Miscellaneous",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Technical Writing",
@@ -1925,7 +1925,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8bc5baf-1abb-4623-ba57-608c62e54d68"),
+                            Id = new Guid("1b785b34-f8f4-4ebf-a1eb-6884587a0aec"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Brand Voice & Tone",
@@ -1933,7 +1933,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("213d49e0-9b96-43e2-8e55-1a0abeebb2b8"),
+                            Id = new Guid("993fd57f-79e1-4aad-b46d-6c5d5cdc9a8c"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Business Names & Slogans",
@@ -1941,7 +1941,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9e718324-ba70-4f0a-9120-4c47e7e4b5d5"),
+                            Id = new Guid("85616a97-a1db-4c53-a06f-2eb9345c9acd"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Case Studies",
@@ -1949,7 +1949,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1b590154-d301-4755-999d-497641b11cf3"),
+                            Id = new Guid("7beb4d94-93b2-435f-8cb9-b013eddb39c7"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "White Papers",
@@ -1957,7 +1957,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ce0bb81-b0ea-4c2d-b2b2-163a7fcf40b9"),
+                            Id = new Guid("faa994f2-f095-4cc6-ba02-608588d9061c"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Product Descriptions",
@@ -1965,7 +1965,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("223f516f-b986-46c0-962a-40d7bee47d41"),
+                            Id = new Guid("1a34e052-13e0-4295-956e-135f74008853"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Ad Copy",
@@ -1973,7 +1973,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a333e60b-9979-4d9e-9ea6-9e8ab4029622"),
+                            Id = new Guid("4b74a35f-6589-4184-95a2-8f309990f209"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Sales Copy",
@@ -1981,7 +1981,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ee391507-b696-493e-991b-781eacfb7653"),
+                            Id = new Guid("e6b26e33-74d1-4ed5-a658-308d68946126"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Email Copy",
@@ -1989,7 +1989,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ac65513-aa35-45e2-9453-2be3afeeb4bc"),
+                            Id = new Guid("2b46e4ec-8c44-49bb-92f9-a50771e8e1fc"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Social Media Copywriting",
@@ -1997,7 +1997,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("14d75e6d-3ead-4e93-8c5d-557f96466337"),
+                            Id = new Guid("dec385c4-7dab-45b7-9ff8-096040be9eb0"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Press Releases",
@@ -2005,7 +2005,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c3a940bd-fb0b-430e-be34-fa27f4261597"),
+                            Id = new Guid("7cb55273-ba0b-4930-bb9a-fe469621ba53"),
                             BriefName = "Business & Marketing Copy",
                             MajorName = "Writing & Translation",
                             SpecializedName = "UX Writing",
@@ -2013,7 +2013,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb3b81ae-d478-44e8-b241-bd76b72d2606"),
+                            Id = new Guid("6492687e-654a-496e-9294-6cb4bbc63d3f"),
                             BriefName = "Translation & Transcription",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Translation",
@@ -2021,7 +2021,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("918be643-08cb-4863-8ac0-d3a117dcd896"),
+                            Id = new Guid("f45a53f3-650b-4885-a7d7-36fa9a9f3642"),
                             BriefName = "Translation & Transcription",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Localization",
@@ -2029,7 +2029,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ff01b2be-8c78-4631-8595-2a4a3aba1d05"),
+                            Id = new Guid("9eb09537-e549-4dd9-8a03-00bdde264fd6"),
                             BriefName = "Translation & Transcription",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Transcription",
@@ -2037,7 +2037,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ce525463-825a-44ab-a9e2-1132e7baae3e"),
+                            Id = new Guid("c035c361-4d1b-4b2d-bccf-e83287526910"),
                             BriefName = "Translation & Transcription",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Interpretation",
@@ -2045,7 +2045,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ef1c15ad-b11c-42f9-8fce-bd625457e5bd"),
+                            Id = new Guid("ec3a1fcf-7730-4db0-a6b3-ec336d8ba66e"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Business, Finance & Law ",
@@ -2053,7 +2053,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a177b87-72b2-4677-9f55-297d0e0c56a7"),
+                            Id = new Guid("5be7ca96-84d9-4d93-b678-b1f0d4673d42"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Health & Medical ",
@@ -2061,7 +2061,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("028c5652-565e-4161-aa37-44232ea454ea"),
+                            Id = new Guid("01f63211-8a57-4f8f-9cdd-2f8f7c622c65"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Internet & Technology ",
@@ -2069,7 +2069,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6cd19a6-7193-4926-b4c5-990b6ed05d69"),
+                            Id = new Guid("b5690a49-e4e6-4b3c-b180-76c1510bc870"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "News & Politics",
@@ -2077,7 +2077,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("743973a7-e9eb-4594-82f3-85c84869eaef"),
+                            Id = new Guid("6badf3a4-5adb-4332-8cac-ec6660aebc3b"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Marketing",
@@ -2085,7 +2085,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dfc42bd4-9a57-40aa-8b40-a78561eccc2e"),
+                            Id = new Guid("5e89f5a3-be55-41a9-9ef5-c38b789d0443"),
                             BriefName = "Industry Specific Content",
                             MajorName = "Writing & Translation",
                             SpecializedName = "Real Estate",
@@ -2093,7 +2093,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7203563d-c95e-468a-9f6d-9878f7bbeb93"),
+                            Id = new Guid("c8b7f751-8e0a-46fa-add3-f3998312a526"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Music Producers",
@@ -2101,7 +2101,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("037c9e99-d9f4-4983-8b0d-4c790b57e1ed"),
+                            Id = new Guid("e994829b-2cd4-4bd4-8a45-bb7c40830492"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Composers",
@@ -2109,7 +2109,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("03387b1b-b483-4f7a-96b8-1f958b9108e2"),
+                            Id = new Guid("16d272ff-402c-45a1-8d60-4b8aa0dca401"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Singers & Vocalists",
@@ -2117,7 +2117,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b3b03af6-33ec-4941-a0f0-b73e810931d4"),
+                            Id = new Guid("85f270cd-44e0-4ee0-aeb7-5cbcf9f0605f"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Session Musicians",
@@ -2125,7 +2125,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e82f0e0e-e4b0-4416-8322-784b470ed310"),
+                            Id = new Guid("1ba17ae2-2f9c-4444-93b6-300171defc0c"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Songwriters",
@@ -2133,7 +2133,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6eb8da7d-263f-4b32-9be7-614200675a2f"),
+                            Id = new Guid("8e5cc436-daab-4de2-85be-485c68803473"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Jingles & Intros",
@@ -2141,7 +2141,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45af89e5-1ee2-4e7f-9b4d-f1f2d5124408"),
+                            Id = new Guid("87742dd1-05fe-400e-822d-7c540dcf835e"),
                             BriefName = "Music Production & Writing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Custom Songs",
@@ -2149,7 +2149,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5955ea91-d568-4cda-b01b-3f74837593ca"),
+                            Id = new Guid("41a0fbe8-d720-4cb3-954c-460200af1071"),
                             BriefName = "Audio Engineering & Post Production",
                             MajorName = "Music & Audio",
                             SpecializedName = "Mixing & Mastering",
@@ -2157,7 +2157,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2795d179-9c37-4b16-ad9c-01cec3621df9"),
+                            Id = new Guid("8ece4907-9b06-4ae1-a650-051795555bf0"),
                             BriefName = "Audio Engineering & Post Production",
                             MajorName = "Music & Audio",
                             SpecializedName = "Audio Editing",
@@ -2165,7 +2165,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51b2bd59-cbdc-4f99-b405-06209c6e3e0c"),
+                            Id = new Guid("20742ad4-fe36-426b-887d-e81aed0eb231"),
                             BriefName = "Audio Engineering & Post Production",
                             MajorName = "Music & Audio",
                             SpecializedName = "Vocal Tuning",
@@ -2173,7 +2173,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3a122fa6-601c-4194-a4a5-47b32259dddd"),
+                            Id = new Guid("0d6ab1bb-c4b0-4cf9-8c7f-74e411f4df97"),
                             BriefName = "Voice Over & Narration",
                             MajorName = "Music & Audio",
                             SpecializedName = "24hr Turnaround",
@@ -2181,7 +2181,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c4f4dc60-390a-4b0d-a230-153e49de403d"),
+                            Id = new Guid("ae28463b-071b-4631-952b-401fb5fa67db"),
                             BriefName = "Voice Over & Narration",
                             MajorName = "Music & Audio",
                             SpecializedName = "Female Voice Over",
@@ -2189,7 +2189,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a715d762-ef13-4509-a303-c7c149088ea0"),
+                            Id = new Guid("a2207417-1aaf-4edb-98ad-032105bf945d"),
                             BriefName = "Voice Over & Narration",
                             MajorName = "Music & Audio",
                             SpecializedName = "Male Voice Over",
@@ -2197,7 +2197,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4b6676d1-0346-4ed7-98b2-8324e007084f"),
+                            Id = new Guid("c505bdef-304e-4075-ad51-043fbb03b199"),
                             BriefName = "Voice Over & Narration",
                             MajorName = "Music & Audio",
                             SpecializedName = "French Voice Over",
@@ -2205,7 +2205,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("23ec4c35-938e-4629-96d0-074f4dbd5386"),
+                            Id = new Guid("cbc67ac5-3ae9-4e36-8f60-91a902c7b079"),
                             BriefName = "Voice Over & Narration",
                             MajorName = "Music & Audio",
                             SpecializedName = "German Voice Over",
@@ -2213,7 +2213,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8f2f8ded-43bb-40dd-989c-dee4f36d7fbb"),
+                            Id = new Guid("cfef5c9e-2ece-438d-8768-99f502a64d59"),
                             BriefName = "Streaming & Audio",
                             MajorName = "Music & Audio",
                             SpecializedName = "Podcast Production",
@@ -2221,7 +2221,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("197139f9-f82a-47ff-b8aa-57551a732493"),
+                            Id = new Guid("28010bf2-1c80-4cfe-b2db-f483790e9c99"),
                             BriefName = "Streaming & Audio",
                             MajorName = "Music & Audio",
                             SpecializedName = "Audiobook Production",
@@ -2229,7 +2229,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45570801-b52e-4b48-ba2a-5524611e4696"),
+                            Id = new Guid("c9a05af3-b08c-454e-b118-572e419995fc"),
                             BriefName = "Streaming & Audio",
                             MajorName = "Music & Audio",
                             SpecializedName = "Audio Ads Production",
@@ -2237,7 +2237,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c643d578-3446-45a0-b026-4a2aa03755bd"),
+                            Id = new Guid("55d5233a-c623-4019-928a-6fc545a6bf03"),
                             BriefName = "Streaming & Audio",
                             MajorName = "Music & Audio",
                             SpecializedName = "Voice Synthesis & AI",
@@ -2245,7 +2245,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3d28a3e4-cc5d-4365-b730-11a433446716"),
+                            Id = new Guid("8962eaf3-bed3-4f3f-89c5-7948999ce47a"),
                             BriefName = "DJing",
                             MajorName = "Music & Audio",
                             SpecializedName = "DJ Drops & Tags",
@@ -2253,7 +2253,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("048970b8-310e-467b-8bd2-e039604c23a8"),
+                            Id = new Guid("ca2ec481-3f65-407e-bd23-5d5bfe9ce7c1"),
                             BriefName = "DJing",
                             MajorName = "Music & Audio",
                             SpecializedName = "DJ Mixing",
@@ -2261,7 +2261,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7e405e2c-b4fa-43f0-ae19-14dc5b9a8b09"),
+                            Id = new Guid("d9f289a8-f8ce-4940-b3af-97175e5d9074"),
                             BriefName = "DJing",
                             MajorName = "Music & Audio",
                             SpecializedName = "Remixing",
@@ -2269,7 +2269,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a5c03cfd-b971-44b6-a3c0-9d4f2e2dc070"),
+                            Id = new Guid("e9469d65-6fee-430b-bd18-1cabfe74576e"),
                             BriefName = "Sound Design",
                             MajorName = "Music & Audio",
                             SpecializedName = "Sound Design",
@@ -2277,7 +2277,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5319343e-04a4-4e8f-9cc6-99cf58bd7ffc"),
+                            Id = new Guid("c08041d5-08a2-4e32-b95f-e54edcee1827"),
                             BriefName = "Sound Design",
                             MajorName = "Music & Audio",
                             SpecializedName = "Meditation Music",
@@ -2285,7 +2285,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fc54c389-f411-4af4-b2aa-271fe12939a1"),
+                            Id = new Guid("9e33bba5-a7dc-4f22-8523-9aa40be83c13"),
                             BriefName = "Sound Design",
                             MajorName = "Music & Audio",
                             SpecializedName = "Audio Logo & Sonic Branding",
@@ -2293,7 +2293,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8488d159-e27c-4b0b-b075-e7c0881ba1d7"),
+                            Id = new Guid("b6beacd4-b4dc-4750-8872-e155ad63673a"),
                             BriefName = "Sound Design",
                             MajorName = "Music & Audio",
                             SpecializedName = "Custom Patches & Samples",
@@ -2301,7 +2301,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("17b2057e-735a-4f26-97c5-6d2c46555306"),
+                            Id = new Guid("31205925-ca1e-4323-b435-e7972277dd67"),
                             BriefName = "Sound Design",
                             MajorName = "Music & Audio",
                             SpecializedName = "Audio Plugin Development",
@@ -2309,7 +2309,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3d8a6581-ec5b-4ced-93bd-5cd16da7dd53"),
+                            Id = new Guid("1c41fa64-da82-4050-a3c7-f1b61b2b4194"),
                             BriefName = "Lessons & Transcriptions",
                             MajorName = "Music & Audio",
                             SpecializedName = "Online Music Lessons",
@@ -2317,7 +2317,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ddccd577-4b80-49d5-b606-a7c5fa253508"),
+                            Id = new Guid("addc54f8-b0c5-41a9-a58f-9d779342c91d"),
                             BriefName = "Lessons & Transcriptions",
                             MajorName = "Music & Audio",
                             SpecializedName = "Music Transcription",
@@ -2325,7 +2325,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("341f4842-4ea6-4149-9369-816638c211db"),
+                            Id = new Guid("5402589a-3725-4c32-b10d-7c4a358b3efa"),
                             BriefName = "Lessons & Transcriptions",
                             MajorName = "Music & Audio",
                             SpecializedName = "Music & Audio Advice",
@@ -2333,7 +2333,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e66d40f1-7b2c-4901-8775-fe99cd3e0268"),
+                            Id = new Guid("c56d78c3-79a5-4f51-9766-2669b3a22211"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "Business Formation & Registration",
@@ -2341,7 +2341,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8764a70-6b1c-478f-a864-a1eea223638e"),
+                            Id = new Guid("5f5a95cf-d425-40ce-af49-65dab50a0117"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "Market Research",
@@ -2349,7 +2349,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f1e8103f-deca-496b-8524-145d9b3f2165"),
+                            Id = new Guid("ebf421ee-d4a5-41d2-b207-f5a6689f6971"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "Business Plans",
@@ -2357,7 +2357,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf5a660a-87a4-4a1e-bb10-b9a442139aa7"),
+                            Id = new Guid("ecf763f0-0a61-4006-9bfa-d2d3bc751ff9"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "Business Consulting",
@@ -2365,7 +2365,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6b47bfcd-a514-4453-b217-0c5ad76e1c07"),
+                            Id = new Guid("90ce816c-117d-4eaf-acfc-c0905645966a"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "HR Consulting",
@@ -2373,7 +2373,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7fc1f746-b15b-4452-bfd3-4f7aa57730a3"),
+                            Id = new Guid("0c69b152-a958-4dc2-afd2-4ad33d3f9cf2"),
                             BriefName = "Business Formation & Consulting",
                             MajorName = "Business",
                             SpecializedName = "AI Consulting ",
@@ -2381,7 +2381,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("31c1156b-2f05-4415-a6f0-0330384d738e"),
+                            Id = new Guid("b3cc5e55-7ca5-48c5-b498-5ecdab90ce9c"),
                             BriefName = "Legal Services",
                             MajorName = "Business",
                             SpecializedName = "Intellectual Property Management",
@@ -2389,7 +2389,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0679a6a8-116c-4f6a-86a2-025228364bd1"),
+                            Id = new Guid("c8e123f6-d0ed-40d7-974a-6c708148d52d"),
                             BriefName = "Legal Services",
                             MajorName = "Business",
                             SpecializedName = "Legal Documents & Contracts",
@@ -2397,7 +2397,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ca10cae-7d7d-4acd-8669-fe996b0ce8db"),
+                            Id = new Guid("9878efc0-fd87-491f-9aa2-4d20522734a2"),
                             BriefName = "Legal Services",
                             MajorName = "Business",
                             SpecializedName = "Legal Research",
@@ -2405,7 +2405,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("182131f7-d372-4acb-b1a7-55c7afdcc371"),
+                            Id = new Guid("764355ea-d643-4319-b122-2bb491f13eae"),
                             BriefName = "Legal Services",
                             MajorName = "Business",
                             SpecializedName = "General Legal Advice",
@@ -2413,7 +2413,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51a94c8d-413c-4324-a5d7-6a7cf6d463a6"),
+                            Id = new Guid("a88edc5e-c3e2-438e-9eb6-1e3e977a417f"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Virtual Assistant",
@@ -2421,7 +2421,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("41ecbb9a-402b-4718-96a1-9d842b6818f8"),
+                            Id = new Guid("0fe70916-e94f-494f-8b89-55e5ee57171a"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Project Management",
@@ -2429,7 +2429,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7d0634f0-27bc-4995-9820-bee5979a0d7f"),
+                            Id = new Guid("4e3a3359-1c2f-489b-8ee5-6775c7f9850c"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Software Management",
@@ -2437,7 +2437,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7681e4bc-da9a-4e18-b1d9-573e0d27bde0"),
+                            Id = new Guid("359ed165-2072-4119-92cd-2b948f261779"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "E-Commerce Management ",
@@ -2445,7 +2445,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d6597425-e7c3-4cd3-a8af-6e2f7fb8226a"),
+                            Id = new Guid("6c0e3b14-007d-4586-8352-8825ff7639f8"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Supply Chain Management",
@@ -2453,7 +2453,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b61c7ee2-81b6-4cf6-a93b-3329bc0b19ca"),
+                            Id = new Guid("128978e0-af51-4af1-b486-ff8ae3eeea35"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Event Management",
@@ -2461,7 +2461,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3d317995-9b54-41ef-8feb-be2a362d8134"),
+                            Id = new Guid("50259b33-17c0-4406-a72b-f2ef84cf33ed"),
                             BriefName = "Operations & Management",
                             MajorName = "Business",
                             SpecializedName = "Product Management",
@@ -2469,7 +2469,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("974fde6a-3313-4140-a56c-ef3aad2616a3"),
+                            Id = new Guid("19ae06f1-00e2-43db-b30d-ebc9bd652aaf"),
                             BriefName = "Data & Business Intelligence ",
                             MajorName = "Business",
                             SpecializedName = "Data Visualization",
@@ -2477,7 +2477,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63d86690-6709-4925-a1af-e76a06b0d74c"),
+                            Id = new Guid("060e8f9c-4606-4687-87ca-f9b79ac5c784"),
                             BriefName = "Data & Business Intelligence ",
                             MajorName = "Business",
                             SpecializedName = "Data Analytics",
@@ -2485,7 +2485,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9b176aab-ea28-47c7-ac26-0b02803038d8"),
+                            Id = new Guid("e5ded8f8-5eb3-4e45-9651-1f0a201f1dd6"),
                             BriefName = "Data & Business Intelligence ",
                             MajorName = "Business",
                             SpecializedName = "Data Scraping",
@@ -2493,7 +2493,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a55456c6-8249-471c-91bd-9f8b8aa904bf"),
+                            Id = new Guid("6b58ef51-39c7-4b35-a652-e6fefdabdf5e"),
                             BriefName = "Sales & Customer Care",
                             MajorName = "Business",
                             SpecializedName = "Sales",
@@ -2501,7 +2501,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("91d55b27-b512-4493-85a5-d51b504e486d"),
+                            Id = new Guid("45a75f28-2117-4313-baa1-5a95e9f9a50e"),
                             BriefName = "Sales & Customer Care",
                             MajorName = "Business",
                             SpecializedName = "Lead Generation",
@@ -2509,7 +2509,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7215cb3e-cfcb-4cf9-b002-5587adf4468c"),
+                            Id = new Guid("4cf74b33-1065-4057-af57-f3fe88c8aa4b"),
                             BriefName = "Sales & Customer Care",
                             MajorName = "Business",
                             SpecializedName = "Call Center & Calling ",
@@ -2517,7 +2517,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e9ab2f38-dfb4-410b-93bd-d4ab42d615c9"),
+                            Id = new Guid("ee24b638-2d38-4666-a3f6-004982ecacd3"),
                             BriefName = "Sales & Customer Care",
                             MajorName = "Business",
                             SpecializedName = "Customer Care",
@@ -2525,7 +2525,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c47fdc2b-64a0-4afc-acc6-6d1cf9fe280a"),
+                            Id = new Guid("60ad382f-e69a-4a2c-b17f-e8b17e0fb8ce"),
                             BriefName = "Miscellaneous",
                             MajorName = "Business",
                             SpecializedName = "Presentations",
@@ -2533,7 +2533,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ff58b09-3581-44ec-b449-291ebb248d71"),
+                            Id = new Guid("2f43777a-ca76-41b2-ae58-cb757c8ec613"),
                             BriefName = "Miscellaneous",
                             MajorName = "Business",
                             SpecializedName = "Online Investigations",
@@ -2541,7 +2541,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("74ee0d92-fd61-4e6a-9faa-e3798517d6f8"),
+                            Id = new Guid("84a58a79-d580-4175-bafe-ac57c1e8a17a"),
                             BriefName = "Miscellaneous",
                             MajorName = "Business",
                             SpecializedName = "Sustainability Consulting",
@@ -2549,7 +2549,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42f7c7d1-c29b-43e6-a0bb-8ceed8ce4f39"),
+                            Id = new Guid("60834ad4-dc7d-46e2-ba07-58dee655c518"),
                             BriefName = "Miscellaneous",
                             MajorName = "Business",
                             SpecializedName = "Game Concept Design",
@@ -2557,7 +2557,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("652da5e4-ad85-4565-897e-a9615863a66a"),
+                            Id = new Guid("5f4f9051-319a-4628-9e68-c69ede1b8259"),
                             BriefName = "Miscellaneous",
                             MajorName = "Business",
                             SpecializedName = "Other",
@@ -2565,7 +2565,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("51bf239d-655c-40e7-a42e-54f41be13831"),
+                            Id = new Guid("bb9f2dfb-6989-4e6c-9572-9dc982b2ea34"),
                             BriefName = "Accounting Services",
                             MajorName = "Finance",
                             SpecializedName = "Fractional CFO Services",
@@ -2573,7 +2573,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("dd8d4779-a92a-4ec5-b297-e44d85141ee9"),
+                            Id = new Guid("3ffe6430-2bf2-4da2-97f3-ddab77648dab"),
                             BriefName = "Accounting Services",
                             MajorName = "Finance",
                             SpecializedName = "Financial Reporting",
@@ -2581,7 +2581,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c1bf62da-d014-497a-abcb-687d3bf3efdb"),
+                            Id = new Guid("a49ef1d4-212b-4b50-9ffa-4b67beb9a6e1"),
                             BriefName = "Accounting Services",
                             MajorName = "Finance",
                             SpecializedName = "Bookkeeping",
@@ -2589,7 +2589,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("788a5c49-26b9-4f60-9a7a-4c026c6524ac"),
+                            Id = new Guid("53c86aae-d6b4-4d60-8738-02e1ad5dd910"),
                             BriefName = "Accounting Services",
                             MajorName = "Finance",
                             SpecializedName = "Payroll Management",
@@ -2597,7 +2597,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a3002f0d-4110-420e-a5af-9b1af8a9ffa9"),
+                            Id = new Guid("68cce523-e6ac-4f27-aad4-a46bb4915643"),
                             BriefName = "Accounting Services",
                             MajorName = "Finance",
                             SpecializedName = "Find a Financial Expert",
@@ -2605,7 +2605,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("60adf56b-ffd0-40f6-87c4-89f8c23894c3"),
+                            Id = new Guid("245841f3-8d8a-4288-8d7f-147eb501b6dc"),
                             BriefName = "Corporate Finance",
                             MajorName = "Finance",
                             SpecializedName = "Due Diligence",
@@ -2613,7 +2613,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d626b62f-8578-4b85-8889-84fa6b16d23e"),
+                            Id = new Guid("d4a5b05d-4956-4daf-9ff4-b96192526bb0"),
                             BriefName = "Corporate Finance",
                             MajorName = "Finance",
                             SpecializedName = "Valuation",
@@ -2621,7 +2621,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("63eed580-02c0-46fc-9db9-ce48093935f5"),
+                            Id = new Guid("d9a012e9-3892-460c-90bf-70c1d78d5a2c"),
                             BriefName = "Corporate Finance",
                             MajorName = "Finance",
                             SpecializedName = "Mergers & Acquisitions Advisory",
@@ -2629,7 +2629,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("df962881-041f-409b-bd31-024df0794763"),
+                            Id = new Guid("8c731c52-d855-4125-af1c-ef2ba08ae66e"),
                             BriefName = "Corporate Finance",
                             MajorName = "Finance",
                             SpecializedName = "Corporate Finance Strategy",
@@ -2637,7 +2637,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("71d72c60-349d-40d8-84ed-df658732d98c"),
+                            Id = new Guid("a8a34be8-6fc4-4089-97cd-2bc1c3eb9e06"),
                             BriefName = "Tax Consulting",
                             MajorName = "Finance",
                             SpecializedName = "Tax Returns",
@@ -2645,7 +2645,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("55365664-2b4c-433a-9dba-fad746c97e5b"),
+                            Id = new Guid("594725b2-0b18-4d33-bc33-49aba0ace685"),
                             BriefName = "Tax Consulting",
                             MajorName = "Finance",
                             SpecializedName = "Tax Identification Services",
@@ -2653,7 +2653,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0bbc5110-ab97-4a51-bd82-78f26dbe2819"),
+                            Id = new Guid("d64294c7-cddd-411a-8b58-67d6b9028863"),
                             BriefName = "Tax Consulting",
                             MajorName = "Finance",
                             SpecializedName = "Tax Planning",
@@ -2661,7 +2661,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d9fc0fe2-632e-4d90-a3b3-16d6eaefa555"),
+                            Id = new Guid("7ab3b0ba-8c8c-4827-95ec-0072cb311fdf"),
                             BriefName = "Tax Consulting",
                             MajorName = "Finance",
                             SpecializedName = "Tax Compliance",
@@ -2669,7 +2669,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0c1fbd49-59bc-4081-a2a6-bfdea60de494"),
+                            Id = new Guid("3e80ae0e-3e62-47a8-b823-a7b61a7c9f0d"),
                             BriefName = "Tax Consulting",
                             MajorName = "Finance",
                             SpecializedName = "Tax Exemptions",
@@ -2677,7 +2677,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cd85322f-11f2-4e1b-8b97-7d74ac4e5981"),
+                            Id = new Guid("3d2e30f4-8f51-4eca-ab63-503ef762945e"),
                             BriefName = "Financial Planning & Analysis",
                             MajorName = "Finance",
                             SpecializedName = "Budgeting and Forecasting",
@@ -2685,7 +2685,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("45a45667-ca70-4099-b3ae-6cd45faa9001"),
+                            Id = new Guid("5b9b732a-69d8-4209-bf05-b3f58024a0e9"),
                             BriefName = "Financial Planning & Analysis",
                             MajorName = "Finance",
                             SpecializedName = "Financial Modeling",
@@ -2693,7 +2693,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("abf52e76-dd77-4e1e-886d-33f8f3bfb0ad"),
+                            Id = new Guid("0a76956f-7d28-42f9-bbfc-c5bb2e1a6d9f"),
                             BriefName = "Financial Planning & Analysis",
                             MajorName = "Finance",
                             SpecializedName = "Cost Analysis",
@@ -2701,7 +2701,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d7cae6d-8639-4796-a447-631ca9517646"),
+                            Id = new Guid("c8120cca-8ad3-4b53-9167-70440e801d64"),
                             BriefName = "Financial Planning & Analysis",
                             MajorName = "Finance",
                             SpecializedName = "Stock Analysis",
@@ -2709,7 +2709,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ed75dd15-d24c-4492-b91f-844210723122"),
+                            Id = new Guid("c2e2ca9d-f40d-4d6a-afc4-d14a5b1e7711"),
                             BriefName = "Personal Finance & Wealth Management",
                             MajorName = "Finance",
                             SpecializedName = "Personal Budget Management",
@@ -2717,7 +2717,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9549cdce-21cb-483b-aed2-1a44edd7b272"),
+                            Id = new Guid("04d1ef0d-1447-479f-afb5-dbbd1d1e18f0"),
                             BriefName = "Personal Finance & Wealth Management",
                             MajorName = "Finance",
                             SpecializedName = "Investments Advisory",
@@ -2725,7 +2725,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ecec5df4-7414-4d14-98e7-de31962563d4"),
+                            Id = new Guid("8b64a6d8-e2fe-4160-9156-e904f55c426b"),
                             BriefName = "Personal Finance & Wealth Management",
                             MajorName = "Finance",
                             SpecializedName = "Online Trading Lessons",
@@ -2733,7 +2733,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6257a7f3-ae31-43d1-ab8b-994b38bdac75"),
+                            Id = new Guid("15730fa3-3d06-48c3-badc-4b540b718820"),
                             BriefName = "Fundraising",
                             MajorName = "Finance",
                             SpecializedName = "Investors Sourcing",
@@ -2741,7 +2741,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("550a15f2-27cc-4e28-83ed-93c8c9b61020"),
+                            Id = new Guid("a98adf28-0a94-476f-bebf-a9004571a551"),
                             BriefName = "Fundraising",
                             MajorName = "Finance",
                             SpecializedName = "Funding Pitch Presentations",
@@ -2749,7 +2749,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9cf1c340-6907-4ed9-a8c6-b14a026a7ff1"),
+                            Id = new Guid("e8f64ae4-5f0a-4cd1-b29f-f4cfdcd8e6f9"),
                             BriefName = "Fundraising",
                             MajorName = "Finance",
                             SpecializedName = "Fundraising Consultation",
@@ -2757,7 +2757,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6aeb21ee-85bd-4bc9-9a0a-7d4dc8f2aeb5"),
+                            Id = new Guid("ea5764ef-de09-4230-aa7c-2fc1d1fd49a9"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Mobile Apps",
@@ -2765,7 +2765,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("92c53b79-6089-4004-b369-b68ac6676e0f"),
+                            Id = new Guid("b560eda4-5563-422e-ba08-23540ade10d3"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Websites & Software",
@@ -2773,7 +2773,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2ff6bb48-6016-4dfc-9e8c-116ae00a8b55"),
+                            Id = new Guid("7dea8b59-2b19-4bdc-8d7c-70f7928e93d2"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Chatbot",
@@ -2781,7 +2781,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("583696f4-5a36-4cff-9dde-0f1da4a664a9"),
+                            Id = new Guid("5ea9c037-ff53-4cfa-988f-b8e18ef789cf"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Integrations",
@@ -2789,7 +2789,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c3d22c9a-cb4c-4f45-96aa-cb264f344df2"),
+                            Id = new Guid("40c19943-e380-4b62-bf51-6e0372d43c9e"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Agents",
@@ -2797,7 +2797,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e61611c0-0ac8-4658-ac6f-9e3bef66b665"),
+                            Id = new Guid("a0fdc1ad-824c-4207-b96d-a3b7e7237e4b"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Fine-Tuning",
@@ -2805,7 +2805,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7d02b488-be98-4d6e-b327-8c3db285c8c4"),
+                            Id = new Guid("530463fd-4b75-4221-8c8e-f0bb424a1737"),
                             BriefName = "AI Mobile Development",
                             MajorName = "AI Services",
                             SpecializedName = "AI Technology Consulting",
@@ -2813,7 +2813,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e4d09ad6-899b-4fbc-8271-b63b6817a2ff"),
+                            Id = new Guid("a5e5c75d-96d3-4167-be5d-940f9f63d8ab"),
                             BriefName = "Data",
                             MajorName = "AI Services",
                             SpecializedName = "Data Science & ML",
@@ -2821,7 +2821,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("939d05cd-923a-46db-959b-fe4118dc1ba9"),
+                            Id = new Guid("8efad708-04de-42e9-a792-b36c50de94cf"),
                             BriefName = "Data",
                             MajorName = "AI Services",
                             SpecializedName = "Data Analytics",
@@ -2829,7 +2829,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("643b90a1-c939-426e-a199-b23351aa8276"),
+                            Id = new Guid("ea834ee7-17dc-40b1-b4c8-f7847f82c79a"),
                             BriefName = "Data",
                             MajorName = "AI Services",
                             SpecializedName = "Data Visualization",
@@ -2837,7 +2837,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d8a03c5-368c-40fe-9e0e-2b43847ca2c6"),
+                            Id = new Guid("c04e14df-e24c-4909-8ea7-ba8bfe532bb8"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "AI Avatar Design",
@@ -2845,7 +2845,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8db66b98-578a-4d3f-a8e6-13fa95d35c3b"),
+                            Id = new Guid("46f8f2dc-93ee-443e-9790-9b171d6dbc6a"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "ComfyUI Workflow Creation",
@@ -2853,7 +2853,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0a947e44-3db9-46da-88d5-701403f3ae21"),
+                            Id = new Guid("364ae1ab-b99b-4199-bf86-6e14607dddd3"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "AI Image Editing",
@@ -2861,7 +2861,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8c3cee66-cc56-4fce-bf62-3e144354a20a"),
+                            Id = new Guid("7fcb57df-8244-45fc-a105-f63a253ec002"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "Midjourney Artists",
@@ -2869,7 +2869,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("95300def-551c-4065-a21f-08f8b1cde908"),
+                            Id = new Guid("8781511e-c388-4699-bcf2-b8468de1a1be"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "Stable Diffusion Artists",
@@ -2877,7 +2877,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("46df761f-6538-4714-ba87-355d9d34c44d"),
+                            Id = new Guid("d3d1ec43-4d38-43a1-916f-179866d59e20"),
                             BriefName = "AI Artists",
                             MajorName = "AI Services",
                             SpecializedName = "All AI Art Services",
@@ -2885,7 +2885,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f4e3dd9b-4ffb-48a9-95f1-d52f1741165a"),
+                            Id = new Guid("606776c4-ba7e-4c71-a6a2-ed3cb29b32e9"),
                             BriefName = "AI for Businesses",
                             MajorName = "AI Services",
                             SpecializedName = "AI Consulting ",
@@ -2893,7 +2893,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("84a79e05-101e-463c-a083-6eb00cbc3640"),
+                            Id = new Guid("d4e81e3c-0379-41b8-8624-39c17065e645"),
                             BriefName = "AI for Businesses",
                             MajorName = "AI Services",
                             SpecializedName = "AI Strategy",
@@ -2901,7 +2901,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("96aeb76b-ee94-4124-9d78-c2f38f33020b"),
+                            Id = new Guid("09ffb84b-9e7b-4700-8f35-98818094dc39"),
                             BriefName = "AI for Businesses",
                             MajorName = "AI Services",
                             SpecializedName = "AI Lessons",
@@ -2909,7 +2909,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("23c18032-fe2f-4c50-8e3d-f3c43945d8f4"),
+                            Id = new Guid("3d61cf47-342b-4c15-a2c5-a9e88a3fe888"),
                             BriefName = "AI Video",
                             MajorName = "AI Services",
                             SpecializedName = "AI Music Videos",
@@ -2917,7 +2917,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d1dbc398-1fc1-4d3c-90a2-ec7638541a29"),
+                            Id = new Guid("7ef6a2db-5af4-4872-ad94-a245f85b2b87"),
                             BriefName = "AI Video",
                             MajorName = "AI Services",
                             SpecializedName = "AI Video Art",
@@ -2925,7 +2925,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f7ee1f1-769f-494e-9aac-baaab7c520a1"),
+                            Id = new Guid("8f488d1f-94b0-4181-b31e-4c238f2f9e4f"),
                             BriefName = "AI Video",
                             MajorName = "AI Services",
                             SpecializedName = " AI Video Avatars",
@@ -2933,7 +2933,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf3b791a-021f-4736-a217-21fe98ce7c73"),
+                            Id = new Guid("08fc2034-e22c-4bd8-a278-30e90a6b6beb"),
                             BriefName = "AI Audio",
                             MajorName = "AI Services",
                             SpecializedName = "Voice Synthesis & AI",
@@ -2941,7 +2941,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e68bfa45-feb8-4c32-99c7-f94f88a7ab9f"),
+                            Id = new Guid("a538fead-4f9b-43e5-963b-edce4c793687"),
                             BriefName = "AI Audio",
                             MajorName = "AI Services",
                             SpecializedName = "Text to Speech",
@@ -2949,7 +2949,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8be34d46-c820-47cd-acdc-65b7d0da82af"),
+                            Id = new Guid("5642a7a8-18a9-491a-aa59-118a3f779af7"),
                             BriefName = "AI Content",
                             MajorName = "AI Services",
                             SpecializedName = "AI Content Editing",
@@ -2957,7 +2957,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("804af47d-d4aa-4398-9855-34fc41776135"),
+                            Id = new Guid("4177abb2-c123-465d-86fb-a6d7f40239b2"),
                             BriefName = "AI Content",
                             MajorName = "AI Services",
                             SpecializedName = "Custom Writing Prompts",
@@ -2965,7 +2965,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f753660-5497-4a24-b795-2b4fc7125259"),
+                            Id = new Guid("08f80f6a-447d-4ea2-8ae2-329443d7e636"),
                             BriefName = "Self Improvement",
                             MajorName = "Personal Growth",
                             SpecializedName = "Online Tutoring",
@@ -2973,7 +2973,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6a4376bc-fc0d-4d41-b1f9-72e232dd3421"),
+                            Id = new Guid("68f6fc41-1b15-4ce5-a1ff-d12f1b7dcadc"),
                             BriefName = "Self Improvement",
                             MajorName = "Personal Growth",
                             SpecializedName = "Language Lessons",
@@ -2981,7 +2981,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("af84026a-a3be-4942-8b59-dcfd0bca7b35"),
+                            Id = new Guid("0a4effb4-043d-42df-9dce-be02b98516de"),
                             BriefName = "Self Improvement",
                             MajorName = "Personal Growth",
                             SpecializedName = "Life Coaching",
@@ -2989,7 +2989,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e3712b3a-2032-48ae-98f7-7be7aebb1155"),
+                            Id = new Guid("db2b507c-a24c-452e-9c46-122b6181c7d3"),
                             BriefName = "Self Improvement",
                             MajorName = "Personal Growth",
                             SpecializedName = "Career Counseling",
@@ -2997,7 +2997,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5c05dfa0-6eca-4c83-9ea8-599535fa2202"),
+                            Id = new Guid("7f8e1273-5e76-44f5-ab97-1972eb0bf4e0"),
                             BriefName = "Self Improvement",
                             MajorName = "Personal Growth",
                             SpecializedName = "Generative AI Lessons",
@@ -3005,7 +3005,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("25065138-bb5e-4322-8df3-aaf7e0fd5005"),
+                            Id = new Guid("f358725f-7a8e-4342-917b-dc28d10c1a2e"),
                             BriefName = "Fashion & Style",
                             MajorName = "Personal Growth",
                             SpecializedName = "Modeling & Acting",
@@ -3013,7 +3013,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cbd6e2e4-f91e-419c-95e4-222b3b516240"),
+                            Id = new Guid("1e122577-92b4-49b2-bc09-4e55ff3d54dd"),
                             BriefName = "Fashion & Style",
                             MajorName = "Personal Growth",
                             SpecializedName = "Styling & Beauty",
@@ -3021,7 +3021,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ad8a98cc-6ead-499f-843c-4b2da1cdaa87"),
+                            Id = new Guid("9fd75258-bfae-4bf2-90f5-c1cedc6b99bb"),
                             BriefName = "Fashion & Style",
                             MajorName = "Personal Growth",
                             SpecializedName = "Trend Forecasting",
@@ -3029,7 +3029,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a9cfe35-e27e-493f-b548-4eed39e99bd0"),
+                            Id = new Guid("ad03d7de-9036-43f4-be94-179c6f1d41eb"),
                             BriefName = "Wellness & Fitness",
                             MajorName = "Personal Growth",
                             SpecializedName = "Fitness",
@@ -3037,7 +3037,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("23254155-229e-4604-92f0-b84950dbddad"),
+                            Id = new Guid("13dcd9d3-e446-45b9-9eeb-460e21fd0d9f"),
                             BriefName = "Wellness & Fitness",
                             MajorName = "Personal Growth",
                             SpecializedName = "Nutrition ",
@@ -3045,7 +3045,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33952dd8-e84f-4e63-a2f5-91b6f6ed2516"),
+                            Id = new Guid("2f47a55b-129c-49da-aeb8-9ccae985ce0c"),
                             BriefName = "Wellness & Fitness",
                             MajorName = "Personal Growth",
                             SpecializedName = "Wellness",
@@ -3053,7 +3053,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c840cb65-5baa-4619-89c1-2a31a4ed7cb4"),
+                            Id = new Guid("a522c547-a65d-4637-90ba-06af63b0aaf6"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "Game Coaching",
@@ -3061,7 +3061,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("447cb54c-4065-417e-82f0-943e2883a0d4"),
+                            Id = new Guid("13e94cf0-4e12-4710-97a8-ef7e4af76bfb"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "eSports Management & Strategy",
@@ -3069,7 +3069,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3fd9808d-20c9-4ce9-919a-f419baef8c78"),
+                            Id = new Guid("12c6ca99-b046-4f9d-9f49-b9e68149ee24"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "Game Matchmaking",
@@ -3077,7 +3077,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0dddaa2-d718-4571-ae91-f8abe295beb5"),
+                            Id = new Guid("d4cb694e-5d91-474e-b543-a42986dc35ab"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "Ingame Creation",
@@ -3085,7 +3085,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3c31ce82-ef35-4297-a24e-461bdb3b6e1b"),
+                            Id = new Guid("f77a20fa-a306-441f-8900-95857518b301"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "Gameplay Experience & Feedback",
@@ -3093,7 +3093,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4ee277fd-fca4-4672-b074-4471d798eea5"),
+                            Id = new Guid("9178bf76-e9db-45a6-935c-3e426b6a47aa"),
                             BriefName = "Gaming",
                             MajorName = "Personal Growth",
                             SpecializedName = "Game Recordings & Guides",
@@ -3101,7 +3101,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("08781ddc-0df9-4126-ba4d-47dbd2c8787d"),
+                            Id = new Guid("2ec314fb-6d82-4d29-a8e3-341e390302b7"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Astrology & Psychics",
@@ -3109,7 +3109,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e83d6f0f-f636-4e79-bcdf-775ae978eb25"),
+                            Id = new Guid("e1721c31-7cb7-4735-95ed-22b8fb661e0a"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Arts & Crafts",
@@ -3117,7 +3117,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb71f9f7-1d3d-4528-831d-24d358700e19"),
+                            Id = new Guid("3041a661-aad0-4a3e-9c10-dab515d1fa4e"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Cosplay Creation",
@@ -3125,7 +3125,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("07de8b2f-e00c-48da-9b35-d02aac685682"),
+                            Id = new Guid("6e0b7ceb-c4af-4dda-ac18-ac7086c24fab"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Puzzle & Game Creation",
@@ -3133,7 +3133,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b4a19f45-9906-4bb8-a406-2464f2686058"),
+                            Id = new Guid("8ad2084b-1722-483b-99d0-a3449d90acbd"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Traveling",
@@ -3141,7 +3141,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a5bc4f4a-54a9-48fb-b3ee-ddf1f79c4998"),
+                            Id = new Guid("4aeba0ac-7737-4647-a7b8-f6b18b80b48c"),
                             BriefName = "Leisure & Hobbies",
                             MajorName = "Personal Growth",
                             SpecializedName = "Collectibles",
@@ -3149,7 +3149,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b5448200-1e5b-44c4-94cc-dff410be0d76"),
+                            Id = new Guid("5ce25883-f31e-45f2-afc6-b30beaf7bf7b"),
                             BriefName = "Miscellaneous",
                             MajorName = "Personal Growth",
                             SpecializedName = "Family & Genealogy",
@@ -3157,7 +3157,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("05233d99-97a3-4aad-b7fe-9b0c4a2c1c9c"),
+                            Id = new Guid("aa31daa7-0460-404c-81b6-1cb3fff15e18"),
                             BriefName = "Miscellaneous",
                             MajorName = "Personal Growth",
                             SpecializedName = "Cosmetics Formulation",
@@ -3165,7 +3165,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e3744141-6c97-4eb5-b5ae-f59e88003720"),
+                            Id = new Guid("a11f3917-829f-4abc-8d5b-07cdcf6af10f"),
                             BriefName = "Miscellaneous",
                             MajorName = "Personal Growth",
                             SpecializedName = "Greeting Cards & Videos",
@@ -3173,7 +3173,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0f350fde-7e9d-4ab8-a60a-8cb157b93e7e"),
+                            Id = new Guid("ea7c113d-557e-4482-959d-d29800de663f"),
                             BriefName = "Miscellaneous",
                             MajorName = "Personal Growth",
                             SpecializedName = "Embroidery Digitizing",
@@ -3181,7 +3181,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9614654e-1d90-4cc4-9a6b-c6d195af380c"),
+                            Id = new Guid("2ef080ce-097a-41fa-b282-1b91dbbf6d87"),
                             BriefName = "Miscellaneous",
                             MajorName = "Personal Growth",
                             SpecializedName = "Other",
@@ -3189,7 +3189,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("81ce751f-d7c6-4bf9-a9dc-3485944c9b72"),
+                            Id = new Guid("ffdb13f6-9957-4f77-b9a4-470c4e4ade16"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "Legal Consulting",
@@ -3197,7 +3197,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2dec9f87-f29e-4edd-9dd6-30116cdc7744"),
+                            Id = new Guid("c1d1d77c-976f-45e0-8b7d-4e1326e938c1"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "Business Consulting",
@@ -3205,7 +3205,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b8a7e4d1-a2c1-4118-ae13-666bf6c43f24"),
+                            Id = new Guid("8bf1f396-75f7-46ce-a902-820b54a1bb6b"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "HR Consulting",
@@ -3213,7 +3213,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("43b90be6-36f1-472f-9d42-64a9876ff72c"),
+                            Id = new Guid("dd5b1d82-d7c0-4b49-a93f-9dcb9d1a83ee"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "AI Consulting",
@@ -3221,7 +3221,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00378f34-0ebb-47db-9427-ca42d32171ae"),
+                            Id = new Guid("9c2ef571-717f-437b-8164-036d17701082"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "Business Plans",
@@ -3229,7 +3229,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5de868fd-a29a-49b4-b89c-fa2c39579b18"),
+                            Id = new Guid("e382cdcf-b36e-45c2-8805-1418b8362269"),
                             BriefName = "Business Consultants",
                             MajorName = "Consulting",
                             SpecializedName = "E-commerce Consulting",
@@ -3237,7 +3237,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4e8bc895-800f-4804-921d-6bc8b837dc25"),
+                            Id = new Guid("9602fcb3-6f22-4668-9f3b-4eed6e49b828"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "Marketing Strategy",
@@ -3245,7 +3245,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4f3e24af-e5ed-4bfb-a8bf-fd2d3470b6e8"),
+                            Id = new Guid("8c01e77d-b84c-4c17-ab95-60c3bf9b6cb7"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "Content Strategy",
@@ -3253,7 +3253,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f57d6b3f-3523-400d-a451-09ff754496d9"),
+                            Id = new Guid("099a03cd-9753-4b1e-aaf9-66ab2abfadd8"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "Social Media Strategy",
@@ -3261,7 +3261,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7393a7c1-cd6c-457b-b206-591f15c20645"),
+                            Id = new Guid("7d1d2d28-16a1-46c9-92ed-2420b91d84d6"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "Influencers Strategy",
@@ -3269,7 +3269,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("95e6cd37-e036-4e03-9501-7ba2cdf83d57"),
+                            Id = new Guid("ef29bbfc-46f4-4094-93f5-853a1a59964f"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "Video Marketing Consulting",
@@ -3277,7 +3277,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ca555921-ed2c-4cb0-9e9a-23ff2f047c10"),
+                            Id = new Guid("dc2f9d3f-db3e-4330-ae6d-cf89b9443113"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "SEM Strategy",
@@ -3285,7 +3285,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bdbde5aa-e779-406b-8a4b-5ad0b72745bb"),
+                            Id = new Guid("ae1ced23-f6ae-499c-875d-bf23b08f0ad6"),
                             BriefName = "Marketing Strategy",
                             MajorName = "Consulting",
                             SpecializedName = "PR Strategy",
@@ -3293,7 +3293,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2c957497-dc58-482e-8e3c-33cc80c21449"),
+                            Id = new Guid("4f3f50a4-7613-425a-b24e-72134e003446"),
                             BriefName = "Data Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Data Analytics Consulting",
@@ -3301,7 +3301,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("005abb86-11ad-4801-bc84-dcdf3f1b0431"),
+                            Id = new Guid("36e40e76-4f52-48b9-80a2-f50984d6f1eb"),
                             BriefName = "Data Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Databases Consulting",
@@ -3309,7 +3309,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("13cb0a83-5507-449e-96cc-00c916835d3f"),
+                            Id = new Guid("79b975b6-32a9-4351-93d7-116e2949e041"),
                             BriefName = "Data Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Data Visualization Consulting",
@@ -3317,7 +3317,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0cbf6f94-fedf-41f0-aafc-c2ab587b5829"),
+                            Id = new Guid("3412a358-e651-45a6-844b-876dcadd9a4e"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Career Counseling",
@@ -3325,7 +3325,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2199d11c-e75e-469b-a455-19e7c521d405"),
+                            Id = new Guid("c5da70ff-6b0e-45c4-9fd2-278443bbcd08"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Life Coaching",
@@ -3333,7 +3333,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6176d6dc-960d-44e0-b058-920254c42bce"),
+                            Id = new Guid("a8071486-de17-4fc8-a636-abbb3a9e1fdc"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Game Coaching",
@@ -3341,7 +3341,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fb5b2d7e-1783-485f-ae64-27aa4880ca0a"),
+                            Id = new Guid("7681e4d3-2b45-477b-9219-5fb02ba4f7d5"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Styling & Beauty Advice",
@@ -3349,7 +3349,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d7878f23-a369-415e-8a18-5b8a3908aad7"),
+                            Id = new Guid("b16aa0ef-b068-429e-a0cf-bc82839f651d"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Travel Advice",
@@ -3357,7 +3357,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9627442b-3436-416e-a552-473f83b67b70"),
+                            Id = new Guid("eaba19ad-7e54-4efc-a869-3e5bb7fd1a16"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Nutrition Coaching",
@@ -3365,7 +3365,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8cac4d54-adc0-4bce-9b05-0c65e9cb0c06"),
+                            Id = new Guid("9f324984-1078-44cd-a0a3-fc2b29ad3bf1"),
                             BriefName = "Coaching & Advice",
                             MajorName = "Consulting",
                             SpecializedName = "Mindfulness Coaching",
@@ -3373,7 +3373,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("522af1a0-cb3c-4d81-be83-701402e80994"),
+                            Id = new Guid("d19eadc4-162d-4a75-9b9f-6f835e9c2ea4"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "AI Technology Consulting",
@@ -3381,7 +3381,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1423609c-2daa-4a46-bb64-0afca61b762e"),
+                            Id = new Guid("f44aa591-f31e-44f9-9c6c-9b5fc9965e20"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Website Consulting",
@@ -3389,7 +3389,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f5e7ffb1-c22f-4a58-bfb8-e8315ed455df"),
+                            Id = new Guid("d0dccc13-a57d-48b8-836e-1c9808251df3"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Mobile App Consulting",
@@ -3397,7 +3397,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d8e00fdb-4fe7-485a-b59c-61432d4283a8"),
+                            Id = new Guid("ccd27750-204e-4ce3-abe4-e91449969129"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Game Development Consulting",
@@ -3405,7 +3405,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cb4ec94a-f4c1-47a1-82bc-dd357606b7a3"),
+                            Id = new Guid("2c2ac501-d009-4d54-8d9d-e7f2986cebee"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Software Development Consulting",
@@ -3413,7 +3413,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ea0f12fa-408e-4957-8845-2d16b5c3dfb8"),
+                            Id = new Guid("c6532e7c-7286-45a2-88b5-6258167a0c3e"),
                             BriefName = "Tech Consulting",
                             MajorName = "Consulting",
                             SpecializedName = "Cybersecurity Consulting",
@@ -3421,7 +3421,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ed258e2-2b3f-4aba-a51d-2cd7de078439"),
+                            Id = new Guid("c640112f-99ef-432a-9e93-c957432a236a"),
                             BriefName = "Mentorship",
                             MajorName = "Consulting",
                             SpecializedName = "Marketing Mentorship",
@@ -3429,7 +3429,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b7c353cb-2614-423e-8730-a7953c7e24e7"),
+                            Id = new Guid("600b13ea-65a7-4bed-8971-79e451622270"),
                             BriefName = "Mentorship",
                             MajorName = "Consulting",
                             SpecializedName = "Design Mentorship",
@@ -3437,7 +3437,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("da28db1e-e308-42cb-bedc-1faf581c9bfb"),
+                            Id = new Guid("3f18ce35-a459-4bb4-a36c-a9cfa1107262"),
                             BriefName = "Mentorship",
                             MajorName = "Consulting",
                             SpecializedName = "Writing Mentorship",
@@ -3445,7 +3445,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("512ad2d7-7c4a-4e1c-ad55-a5ac1f8b7f7a"),
+                            Id = new Guid("05eca098-4027-4cf0-a33d-f21e7230f44c"),
                             BriefName = "Mentorship",
                             MajorName = "Consulting",
                             SpecializedName = "Video Mentorship",
@@ -3453,7 +3453,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ffc5b6b5-ff58-48dd-9f06-7cec2ec27fd2"),
+                            Id = new Guid("8e68a403-7888-408a-b035-ec12bd2a31cc"),
                             BriefName = "Mentorship",
                             MajorName = "Consulting",
                             SpecializedName = "Music Mentorship",
@@ -3461,7 +3461,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d85cea1e-29ea-4e9e-bab9-82e5a15002df"),
+                            Id = new Guid("ba5b9d08-cf13-4be1-975a-00fe2d532a08"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "Machine Learning",
@@ -3469,7 +3469,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b5da5e06-743b-409f-8a4a-2e97d0476821"),
+                            Id = new Guid("06a1098c-0a26-4a5f-9006-b613184a80b4"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "Computer Vision",
@@ -3477,7 +3477,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b1011cc0-55c5-42b6-8237-fb009e0e9cf0"),
+                            Id = new Guid("cb72b0a6-8ec0-4d3b-bec2-da94dd8c5adc"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "NLP",
@@ -3485,7 +3485,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b3d40113-0718-4608-bea3-399b731e272e"),
+                            Id = new Guid("cdc51935-d28f-402e-a88b-06496f24831b"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "Deep Learning",
@@ -3493,7 +3493,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("10b95387-7f9f-4de4-9a20-d95dc9d73a1d"),
+                            Id = new Guid("cbe0ebb2-77a9-4348-875f-ee04b88f03dc"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "Generative Models",
@@ -3501,7 +3501,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e8a7e83a-8eff-4ba3-a379-5fccf37e6238"),
+                            Id = new Guid("39519637-9b9d-43cf-b519-abae54a5e02b"),
                             BriefName = "Data Science & ML",
                             MajorName = "Data",
                             SpecializedName = "Time Series Analysis",
@@ -3509,7 +3509,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f4200185-7f87-4f69-909c-126a8bba4ce1"),
+                            Id = new Guid("96e26e73-a3a9-45c0-91a1-ac202a0dabc7"),
                             BriefName = "Data Analysis & Visualization",
                             MajorName = "Data",
                             SpecializedName = "Data Analytics",
@@ -3517,7 +3517,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b160ed61-fbf0-49f5-8b3e-0a931729710b"),
+                            Id = new Guid("27d170c7-eea2-41b7-9b62-777e2f941ce5"),
                             BriefName = "Data Analysis & Visualization",
                             MajorName = "Data",
                             SpecializedName = "Data Visualization",
@@ -3525,7 +3525,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1ca8e25a-99e4-452e-b245-7b883d1138f4"),
+                            Id = new Guid("b26b8413-9370-4f6b-9b60-bf5436437d54"),
                             BriefName = "Data Analysis & Visualization",
                             MajorName = "Data",
                             SpecializedName = "Data Annotation",
@@ -3533,7 +3533,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d7379bd4-847a-474a-b926-348ae12d8af8"),
+                            Id = new Guid("ce615793-390f-413f-bb44-3f7c9af5ba40"),
                             BriefName = "Data Analysis & Visualization",
                             MajorName = "Data",
                             SpecializedName = "Dashboards",
@@ -3541,7 +3541,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("57206b6a-44d2-4820-bc29-b4d76e90212d"),
+                            Id = new Guid("76f98b47-003e-467f-805a-10ee5eb50005"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Entry",
@@ -3549,7 +3549,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b11ae694-d51b-4d67-9ada-7a43be513fb5"),
+                            Id = new Guid("a5b9ebf6-cf44-4050-aa17-2f058829820d"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Typing",
@@ -3557,7 +3557,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8e6daf00-63f1-48cd-9379-54a09e98a08f"),
+                            Id = new Guid("472f887a-0a3e-4be4-9ab2-3a47f551942d"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Scraping",
@@ -3565,7 +3565,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7eaabaa2-0f3d-4394-b428-612fc3e624b1"),
+                            Id = new Guid("aa1a9d84-7f1b-4bd6-8bc0-7b4126eff7f3"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Formatting",
@@ -3573,7 +3573,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e21bd247-7fe8-48ce-88c0-87c23748d36b"),
+                            Id = new Guid("860d01ae-408a-4e7f-b77d-31d3d27fbce0"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Cleaning",
@@ -3581,7 +3581,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("089da5bd-bda0-4527-a717-a9c14e74ddbb"),
+                            Id = new Guid("7f4b8761-5366-4a08-ba26-5a571e32341c"),
                             BriefName = "Data Collection",
                             MajorName = "Data",
                             SpecializedName = "Data Enrichment",
@@ -3589,7 +3589,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fee63d2f-bba1-4a9e-bddd-a8ad88248b61"),
+                            Id = new Guid("33a35a39-104c-4c78-a96e-7c748c6175c3"),
                             BriefName = "Data Processing & Management ",
                             MajorName = "Data",
                             SpecializedName = "Data Processing",
@@ -3597,7 +3597,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f1262035-c1b8-422e-9c45-23af114c54fe"),
+                            Id = new Guid("ba7bed53-fcc8-4150-963b-43901dd26682"),
                             BriefName = "Data Processing & Management ",
                             MajorName = "Data",
                             SpecializedName = "Data Governance & Protection",
@@ -3605,7 +3605,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a52c6963-6d9c-45b1-afbf-10b27864f613"),
+                            Id = new Guid("c0795941-12c5-4c62-adb4-6ab2e966438f"),
                             BriefName = "Databases & Engineering",
                             MajorName = "Data",
                             SpecializedName = "Databases",
@@ -3613,7 +3613,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4281673d-a672-4977-aeb0-05c96fc8038a"),
+                            Id = new Guid("cf1d4d8a-217e-4603-9d1f-e5caa629972f"),
                             BriefName = "Databases & Engineering",
                             MajorName = "Data",
                             SpecializedName = "Data Engineering",
@@ -3621,7 +3621,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cd55fd31-a602-4b4d-8080-d73ad1f89c77"),
+                            Id = new Guid("cc663401-da44-4c79-a4ef-5221f0cfc48c"),
                             BriefName = "Products & Lifestyle",
                             MajorName = "Photography",
                             SpecializedName = "Product Photographers",
@@ -3629,7 +3629,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9deeecbc-e7e0-46ef-82f7-9edc01668e3c"),
+                            Id = new Guid("0b19bb08-7039-41c8-918a-55d4d343236d"),
                             BriefName = "Products & Lifestyle",
                             MajorName = "Photography",
                             SpecializedName = "Food Photographers",
@@ -3637,7 +3637,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb52e6cd-ee7a-4d21-b7da-c1deed5aa30f"),
+                            Id = new Guid("e0f176ae-cf11-4815-9a9f-72544b6dd9ff"),
                             BriefName = "Products & Lifestyle",
                             MajorName = "Photography",
                             SpecializedName = "Lifestyle & Fashion Photographers",
@@ -3645,7 +3645,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d8df02f-c579-4154-92c1-d53b8b29a6b8"),
+                            Id = new Guid("91093362-3944-4b7c-aad9-b3cbda3ecb9c"),
                             BriefName = "People & Scenes",
                             MajorName = "Photography",
                             SpecializedName = "Portrait Photographers",
@@ -3653,7 +3653,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6e8a7c96-dcd7-4ae5-8bf3-4287dae508e6"),
+                            Id = new Guid("31b31b8b-2008-4054-9ff4-f5553c44ef39"),
                             BriefName = "People & Scenes",
                             MajorName = "Photography",
                             SpecializedName = "Event Photographers",
@@ -3661,7 +3661,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("321c9b39-0211-4c79-b001-73e83007c003"),
+                            Id = new Guid("6d42e3f1-f36c-4925-8dc0-f2e37cf45e62"),
                             BriefName = "People & Scenes",
                             MajorName = "Photography",
                             SpecializedName = "Real Estate Photographers",
@@ -3669,7 +3669,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b35c338a-172a-446a-a096-006d3a9f39a1"),
+                            Id = new Guid("f6b3af66-b395-4614-a51e-b3e237de8cb6"),
                             BriefName = "People & Scenes",
                             MajorName = "Photography",
                             SpecializedName = "Scenic Photographers",
@@ -3677,7 +3677,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("490d75d0-cc5f-4548-97c9-3c57b117539b"),
+                            Id = new Guid("a5765c34-96f1-4be0-8165-32e9669b2877"),
                             BriefName = "Local Photography",
                             MajorName = "Photography",
                             SpecializedName = "Photographers in New York",
@@ -3685,7 +3685,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fb911e03-0bff-418c-b617-08f8f1ceaac0"),
+                            Id = new Guid("62d51fe9-022e-4e1c-ab18-2227ce8b5bd3"),
                             BriefName = "Local Photography",
                             MajorName = "Photography",
                             SpecializedName = "Photographers in Los Angeles",
@@ -3693,7 +3693,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("923607a4-1176-4b1c-beb1-f8f2a59c145f"),
+                            Id = new Guid("10c852dc-ebca-45aa-9c8b-41aaba48c95c"),
                             BriefName = "Local Photography",
                             MajorName = "Photography",
                             SpecializedName = "Photographers in London",
@@ -3701,7 +3701,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6ec05e33-d091-46dc-835e-f0699c20aa3a"),
+                            Id = new Guid("7a1b352e-f8ca-448f-96c0-97e2f6b05983"),
                             BriefName = "Local Photography",
                             MajorName = "Photography",
                             SpecializedName = "Photographers in Paris",
@@ -3709,7 +3709,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("131bd476-d9d5-4a15-822e-467d9980d39f"),
+                            Id = new Guid("3b25c956-173d-4f43-9664-cbea32636ff8"),
                             BriefName = "Local Photography",
                             MajorName = "Photography",
                             SpecializedName = "All Cities",
@@ -3717,7 +3717,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9f274240-b0d1-455b-8648-0ba3fb449083"),
+                            Id = new Guid("e9a92217-6c79-40f1-93b1-6d05129ae461"),
                             BriefName = "Miscellaneous",
                             MajorName = "Photography",
                             SpecializedName = "Photography Classes",
@@ -3725,7 +3725,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("59df76e5-79f5-46f9-9e13-85ac31c9e1ab"),
+                            Id = new Guid("63fdcdff-8cc0-4468-a53c-9ca5066fddc0"),
                             BriefName = "Miscellaneous",
                             MajorName = "Photography",
                             SpecializedName = "Photo Preset Creation",
@@ -3733,7 +3733,7 @@ namespace ChillLancer.Repository.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b16d9020-df6d-45d7-a6e8-1f22b6a60e47"),
+                            Id = new Guid("94e2f925-730d-4770-b02c-54d571d547b8"),
                             BriefName = "Miscellaneous",
                             MajorName = "Photography",
                             SpecializedName = "Other",
@@ -3873,637 +3873,637 @@ namespace ChillLancer.Repository.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ac96dfed-8aa9-4b5b-a4ae-330d4e8e64fc"),
+                            Id = new Guid("86334cfd-ab7b-4ebf-a697-9dd12ce1649f"),
                             Name = "Afrikaans",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("af6cf44d-2bb6-441c-a03a-5c3fef60c849"),
+                            Id = new Guid("870ae3e8-cdce-4350-9402-d5bab327c90d"),
                             Name = "Albanian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("ab6b28ff-9e4a-4a67-85c3-7c6ba0cb33dd"),
+                            Id = new Guid("6ed27c85-9948-4d2a-a486-ff49d7f60e6b"),
                             Name = "Amharic",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("98f4637a-d9a9-4615-acdf-e81386edf82f"),
+                            Id = new Guid("6dd5950e-3866-4bce-8836-2ef3482ce0ce"),
                             Name = "Arabic",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("49599fd7-19eb-4049-9dcf-77d841097846"),
+                            Id = new Guid("b9961a58-130b-4d36-b111-8b93a39bec46"),
                             Name = "Armenian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("31bcda8b-9761-4228-9e5d-11346495b582"),
+                            Id = new Guid("82ab8e84-f097-4544-9df9-c376ca3f43c0"),
                             Name = "Azerbaijani",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("91cb7362-d697-4d3e-ba5b-b4484b257a15"),
+                            Id = new Guid("2211411c-f034-4bb7-83f6-c1668428a671"),
                             Name = "Basque",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("cd0bb499-c12e-43fe-a179-5598c798d420"),
+                            Id = new Guid("843d2f30-0c9d-4fe6-9ff5-6fb5b6f26c48"),
                             Name = "Belarusian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("72a1742b-68c9-4647-8181-6359b1a9867d"),
+                            Id = new Guid("f3b8b594-9f06-4951-ab34-7cf81fa6e6a6"),
                             Name = "Bengali",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("83c50ee9-3051-4984-a622-7fe6c543ff36"),
+                            Id = new Guid("41a5a237-88ff-45a6-992a-221855696844"),
                             Name = "Bosnian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("0fb8379e-8d62-4668-93c2-79f4588aa8de"),
+                            Id = new Guid("8aa9d03e-f778-493b-b822-4f2274baeca4"),
                             Name = "Bulgarian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("62ef3f65-cca6-4294-b89c-6e9a5e4650f9"),
+                            Id = new Guid("b1d83db7-14ec-4494-ad3a-bcaf86d2b1d3"),
                             Name = "Burmese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("cb2673ef-5fb4-4a79-8145-b4b666c8bedd"),
+                            Id = new Guid("3e76dde0-21e9-410c-ad92-f0a29cd34634"),
                             Name = "Catalan",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("bd0bfc2b-2178-4eba-ad76-95c7e7b337d4"),
+                            Id = new Guid("3f5d600a-1a23-4e2c-a02a-7dc39e3110e6"),
                             Name = "Cebuano",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("6e2a52df-6de2-4836-8a4f-3fd3c43610df"),
+                            Id = new Guid("fe1b92de-7698-4822-ada7-712a3ca2f9f9"),
                             Name = "Chichewa",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("0132407d-167b-49c3-a556-7c3f78931900"),
+                            Id = new Guid("476d7835-ae85-4f64-899d-c6c4c751f80a"),
                             Name = "Chinese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("634431b3-57a7-438f-bdbe-0ab68653171d"),
+                            Id = new Guid("ddcf7ae1-6cbf-48c5-846e-7e75f89d7836"),
                             Name = "Corsican",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("30a31130-878e-4e1a-b450-c15bf01b111f"),
+                            Id = new Guid("0d6e26a7-e3b2-418e-a105-cef4418f4dbf"),
                             Name = "Croatian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("b732892e-e667-40eb-9434-b219163dad43"),
+                            Id = new Guid("7a88a8fa-9ca4-4765-a94d-081222213565"),
                             Name = "Czech",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("f0eacfec-e264-45a0-bfeb-fc600db8b00e"),
+                            Id = new Guid("35777d66-0429-4acd-899b-e33c458ee740"),
                             Name = "Danish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("96db88b9-3953-4c56-9d01-c6364c2ca47b"),
+                            Id = new Guid("ac3a0086-f0ae-4d3b-ab6e-4666997aa798"),
                             Name = "Dutch",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("fd1a4370-6505-46fb-921d-747df8378d01"),
+                            Id = new Guid("5b48de55-2be7-42f8-8c54-be2b0253f7ef"),
                             Name = "English",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("6ece8aa5-7b89-4e5f-9e45-3bfa78a86abe"),
+                            Id = new Guid("b5063c71-9576-4304-840c-3e6cde4f2065"),
                             Name = "Esperanto",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("ecfaf097-a86a-4aae-8d28-f50461a78394"),
+                            Id = new Guid("1c12726e-924f-4895-8c91-ef84bbeadcf9"),
                             Name = "Estonian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("692b70a8-8a69-49e2-9bbe-5fb945436beb"),
+                            Id = new Guid("3635f7ea-abdc-4e76-b2d3-9e0b5202bba8"),
                             Name = "Filipino",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("48f76c54-cc99-4079-b0a6-6a352620e38e"),
+                            Id = new Guid("101d371b-da0a-47d9-a903-84515b16a1d0"),
                             Name = "Finnish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("7b9339f1-cfcc-46b4-ae16-028b6acc92dd"),
+                            Id = new Guid("45445c4c-6e52-4a33-9e6b-3b398b3f145d"),
                             Name = "French",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("53a5a382-cf1c-470a-b931-e5519dcc30bb"),
+                            Id = new Guid("0710b6dd-4d7b-4844-af6c-462f1c13f1f3"),
                             Name = "Galician",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("4e71a6e0-fa02-4149-8ab9-c80ed3cc9867"),
+                            Id = new Guid("0d1880c3-4781-4482-84f1-be13f511b5cc"),
                             Name = "Georgian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("4b12a5ff-532f-41f2-b01b-edbb8b73220d"),
+                            Id = new Guid("a06afbba-4f53-4af2-9f81-bddaeb76cea9"),
                             Name = "German",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("e88c12cf-7c7d-4f19-b9e0-317b73147b91"),
+                            Id = new Guid("49af1a38-e3e6-495b-9381-c7515e628b7c"),
                             Name = "Greek",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("51a03693-716e-4ce2-b567-e05cf63546f9"),
+                            Id = new Guid("fbc74e4d-ae68-456f-9cee-e851487ab4de"),
                             Name = "Gujarati",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("d45ded2a-c288-4d04-bc46-e6bdd79232b3"),
+                            Id = new Guid("7abbabd4-d98a-4a52-b049-5df664e7faa1"),
                             Name = "Haitian Creole",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("5d521c42-86e7-47c3-b4eb-c3cdbd12aede"),
+                            Id = new Guid("80f21f1a-482b-414f-9c57-91d8f3f6f531"),
                             Name = "Hausa",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("efcf6abe-4af1-4437-a5c3-79b0f45caff5"),
+                            Id = new Guid("ef85ab2d-a02d-4e6d-a008-1d5054125d7f"),
                             Name = "Hawaiian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("cad2e4e1-07fb-4781-a681-81b5f5070d54"),
+                            Id = new Guid("52694ac3-ba40-4c94-9c46-1a4f68e11a77"),
                             Name = "Hebrew",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("092eb20d-58e1-46a4-a988-483646352012"),
+                            Id = new Guid("4a6c2af4-1562-48ed-aee7-4cd8a72b7594"),
                             Name = "Hindi",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("8ff92f70-cd03-474d-8d87-1df96dc0a323"),
+                            Id = new Guid("0d456de1-44cf-48a6-b16e-a86c4ce1397c"),
                             Name = "Hmong",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("8a5ca4c0-880c-45e5-a226-48b2df9a32eb"),
+                            Id = new Guid("5a761b22-8fbb-4202-98f3-fa5936a97657"),
                             Name = "Hungarian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("2dd82ebb-67ad-4c7e-8a40-a883f5c846f9"),
+                            Id = new Guid("b7d10974-ca5d-48f1-b9df-318a472d4321"),
                             Name = "Icelandic",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("d59870ea-f7aa-4425-89ac-a074e2521d90"),
+                            Id = new Guid("8e47cb7f-5e5e-449b-8a92-8df22d896afa"),
                             Name = "Igbo",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("187ee270-beea-4556-bc70-4e37a0ecf3e0"),
+                            Id = new Guid("b38999bd-51e2-4b00-9502-e01091fbbdd2"),
                             Name = "Indonesian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("e1c54043-bff9-481e-b6bd-418ca3ebe797"),
+                            Id = new Guid("b6ce8b51-4433-4b85-9766-2d2bf3b1e0d7"),
                             Name = "Irish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("cf6c5dcc-b3c9-472e-9105-c3cce13dae2f"),
+                            Id = new Guid("724a0af1-9dd6-4896-a6b9-2a3b5f5117dd"),
                             Name = "Italian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("83e55051-8ce3-4f6d-bb6b-e0ec75d28606"),
+                            Id = new Guid("863955d9-4610-49bf-a695-25e041059ef6"),
                             Name = "Japanese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("da598b19-088e-4c80-800f-1010fb289363"),
+                            Id = new Guid("0c8cbf6a-2eab-406c-971c-459aa5f2676c"),
                             Name = "Javanese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("5d04a900-1c5e-42c5-9183-41d311708960"),
+                            Id = new Guid("5012844b-95d5-49d8-9d12-69abbb2703a5"),
                             Name = "Kannada",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("bb0b527d-0cda-447d-8fcb-b5e483638b24"),
+                            Id = new Guid("b8c8087b-1b6e-4083-8639-f2866a86f415"),
                             Name = "Kazakh",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("0a8196f2-bff7-4660-b6e3-8092b537b2e1"),
+                            Id = new Guid("a26e5ebd-59c2-444a-9893-61fa59b94ca1"),
                             Name = "Khmer",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("570ac624-c9cc-443f-81e0-6208b37a7d2f"),
+                            Id = new Guid("3eb531a5-ae55-46fc-a226-ac043147a63b"),
                             Name = "Kinyarwanda",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("7feffe4c-ce98-41d2-b231-2d73a2b28e02"),
+                            Id = new Guid("4cb8f362-2fc2-4f9f-9783-009088f8b5a2"),
                             Name = "Korean",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("d1d55aaf-9e9c-4484-9e65-c9b67c233c32"),
+                            Id = new Guid("0cf73d81-19fb-4398-9e43-2815a04d1656"),
                             Name = "Kurdish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("32a4c107-f170-45c5-9d4e-9c7b8ca9c2d0"),
+                            Id = new Guid("d66ca043-bdc6-4ce0-9c47-38f38976e4e5"),
                             Name = "Kyrgyz",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("d6ce2dc3-7a15-404d-9e95-8b457d8f98bd"),
+                            Id = new Guid("dafded4c-17c1-4037-80ba-dbf6aaba6d89"),
                             Name = "Lao",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("637b0aba-5159-4a4a-84d1-cd43f808c668"),
+                            Id = new Guid("94a3ecc3-5f2b-4ad7-92c5-c7fcefe8b7bc"),
                             Name = "Latin",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("af7dc4e4-7137-4944-af34-f7ade51d5587"),
+                            Id = new Guid("46012869-897e-42fe-a39f-bd772f4ba3cd"),
                             Name = "Latvian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("4505b33f-bf69-4f7a-9ad2-d02a9dd7db51"),
+                            Id = new Guid("be7bf6b4-11c2-4cdb-9f9b-a6f21721b41c"),
                             Name = "Lithuanian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("bb0dd221-f7d6-4084-93ab-55a9095d26cc"),
+                            Id = new Guid("f0fb7a4f-a529-4430-ab5b-073f438afc55"),
                             Name = "Luxembourgish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("f8756577-5dea-4fe1-8d68-8aaf4d242012"),
+                            Id = new Guid("8079c3ee-f90d-4213-b1dd-cf4465f23977"),
                             Name = "Macedonian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("6a72ef69-bede-4d98-95ae-92f985012d49"),
+                            Id = new Guid("64ec9724-c966-481f-a963-8f66e8c87702"),
                             Name = "Malagasy",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("eb460fda-99bd-4c69-9c32-33c8f3fb6609"),
+                            Id = new Guid("c131bc85-f69d-488c-a235-a9c6f76bf514"),
                             Name = "Malay",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("b87f51d8-2e99-434f-872c-3f6b5a31d255"),
+                            Id = new Guid("75c5271f-c7ea-4b13-aa37-c8acc837331c"),
                             Name = "Malayalam",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("ba0c11d1-e81b-4e69-95b9-96544bca1432"),
+                            Id = new Guid("cdcf2353-176b-454c-b7b7-4c4b9c2cd882"),
                             Name = "Maltese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("2362cd0c-5b30-4daa-b02a-04650b714b2c"),
+                            Id = new Guid("65b6a5f2-cf08-4752-88ad-c9f9573c24c7"),
                             Name = "Maori",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("92ea1c52-9b2c-440f-bf7b-45f056ab8cdc"),
+                            Id = new Guid("1dc71e94-e285-46bb-97b7-e5c3443248bd"),
                             Name = "Marathi",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("254cbdd9-39d4-4c2a-8986-5e7de041d5ca"),
+                            Id = new Guid("83de6462-2588-4f92-90cd-0df835b7e64b"),
                             Name = "Mongolian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("5158cb81-87cf-402b-b5ed-6bf654b2b471"),
+                            Id = new Guid("a80ee7f4-462f-440a-ad2b-9dbc98f06bfe"),
                             Name = "Nepali",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("b5e4a8ac-a81f-4a3b-a0b8-823ae6c99c80"),
+                            Id = new Guid("7e29262a-8258-4187-82dd-3ba41160f98d"),
                             Name = "Norwegian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("b3c9632f-6646-44c7-a3a7-4339b39a4dfc"),
+                            Id = new Guid("bb64a847-b0cf-44e1-a3f4-f0b0f4d90478"),
                             Name = "Pashto",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("9c6407b3-880b-4dd1-8471-5043bde59c1d"),
+                            Id = new Guid("583e5ded-2890-46ae-ac3c-26c38d283704"),
                             Name = "Persian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("a5cf839c-b679-402d-a811-2fa485018f56"),
+                            Id = new Guid("90012799-4885-4ba0-99b9-9ad2c500596c"),
                             Name = "Polish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("6a9c0c15-fa15-4509-8eb0-68c40efb14ef"),
+                            Id = new Guid("dcc5e28a-f05a-40b7-b84b-0f6074d4209a"),
                             Name = "Portuguese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("066e29c3-4a98-48f4-aab1-f607b8bfdfc4"),
+                            Id = new Guid("e4035631-48c5-4122-a990-744284726c57"),
                             Name = "Punjabi",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("5e82046b-a577-45d7-9b57-62d99f365c67"),
+                            Id = new Guid("f513be37-aecf-4138-a257-6b107c6afaf6"),
                             Name = "Romanian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("3a1d709b-da8f-4cc0-bcfd-13e8eb155703"),
+                            Id = new Guid("9547bc00-a3eb-4b56-9b7d-d700ac9a7bad"),
                             Name = "Russian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("14c228a8-1c09-48a7-9028-e0bd9b2171f0"),
+                            Id = new Guid("76188c09-0154-4baf-a2df-121d8b679fe4"),
                             Name = "Samoan",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("73717a7c-97a3-4b3d-95dc-7ad6845b6507"),
+                            Id = new Guid("b3043458-ef07-4edf-a91d-6faf5467a55a"),
                             Name = "Scots Gaelic",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("a2117db5-1e99-4323-b9f7-b3d4ab39265a"),
+                            Id = new Guid("211e2d63-b8b7-4157-bff6-8fe5a0c16b7a"),
                             Name = "Serbian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("2ecd91b2-8f66-4d34-b7a6-f646b6dad49d"),
+                            Id = new Guid("f87a6300-e95c-4f51-97a7-1cf825463d8c"),
                             Name = "Sesotho",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("1646b2c4-a741-403c-8ca0-87dffe362b62"),
+                            Id = new Guid("9d43c646-0201-4470-bfc9-81f55feb3062"),
                             Name = "Shona",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("3efe64d3-a076-48d3-b14d-c96c4a9d8ee2"),
+                            Id = new Guid("0abf0736-c99f-4e17-81ff-53968f0d4001"),
                             Name = "Sindhi",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("efe3c77d-6c83-463f-a419-3c9e4fdf8fac"),
+                            Id = new Guid("16af7dcd-c86b-4f21-977d-8f63d0dfc438"),
                             Name = "Sinhala",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("4ff78801-055c-44e8-8dea-7c40f3703d97"),
+                            Id = new Guid("cf2c804e-8639-4fdb-b707-8056a9d251b9"),
                             Name = "Slovak",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("0b016189-ee8a-42a4-a1d2-c1cd606ccbe7"),
+                            Id = new Guid("0a511e12-ae30-4091-a027-a3c6eaa0d33a"),
                             Name = "Slovenian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("f4bc2939-d856-4fee-a291-1a6e2e1b72b0"),
+                            Id = new Guid("79dc51d4-86bc-4972-8b30-451bdf8af3c7"),
                             Name = "Somali",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("540f4342-e208-4eee-b6cd-df94261de1a4"),
+                            Id = new Guid("7e359399-feec-4cba-bf8b-d53932e0cd4e"),
                             Name = "Spanish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("684c2736-80c2-40d0-84b3-e049cbd811c4"),
+                            Id = new Guid("e6347f4b-b0d0-4d3a-bc2f-3ac6f5c01eb3"),
                             Name = "Sundanese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("5af26e2f-ab85-42fb-9428-f690ad077240"),
+                            Id = new Guid("d61819e8-95a8-4c67-9cc4-211b2dbe15fc"),
                             Name = "Swahili",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("a39c51f6-df7b-41fe-b087-712689eef4b8"),
+                            Id = new Guid("1ce9acba-440a-4b8c-b6f4-09fff1309d1a"),
                             Name = "Swedish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("a884e5e3-790e-4c9c-aa7f-804b2d1cc82c"),
+                            Id = new Guid("1d4a8981-5b92-4d68-bcaf-32d9aa695c26"),
                             Name = "Tajik",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("52ca0244-b151-4fc8-9c54-5e58e51374cf"),
+                            Id = new Guid("2e7861fd-801d-4fd5-9b8b-326f96aa7f87"),
                             Name = "Tamil",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("ae756c5a-b7f0-40a9-9943-3e7fc0eecf3e"),
+                            Id = new Guid("206a09a1-19ab-4a7d-8369-5fde1975af55"),
                             Name = "Tatar",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("a8877f5f-6868-4d29-bc5d-a6df5151f839"),
+                            Id = new Guid("c0f68b6a-73d7-4192-a086-5927e8e58125"),
                             Name = "Telugu",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("9c44359d-4657-4883-a13a-851e235abcf1"),
+                            Id = new Guid("0afa70c8-7b7f-4ba1-8a43-8edf5b5612e4"),
                             Name = "Thai",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("151e120c-fc68-4f0b-a4c0-85ec3ac3b2c0"),
+                            Id = new Guid("ab756710-63d4-471d-99d2-a0979c054ef4"),
                             Name = "Turkish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("b19b8deb-dbc8-4b88-a587-f9e5a90d788c"),
+                            Id = new Guid("c59af8bd-21f7-4e27-90cb-b969a6073f3f"),
                             Name = "Turkmen",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("443d26c8-ed9b-494e-bf10-8186dab876d7"),
+                            Id = new Guid("ab8be5bc-0795-4584-8a5e-715c7ff83009"),
                             Name = "Ukrainian",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("eb672a69-aba6-4cb0-a26a-839e3400a390"),
+                            Id = new Guid("3edd42a0-4ed1-4d81-b9e8-e052fc543433"),
                             Name = "Urdu",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("6fbec751-348e-435a-9d44-aed8eda9db6a"),
+                            Id = new Guid("d99574d9-9912-4a92-8d28-9d2767dad85c"),
                             Name = "Uyghur",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("e0b7bc6e-7666-46d7-a398-40adf2d7b3d9"),
+                            Id = new Guid("baf4314e-667a-4fa1-b1d8-72392de1ba51"),
                             Name = "Uzbek",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("dacaa0d6-ad96-4620-bfbf-25ae025b3318"),
+                            Id = new Guid("78eecf09-f956-4ead-99bd-2f60cbd3f7ed"),
                             Name = "Vietnamese",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("97c11525-625b-4909-b1b0-4657267f8229"),
+                            Id = new Guid("485b22b4-f7fa-4081-a03e-862a8f61d112"),
                             Name = "Welsh",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("d61c47f1-e836-48c0-90b1-ae51605a0a3a"),
+                            Id = new Guid("8a0b74f8-a32c-48e6-8656-9de3ca373fdd"),
                             Name = "Xhosa",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("3722437c-0d22-4222-9bd0-78beeb66fb47"),
+                            Id = new Guid("2beb8442-6062-4d0d-9c7f-542f8923ee79"),
                             Name = "Yiddish",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("2f849c6d-24d0-4582-9f40-a9b2ea882a73"),
+                            Id = new Guid("8c962636-0e6b-44d9-9e8f-387a97de266c"),
                             Name = "Yoruba",
                             Status = "Created"
                         },
                         new
                         {
-                            Id = new Guid("8584016c-0cdf-48b1-9260-d78942cc5aa5"),
+                            Id = new Guid("33e2fa28-9d42-4a13-9c7e-36f7742ae822"),
                             Name = "Zulu",
                             Status = "Created"
                         });
@@ -4553,10 +4553,13 @@ namespace ChillLancer.Repository.Migrations
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Note")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("ProjectContractId")
+                    b.Property<Guid>("ProposalId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("StartDate")
@@ -4577,7 +4580,7 @@ namespace ChillLancer.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProjectContractId");
+                    b.HasIndex("ProposalId");
 
                     b.ToTable("Process");
                 });
@@ -4634,57 +4637,6 @@ namespace ChillLancer.Repository.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("ChillLancer.Repository.Models.ProjectContract", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("AppliedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("BriefName")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("FreelancerId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Note")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Paid")
-                        .HasColumnType("MONEY");
-
-                    b.Property<Guid?>("ProjectId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<decimal>("TotalPay")
-                        .HasColumnType("MONEY");
-
-                    b.Property<Guid?>("TransactionId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FreelancerId");
-
-                    b.HasIndex("ProjectId");
-
-                    b.HasIndex("TransactionId");
-
-                    b.ToTable("ProjectContracts");
-                });
-
             modelBuilder.Entity("ChillLancer.Repository.Models.ProjectSkill", b =>
                 {
                     b.Property<Guid>("ProjectId")
@@ -4705,6 +4657,9 @@ namespace ChillLancer.Repository.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("AppliedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid?>("CategoryId")
                         .HasColumnType("uniqueidentifier");
@@ -4745,6 +4700,9 @@ namespace ChillLancer.Repository.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<Guid?>("TransactionId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -4752,6 +4710,8 @@ namespace ChillLancer.Repository.Migrations
                     b.HasIndex("FreelancerId");
 
                     b.HasIndex("ProjectId");
+
+                    b.HasIndex("TransactionId");
 
                     b.ToTable("Proposals");
                 });
@@ -4969,13 +4929,13 @@ namespace ChillLancer.Repository.Migrations
 
             modelBuilder.Entity("ChillLancer.Repository.Models.Process", b =>
                 {
-                    b.HasOne("ChillLancer.Repository.Models.ProjectContract", "ProjectContract")
+                    b.HasOne("ChillLancer.Repository.Models.Proposal", "Proposal")
                         .WithMany("Processes")
-                        .HasForeignKey("ProjectContractId")
+                        .HasForeignKey("ProposalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ProjectContract");
+                    b.Navigation("Proposal");
                 });
 
             modelBuilder.Entity("ChillLancer.Repository.Models.Project", b =>
@@ -4995,29 +4955,6 @@ namespace ChillLancer.Repository.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Employer");
-                });
-
-            modelBuilder.Entity("ChillLancer.Repository.Models.ProjectContract", b =>
-                {
-                    b.HasOne("ChillLancer.Repository.Models.Account", "Freelancer")
-                        .WithMany("ProjectContracts")
-                        .HasForeignKey("FreelancerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ChillLancer.Repository.Models.Project", "Project")
-                        .WithMany("ProjectContracts")
-                        .HasForeignKey("ProjectId");
-
-                    b.HasOne("ChillLancer.Repository.Models.Transaction", "Transaction")
-                        .WithMany("ProjectContracts")
-                        .HasForeignKey("TransactionId");
-
-                    b.Navigation("Freelancer");
-
-                    b.Navigation("Project");
-
-                    b.Navigation("Transaction");
                 });
 
             modelBuilder.Entity("ChillLancer.Repository.Models.ProjectSkill", b =>
@@ -5055,11 +4992,17 @@ namespace ChillLancer.Repository.Migrations
                         .WithMany("Proposals")
                         .HasForeignKey("ProjectId");
 
+                    b.HasOne("ChillLancer.Repository.Models.Transaction", "Transaction")
+                        .WithMany("Proposals")
+                        .HasForeignKey("TransactionId");
+
                     b.Navigation("Category");
 
                     b.Navigation("Freelancer");
 
                     b.Navigation("Project");
+
+                    b.Navigation("Transaction");
                 });
 
             modelBuilder.Entity("ChillLancer.Repository.Models.ProposalImage", b =>
@@ -5143,8 +5086,6 @@ namespace ChillLancer.Repository.Migrations
 
                     b.Navigation("Educations");
 
-                    b.Navigation("ProjectContracts");
-
                     b.Navigation("Projects");
 
                     b.Navigation("Proposals");
@@ -5178,20 +5119,15 @@ namespace ChillLancer.Repository.Migrations
 
             modelBuilder.Entity("ChillLancer.Repository.Models.Project", b =>
                 {
-                    b.Navigation("ProjectContracts");
-
                     b.Navigation("ProjectSkills");
 
                     b.Navigation("Proposals");
                 });
 
-            modelBuilder.Entity("ChillLancer.Repository.Models.ProjectContract", b =>
-                {
-                    b.Navigation("Processes");
-                });
-
             modelBuilder.Entity("ChillLancer.Repository.Models.Proposal", b =>
                 {
+                    b.Navigation("Processes");
+
                     b.Navigation("ProposalImages");
 
                     b.Navigation("ProposalSkills");
@@ -5213,7 +5149,7 @@ namespace ChillLancer.Repository.Migrations
 
             modelBuilder.Entity("ChillLancer.Repository.Models.Transaction", b =>
                 {
-                    b.Navigation("ProjectContracts");
+                    b.Navigation("Proposals");
                 });
 #pragma warning restore 612, 618
         }
