@@ -24,7 +24,7 @@ namespace ChillLancer.Repository.Models
         public virtual Category Category { get; set; } = null!;
         public virtual Account Employer { get; set; } = null!;
         public virtual ICollection<ProjectSkill>? ProjectSkills { get; set; }
-        public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
         public virtual ICollection<Proposal>? Proposals { get; set; }
+        //public virtual ICollection<ProjectContract>? ProjectContracts { get; set; }
     }
 }

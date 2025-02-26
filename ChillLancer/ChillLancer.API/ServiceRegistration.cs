@@ -44,6 +44,7 @@ namespace ChillLancer.API
         private static IServiceCollection InjectBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
             //Add other BusinessServices here...
 
@@ -55,6 +56,7 @@ namespace ChillLancer.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             //Add other Repository here...
 
