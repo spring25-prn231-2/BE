@@ -16,8 +16,6 @@ namespace ChillLancer.Repository
         public ChillLancerDbContext() { }
         public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
 
-        /**/
-        /**/
 
         //Declare Object
         public virtual DbSet<Account> Accounts { get; set; }

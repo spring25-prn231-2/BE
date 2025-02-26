@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLancer.BusinessService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLancer.Repository", "ChillLancer.Repository\ChillLancer.Repository.csproj", "{51EA0478-5382-46F0-929F-CCF29A98A70D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPage", "RazorPage\RazorPage.csproj", "{29E8F695-7967-4E9C-8E09-CC42C85AFF55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E8F695-7967-4E9C-8E09-CC42C85AFF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E8F695-7967-4E9C-8E09-CC42C85AFF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E8F695-7967-4E9C-8E09-CC42C85AFF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E8F695-7967-4E9C-8E09-CC42C85AFF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

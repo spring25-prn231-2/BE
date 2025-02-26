@@ -84,10 +84,12 @@ namespace ChillLancer.API
             return services;
         }
 
+        // ...
+
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
             services.AddSingleton(TypeAdapterConfig.GlobalSettings);
-            services.AddScoped<IMapper, ServiceMapper>();
+            services.AddScoped<IMapper, Mapper>(); // Change ServiceMapper to Mapper
             //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
             //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
             //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);

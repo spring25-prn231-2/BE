@@ -48,13 +48,11 @@ namespace ChillLancer.BusinessService.Services
             var accounts = await _accountRepository.GetListAsync(acc => true);  // Hoặc có thể bỏ điều kiện lọc nếu không cần thiết
             return _mapper.Map<IEnumerable<AccountBM>>(accounts);
         }
-
         public IQueryable<AccountBM> GetAccountsOdata()
         {
             var accounts = _accountRepository.GetAccountsQuery() ?? throw new Exception("Account not found");
             var mappedAccount = _mapper.Map<IQueryable<AccountBM>>(accounts);
             return mappedAccount;
-
         }
 
         public async Task<bool> UpdateAccount(AccountUpdateBM account)

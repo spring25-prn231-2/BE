@@ -2,9 +2,11 @@
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Models;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+using Newtonsoft.Json;
 
 namespace ChillLancer.API.Controllers
 {
@@ -15,11 +17,13 @@ namespace ChillLancer.API.Controllers
         //=================================[ Declares ]================================
         private readonly IAccountService _accountService;
         private readonly ChillLancerDbContext _context;
+        private readonly IMapper _mapper;
 
-        public AccountController(IAccountService accountService, ChillLancerDbContext context)
+        public AccountController(IAccountService accountService, ChillLancerDbContext context, IMapper mapper)
         {
             _accountService = accountService;
             _context = context;
+            _mapper = mapper;
         }
 
         //=================================[ Endpoints ]================================
@@ -35,13 +39,11 @@ namespace ChillLancer.API.Controllers
         }
         [EnableQuery]
         [HttpGet("odata")]
-        public IActionResult GetUsersOdata(ODataQueryOptions<Account> queryOptions)
+        public IEnumerable<AccountBM> GetUsersOdata()
         {
-            var query = queryOptions.ApplyTo(_context.Accounts.AsQueryable(), new ODataQuerySettings
-            {
-                HandleNullPropagation = HandleNullPropagationOption.False
-            });
-            return Ok(query);
+            var account = _context.Accounts.AsEnumerable();
+            var mappedAccount = _mapper.Map<IEnumerable<AccountBM>>(account);
+            return mappedAccount;
         }
 
         [HttpGet("{id}")]

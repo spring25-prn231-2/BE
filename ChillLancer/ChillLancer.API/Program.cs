@@ -1,9 +1,18 @@
 ﻿using ChillLancer.API;
 using ChillLancer.API.Middlewares;
+using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Services;
+using ChillLancer.Repository.Interfaces;
+using ChillLancer.Repository.Repositories;
 using Microsoft.AspNetCore.OData;
 using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+
+
+
 var logger = LoggerFactory.Create(loggingBuilder => loggingBuilder.AddConsole()).CreateLogger<Program>();
 // Add services to the container.
 builder.Services.DependencyInjectionServices(builder.Configuration);
@@ -18,8 +27,8 @@ foreach (var provider in configurationRoot.Providers)
 }
 builder.Services.AddControllers()
     // Add OData
-    .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(100))
-    .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+    .AddOData(options => options.Select().Filter().OrderBy().Expand().Count().SetMaxTop(100));
+ //   .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 //log odata
 builder.Logging.AddFilter("Microsoft.AspNetCore.OData", LogLevel.Debug);
 builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Debug);
