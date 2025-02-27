@@ -1,10 +1,14 @@
-﻿using ChillLancer.BusinessService.Extensions;
+﻿using ChillLancer.BusinessService.BusinessModels;
+using ChillLancer.BusinessService.Extensions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
+using ChillLancer.Repository.Models;
 using ChillLancer.Repository.Repositories;
+using Mapster;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
@@ -21,6 +25,7 @@ namespace ChillLancer.API
             services.ConfigCORS();
             services.ConfigKebabCase();
             services.ConfigMapster();
+            //services.ConfigOData();
 
             return services;
         }
@@ -37,6 +42,7 @@ namespace ChillLancer.API
         private static IServiceCollection InjectBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IProposalService, ProposalService>();
             services.AddScoped<ICategoryService, CategoryService>();
 
             //Add other BusinessServices here...
@@ -49,6 +55,7 @@ namespace ChillLancer.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IProposalRepository, ProposalRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             //Add other Repository here...
@@ -85,7 +92,21 @@ namespace ChillLancer.API
             //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
             //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
             //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);
+            TypeAdapterConfig<Proposal, ProposalBM>.NewConfig()
+            .Map(dest => dest.ProjectId, src => src.Project.Id)
+            .Map(dest => dest.AccountId, src => src.Freelancer.Id)
+            .IgnoreNullValues(true);
             return services;
         }
+        //Chua biet cau hinh nen tam thoi de day thoi
+        //private static IServiceCollection ConfigOData(this IServiceCollection services)
+        //{
+        //    services.AddControllers().AddOData(options =>
+        //    {
+        //        options.Select().Expand().Filter().OrderBy().Count().SkipToken().AddRouteComponents("odata", model);
+        //    }); 
+
+        //    return services;
+        //}
     }
 }
