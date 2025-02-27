@@ -1,9 +1,12 @@
-﻿using ChillLancer.BusinessService.Extensions;
+﻿using ChillLancer.BusinessService.BusinessModels;
+using ChillLancer.BusinessService.Extensions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
+using ChillLancer.Repository.Models;
 using ChillLancer.Repository.Repositories;
+using Mapster;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
@@ -38,6 +41,10 @@ namespace ChillLancer.API
         {
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICertificationService, CertificationService>();
+            services.AddScoped<IEducationService, EducationService>();
+            services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ISkillService, SkillService>();
 
             //Add other BusinessServices here...
 
@@ -50,6 +57,10 @@ namespace ChillLancer.API
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICertificationRepository, CertificationRepository>();
+            services.AddScoped<IEducationRepository, EducationRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
 
             //Add other Repository here...
 
@@ -81,10 +92,41 @@ namespace ChillLancer.API
 
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
-            //services.AddMapster();
-            //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
-            //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
-            //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);
+            //========================[ Language ]========================
+            //AccountLanguage => LanguageBM
+            TypeAdapterConfig<AccountLanguage, LanguageBM>.NewConfig()
+                .Map(dest => dest.Id, src => src.LanguageId)
+                .Map(dest => dest.Name, src => src.Language.Name)
+                .Map(dest => dest.Status, src => src.Language.Status);
+
+            //LanguageBM => AccountLanguage
+            TypeAdapterConfig<LanguageBM, AccountLanguage>.NewConfig()
+                .Map(dest => dest.LanguageId, src => src.Id)
+                .Ignore(dest => dest.Account)
+                .Ignore(dest => dest.Language);
+
+            //========================[ Skill ]========================
+            //SkillBM => ProjectSkill
+            TypeAdapterConfig<SkillBM, ProjectSkill>.NewConfig()
+                .Map(dest => dest.SkillId, src => src.Id)
+                .Ignore(dest => dest.Project)
+                .Ignore(dest => dest.SkillId);
+
+            //SkillBM => ProposalSkill
+            TypeAdapterConfig<SkillBM, ProposalSkill>.NewConfig()
+                .Map(dest => dest.SkillId, src => src.Id)
+                .Ignore(dest => dest.Proposal)
+                .Ignore(dest => dest.SkillId);
+
+            //========================[ Certification ]========================
+            //CertificationBM => Certification
+            TypeAdapterConfig<CertificationBM, Certification>.NewConfig()
+                .Map(dest => dest.Freelancer, src => new Account { Id = src.FreeLancerId });
+
+            //========================[ Education ]========================
+            //EducationBM => Education
+            TypeAdapterConfig<EducationBM, Education>.NewConfig()
+                .Map(dest => dest.Freelancer, src => new Account { Id = src.FreeLancerId });
             return services;
         }
     }
