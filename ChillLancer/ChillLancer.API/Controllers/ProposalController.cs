@@ -14,7 +14,7 @@ namespace ChillLancer.API.Controllers
         private readonly IProposalService _proposalService = proposalService;
 
         [HttpPost]
-        public async Task<IActionResult> CreateProposal([FromForm] ProposalBM inputData)
+        public async Task<IActionResult> CreateProposal([FromBody] ProposalBM inputData)
         {
             bool result = await _proposalService.Add(inputData);
             return result ? Created(nameof(CreateProposal), "Create Successfully!") : BadRequest("Create Failed!");

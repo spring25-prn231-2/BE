@@ -43,7 +43,12 @@ namespace ChillLancer.API
         {
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IProposalService, ProposalService>();
+            services.AddScoped<IProcessService, ProcessService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICertificationService, CertificationService>();
+            services.AddScoped<IEducationService, EducationService>();
+            services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ISkillService, SkillService>();
 
             //Add other BusinessServices here...
 
@@ -56,7 +61,12 @@ namespace ChillLancer.API
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IProposalRepository, ProposalRepository>();
+            services.AddScoped<IProcessRepository, ProcessRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICertificationRepository, CertificationRepository>();
+            services.AddScoped<IEducationRepository, EducationRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
 
             //Add other Repository here...
 
@@ -88,14 +98,51 @@ namespace ChillLancer.API
 
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
-            //services.AddMapster();
-            //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
-            //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
-            //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);
+            //========================[ Language ]========================
+            //AccountLanguage => LanguageBM
+            TypeAdapterConfig<AccountLanguage, LanguageBM>.NewConfig()
+                .Map(dest => dest.Id, src => src.LanguageId)
+                .Map(dest => dest.Name, src => src.Language.Name)
+                .Map(dest => dest.Status, src => src.Language.Status);
+
+            //LanguageBM => AccountLanguage
+            TypeAdapterConfig<LanguageBM, AccountLanguage>.NewConfig()
+                .Map(dest => dest.LanguageId, src => src.Id)
+                .Ignore(dest => dest.Account)
+                .Ignore(dest => dest.Language);
+
+            //========================[ Skill ]========================
+            //SkillBM => ProjectSkill
+            TypeAdapterConfig<SkillBM, ProjectSkill>.NewConfig()
+                .Map(dest => dest.SkillId, src => src.Id)
+                .Ignore(dest => dest.Project)
+                .Ignore(dest => dest.SkillId);
+
+            //SkillBM => ProposalSkill
+            TypeAdapterConfig<SkillBM, ProposalSkill>.NewConfig()
+                .Map(dest => dest.SkillId, src => src.Id)
+                .Ignore(dest => dest.Proposal)
+                .Ignore(dest => dest.SkillId);
+
+            //========================[ Certification ]========================
+            //CertificationBM => Certification
+            TypeAdapterConfig<CertificationBM, Certification>.NewConfig()
+                .Map(dest => dest.Freelancer, src => new Account { Id = src.FreeLancerId });
+
+            //========================[ Education ]========================
+            //EducationBM => Education
+            TypeAdapterConfig<EducationBM, Education>.NewConfig()
+                .Map(dest => dest.Freelancer, src => new Account { Id = src.FreeLancerId });
+            //========================[ Proposal ]========================
+            //ProposalBM => Proposal
             TypeAdapterConfig<Proposal, ProposalBM>.NewConfig()
             .Map(dest => dest.ProjectId, src => src.Project.Id)
             .Map(dest => dest.AccountId, src => src.Freelancer.Id)
+            .Map(dest => dest.Processes, src => src.Processes)
             .IgnoreNullValues(true);
+            //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
+            //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
+            //.IgnoreNullValues(true);
             return services;
         }
         //Chua biet cau hinh nen tam thoi de day thoi

@@ -1,6 +1,5 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
-using ChillLancer.BusinessService.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChillLancer.API.Controllers
@@ -58,6 +57,5 @@ namespace ChillLancer.API.Controllers
             bool result = await _categoryService.DeleteCategory(id);
             return result ? Ok("Delete Successfully!") : BadRequest("Delete Failed!");
         }
-
     }
 }

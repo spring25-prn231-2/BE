@@ -6,10 +6,6 @@ namespace ChillLancer.Repository.Repositories
 {
     public class ProposalRepository(ChillLancerDbContext context) : GenericRepository<Proposal>(context), IProposalRepository
     {
-        public async Task Add(Proposal proposal)
-        {
-            await AddAsync(proposal);
-        }
         public async Task<List<Proposal>> GetAll()
         {
             return await GetListAsync(x => true, x => x.Freelancer);

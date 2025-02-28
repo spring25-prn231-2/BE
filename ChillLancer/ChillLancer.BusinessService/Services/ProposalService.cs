@@ -26,9 +26,21 @@ namespace ChillLancer.BusinessService.Services
                 if (inputData.Title == proposal.Title) 
                     throw new ConflictException("This title is already existed");
             }
+            
             var newProposal = inputData.Adapt<Proposal>();
             newProposal.Freelancer = currentACC;
             newProposal.Project = currentPRO;
+
+            //Check if there are any processes in the inputData then add them to the new proposal
+            if (inputData.Processes != null)
+            {
+                newProposal.Processes = inputData.Processes.Adapt<List<Process>>();
+                foreach (var process in newProposal.Processes)
+                {
+                    process.Proposal = newProposal;
+                }
+            }
+
             await _proposalRepository.AddAsync(newProposal);
             return await _proposalRepository.SaveChangeAsync();
         }
@@ -40,7 +52,7 @@ namespace ChillLancer.BusinessService.Services
         }
         public async Task<bool> Delete(Guid proposalId)
         {
-            var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new ConflictException("Proposal is not selected yet!");
+            var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new NotFoundException("Proposal is not selected yet!");
             await _proposalRepository.DeleteAsync(selectedProposal);
             return await _proposalRepository.SaveChangeAsync();
         }
