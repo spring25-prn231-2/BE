@@ -15,17 +15,20 @@ namespace ChillLancer.Repository.Models
         public decimal Price { get; set; } = 0;
         public int HourDuration { get; set; } = 0;//For job hire by hour
         public int DeliveryTime { get; set; } = 1;//For the deadline result submission count in day
+        public DateTime? AppliedDate { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         [MaxLength(30)]
         public string Status { get; set; } = "Created";
 
         //======================[ Foreign Key ]======================
+        public virtual Project? Project { get; set; }
         public virtual Account Freelancer { get; set; } = null!;
         public virtual Category? Category { get; set; }
-        public virtual Project? Project { get; set; }
+        public virtual Transaction? Transaction { get; set; }
         public virtual ICollection<ProposalSkill>? ProposalSkills { get; set; }
         public virtual ICollection<ProposalImage>? ProposalImages { get; set; }
+        public virtual ICollection<Process>? Processes { get; set; }
 
         //public virtual ICollection<PersonalContracts>? PersonalContracts { get; set; }
     }
