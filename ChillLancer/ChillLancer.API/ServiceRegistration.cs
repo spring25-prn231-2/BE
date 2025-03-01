@@ -1,11 +1,12 @@
-﻿using ChillLancer.BusinessService.Extensions;
+﻿using ChillLancer.BusinessService.BusinessModels;
+using ChillLancer.BusinessService.Extensions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
+using ChillLancer.Repository.Models;
 using ChillLancer.Repository.Repositories;
 using Mapster;
-using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
@@ -45,6 +46,10 @@ namespace ChillLancer.API
         {
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICertificationService, CertificationService>();
+            services.AddScoped<IEducationService, EducationService>();
+            services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ISkillService, SkillService>();
 
             //Add other BusinessServices here...
 
@@ -57,6 +62,10 @@ namespace ChillLancer.API
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICertificationRepository, CertificationRepository>();
+            services.AddScoped<IEducationRepository, EducationRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
 
             //Add other Repository here...
 
@@ -90,8 +99,7 @@ namespace ChillLancer.API
 
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
-            services.AddSingleton(TypeAdapterConfig.GlobalSettings);
-            services.AddScoped<IMapper, Mapper>(); // Change ServiceMapper to Mapper
+            //services.AddMapster();
             //TypeAdapterConfig<AccountRequested, Account>.NewConfig().IgnoreNullValues(true);
             //TypeAdapterConfig<OrderDetail_InfoDto, OrderDetail>.NewConfig().IgnoreNullValues(true)
             //    .Map(destination => destination.Id, startFrom => startFrom.OrderDetailId);
