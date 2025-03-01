@@ -31,6 +31,12 @@ namespace ChillLancer.API.Controllers
             return result ? Created(nameof(CreateLanguage), "Add Successfully!") : BadRequest("Add Failed!");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllLanguages()
+        {
+            return Ok(await _languageService.GetAllLanguages());
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> ViewLanguageDetail([FromRoute] Guid id)
         {
