@@ -2,14 +2,12 @@ using ChillLancer.API;
 using ChillLancer.API.Middlewares;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
+using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-
-
 
 // Add services to the container.
 builder.Services.DependencyInjectionServices(builder.Configuration);

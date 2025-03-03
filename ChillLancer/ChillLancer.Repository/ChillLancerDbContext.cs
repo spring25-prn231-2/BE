@@ -11,8 +11,8 @@ namespace ChillLancer.Repository
         /*Uncomment after migration to use with Dependency Injection*/
 
         //============[ Constructor ]============
-        //public ChillLancerDbContext() { }
-        //public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
+        public ChillLancerDbContext() { }
+        public ChillLancerDbContext(DbContextOptions<ChillLancerDbContext> options) : base(options) { }
 
 
         //Declare Object
@@ -48,8 +48,8 @@ namespace ChillLancer.Repository
         /**/
         //Comment Method OnConfiguring(...) after migration to avoid conflic in Dependency Injection
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(GetConnectionString());
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //    => optionsBuilder.UseSqlServer(GetConnectionString());
 
         /**/
         /**/
