@@ -6,6 +6,7 @@ namespace ChillLancer.BusinessService.Interfaces
     {
         Task<bool> Add(ProposalBM inputData);
         Task<List<ProposalBM>> GetAll();
+        Task<List<ProposalBM>> GetProposalsByProjectId(Guid projectId);
         Task<bool> Delete(Guid proposalId);
     }
 }

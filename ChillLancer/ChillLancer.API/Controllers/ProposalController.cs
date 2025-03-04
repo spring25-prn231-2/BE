@@ -26,6 +26,7 @@ namespace ChillLancer.API.Controllers
             bool result = await _proposalService.Delete(proposalId);
             return result ? NoContent() : NotFound("Proposal not found or could not be deleted.");
         }
+
         [HttpGet]
         [EnableQuery]
         public async Task<IActionResult> GetAllProposals()

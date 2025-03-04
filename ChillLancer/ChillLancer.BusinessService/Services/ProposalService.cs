@@ -50,6 +50,12 @@ namespace ChillLancer.BusinessService.Services
             var proposalBms = proposals.Adapt<List<ProposalBM>>();
             return proposalBms;
         }
+        public async Task<List<ProposalBM>> GetProposalsByProjectId(Guid projectId)
+        {
+            var proposals = await _proposalRepository.GetProposalsByProjectId(projectId);
+            var proposalBms = proposals.Adapt<List<ProposalBM>>();
+            return proposalBms;
+        }
         public async Task<bool> Delete(Guid proposalId)
         {
             var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new NotFoundException("Proposal is not selected yet!");

@@ -1,4 +1,5 @@
 ﻿using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Services;
 using ChillLancer.Repository.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,10 +9,12 @@ namespace ChillLancer.API.Controllers
     public class ProjectController : Controller
     {
         private readonly IProjectService _projectService;
+        private readonly IProposalService _proposalService;
 
-        public ProjectController(IProjectService projectService)
+        public ProjectController(IProjectService projectService, IProposalService proposalService)
         {
             _projectService = projectService;
+            _proposalService = proposalService;
         }
 
         [HttpGet("projects")]
@@ -30,6 +33,13 @@ namespace ChillLancer.API.Controllers
                 return NotFound();
 
             return Ok(projects);
+        }
+
+        [HttpGet("projects/{projectId}/proposals")]
+        public async Task<IActionResult> GetProposalsByProjectId([FromRoute] Guid projectId)
+        {
+            var payload = await _proposalService.GetProposalsByProjectId(projectId);
+            return Ok(payload);
         }
         //public IActionResult Index()
         //{
