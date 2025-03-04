@@ -30,6 +30,19 @@ namespace ChillLancer.Repository.Repositories
         }
         public IQueryable<T> GetAll() => Entities.AsQueryable();
 
+        //This function is the update version of the one above, which have Include() in it
+        public async Task<List<T>> GetListAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>().Where(expression);
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.ToListAsync();
+        }
+
         public async Task<T?> GetOneAsync(Expression<Func<T, bool>> expression, bool hasTrackings = true)
         {
             return hasTrackings ? await _context.Set<T>().FirstOrDefaultAsync(expression)

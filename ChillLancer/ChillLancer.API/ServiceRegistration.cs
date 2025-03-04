@@ -9,6 +9,7 @@ using ChillLancer.Repository.Repositories;
 using Mapster;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
@@ -25,6 +26,7 @@ namespace ChillLancer.API
             services.ConfigCORS();
             services.ConfigKebabCase();
             services.ConfigMapster();
+            //services.ConfigOData();
 
             return services;
         }
@@ -41,6 +43,8 @@ namespace ChillLancer.API
         private static IServiceCollection InjectBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IProposalService, ProposalService>();
+            services.AddScoped<IProcessService, ProcessService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICertificationService, CertificationService>();
             services.AddScoped<IEducationService, EducationService>();
@@ -57,6 +61,8 @@ namespace ChillLancer.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             //---------------------------------------------------------------------------
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IProposalRepository, ProposalRepository>();
+            services.AddScoped<IProcessRepository, ProcessRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICertificationRepository, CertificationRepository>();
             services.AddScoped<IEducationRepository, EducationRepository>();
@@ -134,7 +140,27 @@ namespace ChillLancer.API
             //EducationBM => Education
             TypeAdapterConfig<EducationBM, Education>.NewConfig()
                 .Map(dest => dest.Freelancer, src => new Account { Id = src.FreeLancerId });
+            //========================[ Proposal ]========================
+            //ProposalBM => Proposal
+            TypeAdapterConfig<Proposal, ProposalBM>.NewConfig()
+            .Map(dest => dest.ProjectId, src => src.Project.Id)
+            .Map(dest => dest.AccountId, src => src.Freelancer.Id)
+            .Map(dest => dest.Processes, src => src.Processes)
+            .IgnoreNullValues(true);
+            //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
+            //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
+            //.IgnoreNullValues(true);
             return services;
         }
+        //Chua biet cau hinh nen tam thoi de day thoi
+        //private static IServiceCollection ConfigOData(this IServiceCollection services)
+        //{
+        //    services.AddControllers().AddOData(options =>
+        //    {
+        //        options.Select().Expand().Filter().OrderBy().Count().SkipToken().AddRouteComponents("odata", model);
+        //    }); 
+
+        //    return services;
+        //}
     }
 }
