@@ -28,5 +28,7 @@ namespace ChillLancer.BusinessService.BusinessModels
 
         [Required(ErrorMessage = "category id is required.")]
         public Guid? categoryId { get; set; }
+
+        public ICollection<Guid>? skillIds { get; set; }
     }
 }
