@@ -7,6 +7,7 @@ using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
 using ChillLancer.Repository.Repositories;
 using Mapster;
+using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
@@ -98,6 +99,12 @@ namespace ChillLancer.API
 
         private static IServiceCollection ConfigMapster(this IServiceCollection services)
         {
+            var config = TypeAdapterConfig.GlobalSettings;
+            config.Scan(typeof(ServiceRegistration).Assembly); // Auto-scan for mappings
+
+            services.AddSingleton(config);
+            services.AddScoped<IMapper, Mapper>(); // ✅ Ensure IMapper is registered
+
             //========================[ Language ]========================
             //AccountLanguage => LanguageBM
             TypeAdapterConfig<AccountLanguage, LanguageBM>.NewConfig()

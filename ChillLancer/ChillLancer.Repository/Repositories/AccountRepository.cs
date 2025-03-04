@@ -15,5 +15,9 @@ namespace ChillLancer.Repository.Repositories
         {
             return true;
         }
+        public IQueryable<Account> GetAccountsQuery()
+        {
+            return _context.Accounts.AsQueryable();
+        }
     }
 }
