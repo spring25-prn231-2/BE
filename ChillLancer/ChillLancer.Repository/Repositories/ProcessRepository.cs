@@ -6,7 +6,46 @@ namespace ChillLancer.Repository.Repositories
 {
     public class ProcessRepository(ChillLancerDbContext context) : GenericRepository<Process>(context), IProcessRepository
     {
-        public async Task<Proposal> GetProposalById(Guid proposalId)
-            => await context.Proposals.FirstOrDefaultAsync(p => p.Id == proposalId);
+        public async Task<List<Process>> GetProcessesByProposalId(Guid proposalId)
+        => await context.Processes
+                .Include(p => p.Proposal)
+                .Where(p => p.Proposal.Id == proposalId).ToListAsync();
+        public async Task<bool> UpdateProcesses(List<Process> processes)
+        {
+            using var transaction = await context.Database.BeginTransactionAsync();
+
+            try
+            {
+                context.Processes.UpdateRange(processes);
+                await context.SaveChangesAsync();
+                await transaction.CommitAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
+        public async Task<bool> DeleteProcesses(List<Process> processes)
+        {
+            using var transaction = await context.Database.BeginTransactionAsync();
+
+            try
+            {
+                context.Processes.RemoveRange(processes);
+                await context.SaveChangesAsync();
+                await transaction.CommitAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
     }
+
 }
