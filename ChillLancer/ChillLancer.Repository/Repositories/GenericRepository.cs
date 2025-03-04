@@ -87,5 +87,25 @@ namespace ChillLancer.Repository.Repositories
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<bool> RollbackAsync()
+        {
+            foreach (var entry in _context.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        // Remove the entity from DbContext
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Modified:
+                    case EntityState.Deleted:
+                        // Reload the entity's data from the database
+                        entry.Reload();
+                        break;
+                }
+            }
+            return await SaveChangeAsync();
+        }
     }
 }

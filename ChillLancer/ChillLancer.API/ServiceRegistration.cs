@@ -50,6 +50,8 @@ namespace ChillLancer.API
             services.AddScoped<IEducationService, EducationService>();
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<IProjectService, ProjectService>();
+
 
             //Add other BusinessServices here...
 
@@ -68,6 +70,7 @@ namespace ChillLancer.API
             services.AddScoped<IEducationRepository, EducationRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
 
             //Add other Repository here...
 
