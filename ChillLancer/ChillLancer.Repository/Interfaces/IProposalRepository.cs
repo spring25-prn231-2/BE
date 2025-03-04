@@ -10,5 +10,6 @@ namespace ChillLancer.Repository.Interfaces
         Task<List<Proposal>> GetProposalsByProjectId(Guid projectId);
         Task<Project> GetProjectById(Guid projectId);
         Task<Account> GetAccountById(Guid accountId);
+        Task<Proposal> GetProposalById(Guid proposalId);
     }
 }

@@ -32,6 +32,7 @@ namespace ChillLancer.Repository
         public virtual DbSet<ProjectSkill> ProjectSkills { get; set; }
         public virtual DbSet<ProposalSkill> ProposalSkills { get; set; }
         public virtual DbSet<ProposalImage> ProposalImages { get; set; }
+        public virtual DbSet<Process> Processes { get; set; }
         //public virtual DbSet<ProjectContract> ProjectContracts { get; set; }
 
         private string GetConnectionString()

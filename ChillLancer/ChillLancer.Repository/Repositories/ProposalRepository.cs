@@ -8,7 +8,7 @@ namespace ChillLancer.Repository.Repositories
     {
         public async Task<List<Proposal>> GetAll()
         {
-            return await GetListAsync(x => true, x => x.Freelancer);
+            return await GetListAsync(x => true, x => x.Freelancer, x => x.Project, x => x.Processes);
         }
         public async Task<List<Proposal>> GetProposalsByAccount(Guid accountId)
         {
@@ -26,5 +26,7 @@ namespace ChillLancer.Repository.Repositories
             => await context.Projects.FirstOrDefaultAsync(p => p.Id == projectId);
         public async Task<Account> GetAccountById(Guid accountId)
             => await context.Accounts.FirstOrDefaultAsync(a => a.Id == accountId);
+        public async Task<Proposal> GetProposalById(Guid proposalId)
+            => await context.Proposals.FirstOrDefaultAsync(p => p.Id == proposalId);
     }
 }
