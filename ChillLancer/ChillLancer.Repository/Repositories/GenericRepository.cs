@@ -30,6 +30,19 @@ namespace ChillLancer.Repository.Repositories
         }
         public IQueryable<T> GetAll() => Entities.AsQueryable();
 
+        //This function is the update version of the one above, which have Include() in it
+        public async Task<List<T>> GetListAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>().Where(expression);
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.ToListAsync();
+        }
+
         public async Task<T?> GetOneAsync(Expression<Func<T, bool>> expression, bool hasTrackings = true)
         {
             return hasTrackings ? await _context.Set<T>().FirstOrDefaultAsync(expression)
@@ -73,6 +86,26 @@ namespace ChillLancer.Repository.Repositories
         public async Task<bool> SaveChangeAsync()
         {
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<bool> RollbackAsync()
+        {
+            foreach (var entry in _context.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        // Remove the entity from DbContext
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Modified:
+                    case EntityState.Deleted:
+                        // Reload the entity's data from the database
+                        entry.Reload();
+                        break;
+                }
+            }
+            return await SaveChangeAsync();
         }
     }
 }
