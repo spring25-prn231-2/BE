@@ -12,5 +12,6 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<bool> UpdateAccount(AccountUpdateBM account);
         Task<bool> DeleteAccount(Guid Id);
         IQueryable<AccountBM> GetAccountsOdata();
+        Task<AccountBM> Login(string email, string password);
     }
 }
