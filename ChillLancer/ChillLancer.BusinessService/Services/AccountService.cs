@@ -1,4 +1,5 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
+using ChillLancer.BusinessService.Extensions.Exceptions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
@@ -53,6 +54,14 @@ namespace ChillLancer.BusinessService.Services
             var accounts = _accountRepository.GetAccountsQuery() ?? throw new Exception("Account not found");
             var mappedAccount = _mapper.Map<IQueryable<AccountBM>>(accounts);
             return mappedAccount;
+        }
+
+        public async Task<AccountBM> Login(string email, string password)
+        {
+            var loginedAccount = await _accountRepository.GetOneAsync(a => a.Email == email && a.Password == password);
+            if (loginedAccount is null)
+                throw new NotFoundException("");
+            return loginedAccount.Adapt<AccountBM>();
         }
 
         public async Task<bool> UpdateAccount(AccountUpdateBM account)
