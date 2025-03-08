@@ -1,5 +1,6 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Middleware;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Models;
 using MapsterMapper;
@@ -45,23 +46,27 @@ namespace ChillLancer.API.Controllers
             var mappedAccount = _mapper.Map<IEnumerable<AccountBM>>(account);
             return mappedAccount;
         }
-
+        [Protected]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAccount(Guid id)
         {
             return Ok(await _accountService.GetAccount(id));
         }
+        [Protected]
         [HttpPost]
         public async Task<IActionResult> CreateAccount(AccountCreateBM account)
         {
             return Ok(await _accountService.CreateAccount(account));
         }
+        [Protected]
         [HttpPut]
         public async Task<IActionResult> UpdateAccount(AccountUpdateBM account)
         {
             return Ok(await _accountService.UpdateAccount(account));
         }
+        [Protected]
         [HttpDelete("{id}")]
+        [Permission("ACCOUNT.ALL")]
         public async Task<IActionResult> DeleteAccount(Guid id)
         {
             return Ok(await _accountService.DeleteAccount(id));

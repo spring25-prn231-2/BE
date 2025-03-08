@@ -51,7 +51,7 @@ namespace ChillLancer.API
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<ISkillService, SkillService>();
             services.AddScoped<IProjectService, ProjectService>();
-
+            services.AddScoped<IRoleRepository, RoleRepository>();
 
             //Add other BusinessServices here...
 
