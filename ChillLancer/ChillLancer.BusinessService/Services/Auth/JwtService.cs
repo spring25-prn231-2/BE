@@ -10,9 +10,13 @@ using System.Threading.Tasks;
 
 namespace ChillLancer.BusinessService.Services.Auth
 {
+    public static class JwtConst
+    {
+        public const int ACCESS_TOKEN_EXP = 15 * 60; // 15m
+    }
     public interface IJwtService
     {
-        string GenerateToken(Guid userId, string role, int exp);
+        string GenerateToken(Guid userId, string role);
         Payload? ValidateToken(string token);
 
     }
@@ -26,7 +30,8 @@ namespace ChillLancer.BusinessService.Services.Auth
             _key = System.Text.Encoding.ASCII.GetBytes(SecretKey);
             _handler = new JwtSecurityTokenHandler();
         }
-        public string GenerateToken(Guid userId, string role, int exp)
+        // role: Admin, Employer, Freelancer
+        public string GenerateToken(Guid userId, string role)
         {
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -35,7 +40,7 @@ namespace ChillLancer.BusinessService.Services.Auth
                     new("role", role)
                 ]),
                 Issuer = userId.ToString(),
-                Expires = DateTime.UtcNow.AddSeconds(exp),
+                Expires = DateTime.UtcNow.AddSeconds(JwtConst.ACCESS_TOKEN_EXP),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(_key), SecurityAlgorithms.HmacSha256Signature)
             };
 
