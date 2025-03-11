@@ -29,5 +29,19 @@ namespace ChillLancer.API.Controllers
 
             return Ok(account);
         }
+        [HttpPost("/register")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register([FromBody] RegisterRequestModel registerRequest)
+        {
+            try
+            {
+                return await _accountService.Register(registerRequest);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
+
+        }
     }
 }
