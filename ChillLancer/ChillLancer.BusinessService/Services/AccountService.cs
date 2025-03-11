@@ -83,7 +83,7 @@ namespace ChillLancer.BusinessService.Services
                     Email = model.Email,
                     Password = model.Password,
                     NameTag = "",
-                    FullName = ""
+                    FullName = model.FullName
                 };
                 await _accountRepository.AddAsync(user);
                 await _accountRepository.SaveChangeAsync();
