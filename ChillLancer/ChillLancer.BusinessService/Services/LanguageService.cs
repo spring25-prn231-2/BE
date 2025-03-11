@@ -77,7 +77,7 @@ namespace ChillLancer.BusinessService.Services
             var existLanguages = await _languageRepository.GetOneAsync(lang => lang.Id == id)
                 ?? throw new NotFoundException("This Languages is not existed!");
 
-            await _languageRepository.DeleteAsync(existLanguages);
+            existLanguages.Status = "Deleted";
             return await _languageRepository.SaveChangeAsync();
         }
     }

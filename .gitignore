@@ -549,6 +549,8 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,aspnetcore,dotnetcore
-appsettings.Development.json
 
-Migrations
+# ===========================================================================================================
+# Custom ignore
+/ChillLancer/ChillLancer.Repository/Migrations/
+/ChillLancer/ChillLancer.Repository/Migrations/*

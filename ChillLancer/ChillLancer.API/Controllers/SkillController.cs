@@ -18,7 +18,7 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateSkill([FromForm] SkillBM inputData)
+        public async Task<IActionResult> CreateSkill([FromBody] SkillBM inputData)
         {
             bool result = await _skillService.CreateSkill(inputData);
             return result ? Created(nameof(CreateSkill), "Create Successfully!") : BadRequest("Create Failed!");
@@ -38,7 +38,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateSkill([FromForm] SkillBM inputData)
+        public async Task<IActionResult> UpdateSkill([FromBody] SkillBM inputData)
         {
             bool result = await _skillService.UpdateSkill(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");
