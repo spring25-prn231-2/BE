@@ -78,6 +78,14 @@ namespace ChillLancer.BusinessService.Services
         {
             try
             {
+                var account = await _accountRepository.GetOneAsync(a => a.Email == model.Email);
+                if (account != null)
+                {
+                    return new BadRequestObjectResult(new
+                    {
+                        message = "Email is already in use"
+                    });
+                }
                 var user = new Account
                 {
                     Email = model.Email,
@@ -87,11 +95,17 @@ namespace ChillLancer.BusinessService.Services
                 };
                 await _accountRepository.AddAsync(user);
                 await _accountRepository.SaveChangeAsync();
-                return new OkResult();
+                return new OkObjectResult(new
+                {
+                    message = "Register successfully"
+                });
             }
             catch (Exception ex)
             {
-                return new BadRequestObjectResult(ex.Message);
+                return new BadRequestObjectResult(new
+                {
+                    message = ex.Message
+                });
             }
         }
 
