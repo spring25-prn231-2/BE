@@ -87,7 +87,7 @@ namespace ChillLancer.BusinessService.Services
             var existSkill = await _skillRepository.GetOneAsync(ski => ski.Id == id)
                 ?? throw new NotFoundException("This Skill is not existed!");
 
-            await _skillRepository.DeleteAsync(existSkill);
+            existSkill.Status = "Deleted";
             return await _skillRepository.SaveChangeAsync();
         }
     }

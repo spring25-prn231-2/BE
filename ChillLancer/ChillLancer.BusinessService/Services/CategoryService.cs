@@ -50,7 +50,7 @@ namespace ChillLancer.BusinessService.Services
             var (result, totalCount) = await _categoryRepository.SearchCategory
                 (queryCondition.KeyWord, queryCondition.InField, queryCondition.Status, queryCondition.PageIndex, queryCondition.PageSize);
 
-            if (totalCount == 0) { throw new NotFoundException("Not found any account"); }
+            if (totalCount == 0) { throw new NotFoundException("Not found any Category"); }
 
             //Convert "List Category" to "List CategoryBM"
             var mappedResult = result.Adapt<List<CategoryBM>>();
