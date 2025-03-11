@@ -1,5 +1,6 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.Repository.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ChillLancer.BusinessService.Interfaces
 {
@@ -12,6 +13,7 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<bool> UpdateAccount(AccountUpdateBM account);
         Task<bool> DeleteAccount(Guid Id);
         IQueryable<AccountBM> GetAccountsOdata();
-        Task<AccountBM> Login(string email, string password);
+        Task<IActionResult> Login(string email, string password);
+        Task<IActionResult> Register(RegisterRequestModel model);
     }
 }

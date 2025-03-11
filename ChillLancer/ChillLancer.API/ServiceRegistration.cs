@@ -2,6 +2,7 @@
 using ChillLancer.BusinessService.Extensions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
+using ChillLancer.BusinessService.Services.Auth;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
@@ -71,6 +72,7 @@ namespace ChillLancer.API
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IJwtService, JwtService>();
 
             //Add other Repository here...
 
