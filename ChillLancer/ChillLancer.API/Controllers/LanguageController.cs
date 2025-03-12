@@ -27,7 +27,7 @@ namespace ChillLancer.API.Controllers
         [HttpPost("profile")]
         public async Task<IActionResult> AddLanguageToProfile([FromBody] LanguageBM inputData)
         {
-            bool result = await _languageService.CreateLanguage(inputData);
+            bool result = await _languageService.AddLanguageToAccount(inputData);
             return result ? Created(nameof(CreateLanguage), "Add Successfully!") : BadRequest("Add Failed!");
         }
 
