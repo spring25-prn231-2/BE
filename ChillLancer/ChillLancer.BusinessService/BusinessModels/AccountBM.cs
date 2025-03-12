@@ -40,7 +40,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         //public string? FacebookId { get; set; }
 
         [Required, MaxLength(100)]
-        public string NameTag { get; set; } = null!;
+        public string NameTag { get; set; } = "";
 
         //[MaxLength(30)]
         //public string? IdentityCode { get; set; }
@@ -73,6 +73,8 @@ namespace ChillLancer.BusinessService.BusinessModels
     }
     public class AccountUpdateBM
     {
+        [Required]
+        public Guid Id { get; set; }
         public string? AvatarUrl { get; set; }
         public string? FirebaseUid { get; set; }
         public string? FcmToken { get; set; }

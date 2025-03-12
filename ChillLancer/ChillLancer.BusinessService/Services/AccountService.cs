@@ -31,8 +31,8 @@ namespace ChillLancer.BusinessService.Services
         public async Task<bool> CreateAccount(AccountCreateBM account)
         {
             var newAccount = _mapper.Map<Account>(account);
-            newAccount.NameTag = "";
             newAccount.Password = "123456";
+            newAccount.IsVerified = true;
             await _accountRepository.AddAsync(newAccount);
             return await _accountRepository.SaveChangeAsync();
         }
@@ -92,7 +92,6 @@ namespace ChillLancer.BusinessService.Services
                 {
                     Email = model.Email,
                     Password = model.Password,
-                    NameTag = "",
                     FullName = model.FullName,
                 };
                 if (model.Role != "Employer" && model.Role != "Freelancer")
