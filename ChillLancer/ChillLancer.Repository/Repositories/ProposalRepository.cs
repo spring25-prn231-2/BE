@@ -8,7 +8,7 @@ namespace ChillLancer.Repository.Repositories
     {
         public async Task<List<Proposal>> GetAll()
         {
-            return await GetListAsync(x => true, x => x.Freelancer, x => x.Project, x => x.Processes);
+            return await GetListAsync(x => true, x => x.Freelancer, x => x.Project);
         }
         public async Task<List<Proposal>> GetProposalsByAccount(Guid accountId)
         {
