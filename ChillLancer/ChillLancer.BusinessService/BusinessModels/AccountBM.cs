@@ -69,12 +69,10 @@ namespace ChillLancer.BusinessService.BusinessModels
         //public string? CompanyWebsite { get; set; }
         //public DateTime? LastDelivery { get; set; }
         [MaxLength(30)]
-        public string Role { get; set; } = "Customer";
+        public string Role { get; set; } = null!;
     }
     public class AccountUpdateBM
     {
-        [Required]
-        public Guid Id { get; set; }
         public string? AvatarUrl { get; set; }
         public string? FirebaseUid { get; set; }
         public string? FcmToken { get; set; }
@@ -82,16 +80,16 @@ namespace ChillLancer.BusinessService.BusinessModels
         public string? FacebookId { get; set; }
 
         [Required, MaxLength(100)]
-        public string NameTag { get; set; } = null!;
+        public string? NameTag { get; set; }
 
         [MaxLength(30)]
         public string? IdentityCode { get; set; }
 
         [Required, MaxLength(50)]
-        public string FullName { get; set; } = null!;
+        public string? FullName { get; set; } = null!;
 
-        [Required, MaxLength(100)]
-        public string Email { get; set; } = null!;
+        //[Required, MaxLength(100)]
+        //public string Email { get; set; } = null!;
 
         [MaxLength(15)]
         public string? PhoneNumber { get; set; }

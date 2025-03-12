@@ -33,7 +33,6 @@ namespace ChillLancer.BusinessService.Services
             var newAccount = _mapper.Map<Account>(account);
             newAccount.NameTag = "";
             newAccount.Password = "123456";
-            newAccount.Role = "";
             await _accountRepository.AddAsync(newAccount);
             return await _accountRepository.SaveChangeAsync();
         }
