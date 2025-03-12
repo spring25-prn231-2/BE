@@ -7,25 +7,26 @@ using Mapster;
 
 namespace ChillLancer.BusinessService.Services
 {
-    public class ProcessService(IProcessRepository processRepository) : IProcessService
+    public class ProcessService(IProcessRepository processRepository, IProposalRepository proposalRepository) : IProcessService
     {
         private readonly IProcessRepository _processRepository = processRepository;        
+        private readonly IProposalRepository _proposalRepository = proposalRepository;        
 
-        //public async Task<bool> Add(List<ProcessBM> inputData)
-        //{
-        //    //Proposal currentPRO;
-        //    //if (inputData.Count != 0)
-        //    //{
-        //    //    foreach (var process in inputData)
-        //    //    {
-        //    //        currentPRO = await _processRepository.GetProposalById(process.ProposalId);
-        //    //        var newProcess = process.Adapt<Process>();
-        //    //        newProcess.Proposal = currentPRO;
-        //    //        await _processRepository.AddAsync(newProcess);
-        //    //    }
-        //    //}
-        //    return await _processRepository.SaveChangeAsync();
-        //}
+        public async Task<bool> Add(List<ProcessCreateBM> inputData)
+        {
+            Proposal currentPRO;
+            if (inputData.Count != 0)
+            {
+                foreach (var process in inputData)
+                {
+                    currentPRO = await _proposalRepository.GetProposalById(process.ProposalId);
+                    var newProcess = process.Adapt<Process>();
+                    newProcess.Proposal = currentPRO;
+                    await _processRepository.AddAsync(newProcess);
+                }
+            }
+            return await _processRepository.SaveChangeAsync();
+        }
         public async Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId)
         {
             List<Process> processes = await _processRepository.GetProcessesByProposalId(proposalId);

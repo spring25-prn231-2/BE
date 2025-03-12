@@ -1,15 +1,11 @@
-﻿using ChillLancer.Repository.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ChillLancer.BusinessService.BusinessModels
 {
     public class ProjectBM
     {
+        [Key]
+        public Guid Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [MaxLength(150, ErrorMessage = "Title cannot exceed 150 characters.")]
         public string Title { get; set; } = null!;
