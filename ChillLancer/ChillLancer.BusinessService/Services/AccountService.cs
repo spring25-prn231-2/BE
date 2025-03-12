@@ -31,6 +31,9 @@ namespace ChillLancer.BusinessService.Services
         public async Task<bool> CreateAccount(AccountCreateBM account)
         {
             var newAccount = _mapper.Map<Account>(account);
+            newAccount.NameTag = "";
+            newAccount.Password = "123456";
+            newAccount.Role = "";
             await _accountRepository.AddAsync(newAccount);
             return await _accountRepository.SaveChangeAsync();
         }
@@ -71,7 +74,7 @@ namespace ChillLancer.BusinessService.Services
             return new OkObjectResult(new
             {
                 token = token //return token
-            });  
+            });
         }
 
         public async Task<IActionResult> Register(RegisterRequestModel model)
@@ -91,8 +94,16 @@ namespace ChillLancer.BusinessService.Services
                     Email = model.Email,
                     Password = model.Password,
                     NameTag = "",
-                    FullName = model.FullName
+                    FullName = model.FullName,
                 };
+                if (model.Role != "Employer" && model.Role != "Freelancer")
+                {
+                    return new BadRequestObjectResult(new
+                    {
+                        message = "Only Freelancer or Employer is valid for Role"
+                    });
+                }
+                user.Role = model.Role;
                 await _accountRepository.AddAsync(user);
                 await _accountRepository.SaveChangeAsync();
                 return new OkObjectResult(new

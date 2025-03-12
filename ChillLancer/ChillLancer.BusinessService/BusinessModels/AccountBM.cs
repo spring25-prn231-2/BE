@@ -33,17 +33,17 @@ namespace ChillLancer.BusinessService.BusinessModels
     }
     public class AccountCreateBM
     {
-        public string? AvatarUrl { get; set; }
-        public string? FirebaseUid { get; set; }
-        public string? FcmToken { get; set; }
-        public string? GoogleId { get; set; }
-        public string? FacebookId { get; set; }
+        //public string? AvatarUrl { get; set; }
+        //public string? FirebaseUid { get; set; }
+        //public string? FcmToken { get; set; }
+        //public string? GoogleId { get; set; }
+        //public string? FacebookId { get; set; }
 
         [Required, MaxLength(100)]
         public string NameTag { get; set; } = null!;
 
-        [MaxLength(30)]
-        public string? IdentityCode { get; set; }
+        //[MaxLength(30)]
+        //public string? IdentityCode { get; set; }
 
         [Required, MaxLength(50)]
         public string FullName { get; set; } = null!;
@@ -51,23 +51,25 @@ namespace ChillLancer.BusinessService.BusinessModels
         [Required, MaxLength(100)]
         public string Email { get; set; } = null!;
 
-        [Required]
-        public string Password { get; set; } = null!;
+        //[Required]
+        //public string Password { get; set; } = null!;
 
-        [MaxLength(15)]
-        public string? PhoneNumber { get; set; }
-        public string? Address { get; set; }
-        public DateTime? DateOfBirth { get; set; }
-        [MaxLength(20)]
-        public string? Gender { get; set; }
-        [MaxLength(100)]
-        public string? National { get; set; }
-        public string? BioSummary { get; set; }
-        [MaxLength(200)]
-        public string? CompanyName { get; set; }
-        [MaxLength(255)]
-        public string? CompanyWebsite { get; set; }
-        public DateTime? LastDelivery { get; set; }
+        //[MaxLength(15)]
+        //public string? PhoneNumber { get; set; }
+        //public string? Address { get; set; }
+        //public DateTime? DateOfBirth { get; set; }
+        //[MaxLength(20)]
+        //public string? Gender { get; set; }
+        //[MaxLength(100)]
+        //public string? National { get; set; }
+        //public string? BioSummary { get; set; }
+        //[MaxLength(200)]
+        //public string? CompanyName { get; set; }
+        //[MaxLength(255)]
+        //public string? CompanyWebsite { get; set; }
+        //public DateTime? LastDelivery { get; set; }
+        [MaxLength(30)]
+        public string Role { get; set; } = "Customer";
     }
     public class AccountUpdateBM
     {
