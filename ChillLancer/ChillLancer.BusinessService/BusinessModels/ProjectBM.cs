@@ -22,8 +22,6 @@ namespace ChillLancer.BusinessService.BusinessModels
         public DateTime? EndDate { get; set; }
         public string? RequirementNote { get; set; }
         public string Status { get; set; } = "Created";
-
-        [Required(ErrorMessage ="employer id is required.")]
         public Guid? employerId { get; set; }
 
         [Required(ErrorMessage = "category id is required.")]
