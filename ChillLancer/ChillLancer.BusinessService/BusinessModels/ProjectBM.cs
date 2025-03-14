@@ -10,6 +10,7 @@ namespace ChillLancer.BusinessService.BusinessModels
 {
     public class ProjectBM
     {
+        public Guid Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [MaxLength(150, ErrorMessage = "Title cannot exceed 150 characters.")]
         public string Title { get; set; } = null!;
@@ -22,10 +23,10 @@ namespace ChillLancer.BusinessService.BusinessModels
         public DateTime? EndDate { get; set; }
         public string? RequirementNote { get; set; }
         public string Status { get; set; } = "Created";
-        public Guid? employerId { get; set; }
+        public Guid? EmployerId { get; set; }
 
         [Required(ErrorMessage = "category id is required.")]
-        public Guid? categoryId { get; set; }
+        public Guid? CategoryId { get; set; }
 
         public ICollection<Guid>? skillIds { get; set; }
     }

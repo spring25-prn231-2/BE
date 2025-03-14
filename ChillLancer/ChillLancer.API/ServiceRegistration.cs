@@ -152,6 +152,11 @@ namespace ChillLancer.API
             .Map(dest => dest.AccountId, src => src.Freelancer.Id)
             .Map(dest => dest.Processes, src => src.Processes)
             .IgnoreNullValues(true);
+            // Project => ProjectBM
+            TypeAdapterConfig<Project, ProjectBM>.NewConfig()
+                .Map(dest => dest.CategoryId, src => src.Category.Id)
+                .Map(dest => dest.EmployerId, src => src.Employer.Id)
+                .IgnoreNullValues(true);
             //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
             //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
             //.IgnoreNullValues(true);

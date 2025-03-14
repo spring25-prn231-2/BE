@@ -52,14 +52,14 @@ namespace ChillLancer.BusinessService.Services
 
                 var project = projectModel.Adapt<Project>();
                 //Employer
-                var employer = await _accountRepository.GetByIdAsync(projectModel.employerId);
+                var employer = await _accountRepository.GetByIdAsync(projectModel.EmployerId);
                 if (employer == null) 
                 {
                     throw new NotFoundException("Employer is not found");
                 }
                 project.Employer = employer;
                 //Category
-                var category = await _categoryRepository.GetByIdAsync(projectModel.categoryId);
+                var category = await _categoryRepository.GetByIdAsync(projectModel.CategoryId);
                 if (category == null)
                 {
                     throw new NotFoundException("Category is not found");
@@ -166,14 +166,14 @@ namespace ChillLancer.BusinessService.Services
 
                 var project = await _projectRepository.GetByIdAsync(id);
                 //Employer
-                var employer = await _accountRepository.GetByIdAsync(projectModel.employerId);
+                var employer = await _accountRepository.GetByIdAsync(projectModel.EmployerId);
                 if (employer == null)
                 {
                     throw new NotFoundException("Employer is not found");
                 }
                 project.Employer = employer;
                 //Category
-                var category = await _categoryRepository.GetByIdAsync(projectModel.categoryId);
+                var category = await _categoryRepository.GetByIdAsync(projectModel.CategoryId);
                 if (category == null)
                 {
                     throw new NotFoundException("Category is not found");

@@ -1,6 +1,7 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Middleware;
+using ChillLancer.BusinessService.Services.Auth;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Models;
 using MapsterMapper;
@@ -72,6 +73,32 @@ namespace ChillLancer.API.Controllers
         public async Task<IActionResult> DeleteAccount(Guid id)
         {
             return Ok(await _accountService.DeleteAccount(id));
+        }
+        [Protected]
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetProfile()
+        {
+            try
+            {
+                var payload = HttpContext.Items["payload"] as Payload;
+                if (payload == null)
+                {
+                    return Unauthorized();
+                }
+                var account = await _accountService.GetAccount(payload.UserId);
+                return Ok(new OkObjectResult(new
+                {
+                    data = account
+                }));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new OkObjectResult(new
+                {
+                    message = ex.Message,
+                }));
+            }
         }
     }
 }

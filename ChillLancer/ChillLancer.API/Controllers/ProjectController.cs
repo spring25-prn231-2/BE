@@ -69,13 +69,26 @@ namespace ChillLancer.API.Controllers
         [HttpGet("employer-projects")]
         public async Task<IActionResult> GetProjects()
         {
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                return BadRequest(new OkObjectResult(new
+                {
+                    message = ex.Message,
+                }));
+            }
             var payload = HttpContext.Items["payload"] as Payload;
             if (payload == null || payload.Role != "Employer")
             {
                 return Unauthorized();
             }
             var projects = await _projectService.GetProjectsByEmployerId(payload.UserId);
-            return Ok(projects);
+            return Ok(new OkObjectResult(new
+            {
+                data = projects
+            }));
         }
         [Protected]
         [HttpPost]
@@ -88,7 +101,7 @@ namespace ChillLancer.API.Controllers
                 {
                     return Unauthorized();
                 }
-                project.employerId = payload.UserId;
+                project.EmployerId = payload.UserId;
                 var result = await _projectService.CreateProject(project);
                 return Ok(new ObjectResult(new
                 {
@@ -105,3 +118,4 @@ namespace ChillLancer.API.Controllers
             }
         }
     }
+}
