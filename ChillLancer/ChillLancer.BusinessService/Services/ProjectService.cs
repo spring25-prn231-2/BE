@@ -132,7 +132,7 @@ namespace ChillLancer.BusinessService.Services
         {
             try
             {
-                var projects = await _projectRepository.GetListAsync(p => p.Employer.Id == employerId);
+                var projects = await _projectRepository.GetProjectsByEmployerId(employerId);
                 if (projects == null || projects.Count == 0) 
                 {
                     throw new NotFoundException("");

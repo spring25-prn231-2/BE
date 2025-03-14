@@ -156,6 +156,7 @@ namespace ChillLancer.API
             TypeAdapterConfig<Project, ProjectBM>.NewConfig()
                 .Map(dest => dest.CategoryId, src => src.Category.Id)
                 .Map(dest => dest.EmployerId, src => src.Employer.Id)
+                .Map(dest => dest.skillIds, src => src.ProjectSkills != null ? src.ProjectSkills.Select(ps => ps.SkillId).ToList() : new List<Guid>())
                 .IgnoreNullValues(true);
             //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
             //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
