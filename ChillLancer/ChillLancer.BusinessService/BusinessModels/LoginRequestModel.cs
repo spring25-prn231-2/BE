@@ -19,13 +19,13 @@ namespace ChillLancer.BusinessService.BusinessModels
     public class RegisterRequestModel
     {
         [Required(ErrorMessage = "Name is required.")]
-        public string FullName { get; set; }
+        public string FullName { get; set; } = null!;
         [Required(ErrorMessage = "Email is required.")]
         [EmailAddress(ErrorMessage = "Invalid email format.")]
-        public string Email { get; set; }
+        public string Email { get; set; } = null!;
         [Required(ErrorMessage = "Password is required.")]
-        public string Password { get; set; }
-        public string Role { get; set; } = "Employer";
+        public string Password { get; set; } = null!;
+        public string Role { get; set; } = null!;
     }
     public class LoginResponseModel
     { 

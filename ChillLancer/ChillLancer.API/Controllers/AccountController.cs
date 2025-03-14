@@ -36,7 +36,10 @@ namespace ChillLancer.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAccounts()
         {
-            return Ok(await _accountService.GetAccounts());
+            return Ok(new OkObjectResult(new
+            {
+                data = await _accountService.GetAccounts()
+            }));
         }
         [EnableQuery]
         [HttpGet("odata")]
@@ -46,7 +49,6 @@ namespace ChillLancer.API.Controllers
             var mappedAccount = _mapper.Map<IEnumerable<AccountBM>>(account);
             return mappedAccount;
         }
-        [Protected]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAccount(Guid id)
         {

@@ -93,6 +93,7 @@ namespace ChillLancer.BusinessService.Services
                     Email = model.Email,
                     Password = model.Password,
                     FullName = model.FullName,
+                    NameTag = ""
                 };
                 if (model.Role != "Employer" && model.Role != "Freelancer")
                 {
