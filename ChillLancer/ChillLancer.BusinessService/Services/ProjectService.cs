@@ -21,9 +21,9 @@ namespace ChillLancer.BusinessService.Services
         private readonly ICategoryRepository _categoryRepository;
         private readonly IAccountRepository _accountRepository;
         private readonly ISkillRepository _skillRepository;
-        public ProjectService(IProjectRepository projectRepository, 
-            ICategoryRepository categoryRepository, 
-            IAccountRepository accountRepository, 
+        public ProjectService(IProjectRepository projectRepository,
+            ICategoryRepository categoryRepository,
+            IAccountRepository accountRepository,
             ISkillRepository skillRepository)
         {
             _projectRepository = projectRepository;
@@ -117,7 +117,8 @@ namespace ChillLancer.BusinessService.Services
             try
             {
                 var project = await _projectRepository.GetByIdAsync(id);
-                if (project == null) {
+                if (project == null)
+                {
                     throw new NotFoundException("");
                 }
                 return project;
@@ -137,7 +138,7 @@ namespace ChillLancer.BusinessService.Services
                 {
                     throw new NotFoundException("");
                 }
-                return projects.Adapt<List<ProjectBM>> ();
+                return projects.Adapt<List<ProjectBM>>();
             }
             catch (Exception ex)
             {
@@ -199,7 +200,7 @@ namespace ChillLancer.BusinessService.Services
                 await _projectRepository.SaveChangeAsync();
                 return true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 //await _projectRepository.RollbackAsync();
                 throw new BadRequestException(ex.Message);
@@ -231,6 +232,16 @@ namespace ChillLancer.BusinessService.Services
             var a = await _projectRepository.GetAll().AsNoTracking().ToListAsync<Project>();
             //var a = await _projectRepository.GetListAsync(p => true);
             return a.Adapt<List<ProjectBM>>();
+        }
+
+        public async Task<List<ProjectBM>> GetListProjectsByCategory(string categoryName)
+        {
+            var existCategory = await _categoryRepository.GetOneAsync(cate => cate.SpecializedName.Equals(categoryName))
+                ?? throw new NotFoundException("Not found this category!");
+
+            var projects = await _projectRepository.GetListAsync(proj => proj.Category.SpecializedName.Equals(existCategory.SpecializedName))
+                ?? throw new NotFoundException("Not found any project!"); ;
+            return projects.Adapt<List<ProjectBM>>();
         }
     }
 }

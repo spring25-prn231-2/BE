@@ -117,6 +117,7 @@ namespace ChillLancer.Repository
                 entity.HasMany(pack => pack.Transactions)
                 .WithOne(trans => trans.Package)
                 .HasForeignKey("PackageId");
+                entity.HasData(GetPackages());
             });
 
             //optionsBuilder.Entity<ProjectContract>(entity =>
@@ -3765,6 +3766,16 @@ namespace ChillLancer.Repository
                 new Skill { Name = "AI Agents" }
             };
         }//End methods
+        private List<Package> GetPackages()
+        {
+            return new List<Package>
+            {
+            new Package { Code = "FREE", Name = "Free", Description = "Basic free plan", Price = 0, DayDuration = 30, Status = "Active" },
+            new Package { Code = "BUSINESS", Name = "Business", Description = "Best for small businesses", Price = 19, DayDuration = 30, Status = "Active" },
+            new Package { Code = "DEVELOPER", Name = "Developer", Description = "For professional developers", Price = 29, DayDuration = 30, Status = "Active" },
+            new Package { Code = "ULTIMATE", Name = "Ultimate", Description = "All features included", Price = 49, DayDuration = 30, Status = "Active" }
+            };
+        }
         private static readonly Dictionary<string, List<string>> rolePermissions = new Dictionary<string, List<string>>
         {
             //admin
@@ -3833,4 +3844,5 @@ namespace ChillLancer.Repository
         }
     };
 }
+        
 

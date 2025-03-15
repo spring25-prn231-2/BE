@@ -15,7 +15,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         public string Status { get; set; } = "Created";
         public Guid ProjectId { get; set; } = Guid.Empty;
         public Guid AccountId { get; set; }
-        public List<ProcessBM> Processes { get; set; } = [];
+        public List<ProcessBM>? Processes { get; set; } = [];
 
     }
 }

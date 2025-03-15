@@ -18,7 +18,7 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateCategory([FromForm] CategoryBM inputData)
+        public async Task<IActionResult> CreateCategory([FromBody] CategoryBM inputData)
         {
             bool result = await _categoryService.CreateCategory(inputData);
             return result ? Created(nameof(CreateCategory), "Create Successfully!") : BadRequest("Create Failed!");
@@ -45,7 +45,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateCategory([FromForm] CategoryBM inputData)
+        public async Task<IActionResult> UpdateCategory([FromBody] CategoryBM inputData)
         {
             bool result = await _categoryService.UpdateCategory(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");

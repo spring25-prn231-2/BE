@@ -52,7 +52,7 @@ namespace ChillLancer.BusinessService.Services
 
         public async Task<List<SkillBM>> GetAllSkills()
         {
-            var listResult = await _skillRepository.GetListAsync(skill => true); // get all skills
+            var listResult = await _skillRepository.GetListAsync(ski => !ski.Status.ToLower().Equals("deleted"));
             return listResult is null
                 ? throw new NotFoundException("Not found any Skills!")
                 : listResult.Adapt<List<SkillBM>>();
@@ -87,7 +87,7 @@ namespace ChillLancer.BusinessService.Services
             var existSkill = await _skillRepository.GetOneAsync(ski => ski.Id == id)
                 ?? throw new NotFoundException("This Skill is not existed!");
 
-            await _skillRepository.DeleteAsync(existSkill);
+            existSkill.Status = "Deleted";
             return await _skillRepository.SaveChangeAsync();
         }
 

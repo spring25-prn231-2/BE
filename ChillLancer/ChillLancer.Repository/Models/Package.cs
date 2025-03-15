@@ -13,7 +13,7 @@ namespace ChillLancer.Repository.Models
         public string Name { get; set; } = null!;
         public string? Description { get; set; }
         public decimal Price { get; set; } = 0;
-        public int DayDuration = 0;
+        public int DayDuration { get; set; } = 0;
         [MaxLength(30)]
         public string Status { get; set; } = "Active";
 

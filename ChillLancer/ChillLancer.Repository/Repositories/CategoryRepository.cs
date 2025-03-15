@@ -64,7 +64,14 @@ namespace ChillLancer.Repository.Repositories
 
                 if (!string.IsNullOrEmpty(status))
                 {
-                    query = query.Where(cate => cate.Status.ToLower().Equals(status));
+                    if (status.ToLower().Equals("exceptdeleted"))
+                    {
+                        query = query.Where(cate => !cate.Status.ToLower().Equals("deleted"));
+                    }
+                    else
+                    {
+                        query = query.Where(cate => cate.Status.ToLower().Equals(status));
+                    }
                 }
 
                 // Sort by Name
