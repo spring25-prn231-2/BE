@@ -49,8 +49,8 @@ namespace ChillLancer.Repository
         /**/
         //Comment Method OnConfiguring(...) after migration to avoid conflic in Dependency Injection
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //    => optionsBuilder.UseSqlServer(GetConnectionString());
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            => optionsBuilder.UseSqlServer(GetConnectionString());
 
         /**/
         /**/

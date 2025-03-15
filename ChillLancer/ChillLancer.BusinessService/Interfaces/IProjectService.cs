@@ -19,7 +19,5 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<bool> UpdateProject(Guid id, ProjectBM projectModel);
         Task<bool> UpdateProjectStatus(Guid id, string status);
         Task<bool> CreateProject(ProjectBM projectModel);
-
-
     }
 }

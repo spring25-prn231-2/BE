@@ -20,14 +20,21 @@ namespace ChillLancer.API.Controllers
 
         [HttpPost("/login")]
         [AllowAnonymous]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<AccountBM>> Login([FromBody] LoginRequestModel loginRequest)
+        public async Task<ActionResult> Login([FromBody] LoginRequestModel loginRequest)
         {
-            var account = await _accountService.Login(loginRequest.Email, loginRequest.Password);
-            if (account is null) return NotFound();
+            try
+            {
+                var account = await _accountService.Login(loginRequest.Email, loginRequest.Password);
+                return Ok(account);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new BadRequestObjectResult(new
+                {
+                    message = ex.Message
+                }));
+            }
 
-            return Ok(account);
         }
         [HttpPost("/register")]
         [AllowAnonymous]
@@ -35,11 +42,14 @@ namespace ChillLancer.API.Controllers
         {
             try
             {
-                return await _accountService.Register(registerRequest);
+                return Ok(await _accountService.Register(registerRequest));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(new BadRequestObjectResult(new
+                {
+                    message = ex.Message
+                }));
             }
 
         }

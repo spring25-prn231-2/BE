@@ -1,5 +1,6 @@
 ﻿using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,15 @@ namespace ChillLancer.Repository.Repositories
         public async Task<bool> CallDb()
         {
             return true;
+        }
+        public async Task<List<Project>?> GetProjectsByEmployerId(Guid employerId)
+        {
+            return await _context.Projects
+            .Where(project => project.Employer.Id == employerId)
+            .Include(project => project.Category)
+            .Include(project => project.Employer)
+            .Include(project => project.ProjectSkills)
+            .ToListAsync();
         }
     }
 }

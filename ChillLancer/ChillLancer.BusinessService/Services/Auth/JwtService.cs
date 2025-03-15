@@ -66,7 +66,7 @@ namespace ChillLancer.BusinessService.Services.Auth
             var payload = new Payload()
             {
                 UserId = Guid.Parse(result.Issuer),
-                Role = result.Claims.First(x => x.Type == "roleId").Value
+                Role = result.Claims.First(x => x.Type == "role").Value
             };
 
             return payload;
