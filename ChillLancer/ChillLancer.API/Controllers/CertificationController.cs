@@ -18,7 +18,7 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateCertification([FromForm] CertificationBM inputData)
+        public async Task<IActionResult> CreateCertification([FromBody] CertificationBM inputData)
         {
             bool result = await _certificationService.CreateCertification(inputData);
             return result ? Created(nameof(CreateCertification), "Create Successfully!") : BadRequest("Create Failed!");
@@ -46,7 +46,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateCertification([FromForm] CertificationBM inputData)
+        public async Task<IActionResult> UpdateCertification([FromBody] CertificationBM inputData)
         {
             bool result = await _certificationService.UpdateCertification(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");
