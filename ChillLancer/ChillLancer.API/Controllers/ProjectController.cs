@@ -34,6 +34,19 @@ namespace ChillLancer.API.Controllers
             return Ok(projects);
         }
 
+        [HttpGet("category/{categoryName}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetAppointments([FromRoute]string categoryName)
+        {
+            var projects = await _projectService.GetListProjectsByCategory(categoryName);
+
+            if (!projects.Any())
+                return NotFound();
+
+            return Ok(projects);
+        }
+
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
