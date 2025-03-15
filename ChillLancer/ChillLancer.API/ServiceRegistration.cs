@@ -161,6 +161,8 @@ namespace ChillLancer.API
             //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
             //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
             //.IgnoreNullValues(true);
+            TypeAdapterConfig<Skill, SkillBM>.NewConfig()
+                .IgnoreNullValues(true);
             return services;
         }
         //Chua biet cau hinh nen tam thoi de day thoi

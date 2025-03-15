@@ -50,5 +50,25 @@ namespace ChillLancer.API.Controllers
             bool result = await _skillService.DeleteSkill(id);
             return result ? Ok("Delete Successfully!") : BadRequest("Delete Failed!");
         }
+        [HttpGet("project/{projectId}")]
+        public async Task<IActionResult> GetProjectSkills([FromRoute] Guid projectId)
+        {
+            try
+            {
+                var listSkill = await _skillService.GetProjectSkills2(projectId);
+                return Ok(new OkObjectResult(new
+                {
+                    message = "Get Project Skills Successfully!",
+                    data = listSkill
+                }));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new OkObjectResult(new
+                {
+                    message = ex.Message
+                }));
+            }
+        }
     }
 }
