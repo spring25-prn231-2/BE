@@ -10,7 +10,7 @@ namespace ChillLancer.BusinessService.BusinessModels
 {
     public class ProjectBM
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [MaxLength(150, ErrorMessage = "Title cannot exceed 150 characters.")]
         public string Title { get; set; } = null!;
