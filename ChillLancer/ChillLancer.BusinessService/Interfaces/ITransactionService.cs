@@ -6,10 +6,8 @@ namespace ChillLancer.BusinessService.Interfaces
 {
     public interface ITransactionService
     {
-        Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, Guid userId);
+        Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, string userId);
         Task<Transaction> AddPayment(TransactionResponseDTO paymentResponseDto);
         VnPaymentResponseModel PaymentExecute(Dictionary<string, string> url);
-        string GetOrderId(string orderInfo);
-        string GetUserId(string orderInfo);
     }
 }
