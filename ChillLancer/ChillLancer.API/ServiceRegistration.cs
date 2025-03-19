@@ -2,6 +2,7 @@
 using ChillLancer.BusinessService.Extensions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.BusinessService.Services;
+using ChillLancer.BusinessService.Services.Auth;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
@@ -9,7 +10,6 @@ using ChillLancer.Repository.Repositories;
 using Mapster;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
@@ -26,7 +26,6 @@ namespace ChillLancer.API
             services.ConfigCORS();
             services.ConfigKebabCase();
             services.ConfigMapster();
-            //services.ConfigOData();
 
             return services;
         }
@@ -51,7 +50,8 @@ namespace ChillLancer.API
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<ISkillService, SkillService>();
             services.AddScoped<IProjectService, ProjectService>();
-
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPackageService, PackageService>();
 
             //Add other BusinessServices here...
 
@@ -71,6 +71,8 @@ namespace ChillLancer.API
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IJwtService, JwtService>();
+            services.AddScoped<IPackageRepository, PackageRepository>();
 
             //Add other Repository here...
 
@@ -160,20 +162,18 @@ namespace ChillLancer.API
             .Map(dest => dest.AccountId, src => src.Freelancer.Id)
             .Map(dest => dest.Processes, src => src.Processes)
             .IgnoreNullValues(true);
+            // Project => ProjectBM
+            TypeAdapterConfig<Project, ProjectBM>.NewConfig()
+                .Map(dest => dest.CategoryId, src => src.Category.Id)
+                .Map(dest => dest.EmployerId, src => src.Employer.Id)
+                .Map(dest => dest.skillIds, src => src.ProjectSkills != null ? src.ProjectSkills.Select(ps => ps.SkillId).ToList() : new List<Guid>())
+                .IgnoreNullValues(true);
             //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
             //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
             //.IgnoreNullValues(true);
+            TypeAdapterConfig<Skill, SkillBM>.NewConfig()
+                .IgnoreNullValues(true);
             return services;
         }
-        //Chua biet cau hinh nen tam thoi de day thoi
-        //private static IServiceCollection ConfigOData(this IServiceCollection services)
-        //{
-        //    services.AddControllers().AddOData(options =>
-        //    {
-        //        options.Select().Expand().Filter().OrderBy().Count().SkipToken().AddRouteComponents("odata", model);
-        //    }); 
-
-        //    return services;
-        //}
     }
 }

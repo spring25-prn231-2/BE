@@ -18,17 +18,23 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateLanguage([FromForm] LanguageBM inputData)
+        public async Task<IActionResult> CreateLanguage([FromBody] LanguageBM inputData)
         {
             bool result = await _languageService.CreateLanguage(inputData);
             return result ? Created(nameof(CreateLanguage), "Create Successfully!") : BadRequest("Create Failed!");
         }
 
         [HttpPost("profile")]
-        public async Task<IActionResult> AddLanguageToProfile([FromForm] LanguageBM inputData)
+        public async Task<IActionResult> AddLanguageToProfile([FromBody] LanguageBM inputData)
         {
-            bool result = await _languageService.CreateLanguage(inputData);
+            bool result = await _languageService.AddLanguageToAccount(inputData);
             return result ? Created(nameof(CreateLanguage), "Add Successfully!") : BadRequest("Add Failed!");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllLanguages()
+        {
+            return Ok(await _languageService.GetAllLanguages());
         }
 
         [HttpGet("{id}")]
@@ -46,7 +52,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateLanguage([FromForm] LanguageBM inputData)
+        public async Task<IActionResult> UpdateLanguage([FromBody] LanguageBM inputData)
         {
             bool result = await _languageService.UpdateLanguage(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");

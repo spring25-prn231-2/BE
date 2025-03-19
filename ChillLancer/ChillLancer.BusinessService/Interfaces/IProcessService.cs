@@ -11,5 +11,8 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<bool> UpdateProcess(ProcessBM process);
         Task<bool> SubmitTask(Guid id, TaskSubmissionModel model);
         Task<bool> UpdateStatus(string status, Guid id);
+        //Task<bool> Add(List<ProcessBM> inputData);
+        Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId);
+        Task<bool> Delete(List<ProcessUpdateBM> inputData, Guid proposalId);
     }
 }

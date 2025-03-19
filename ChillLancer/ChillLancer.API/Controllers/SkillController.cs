@@ -18,7 +18,7 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateSkill([FromForm] SkillBM inputData)
+        public async Task<IActionResult> CreateSkill(SkillBM inputData)
         {
             bool result = await _skillService.CreateSkill(inputData);
             return result ? Created(nameof(CreateSkill), "Create Successfully!") : BadRequest("Create Failed!");
@@ -38,7 +38,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateSkill([FromForm] SkillBM inputData)
+        public async Task<IActionResult> UpdateSkill(SkillBM inputData)
         {
             bool result = await _skillService.UpdateSkill(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");
@@ -49,6 +49,26 @@ namespace ChillLancer.API.Controllers
         {
             bool result = await _skillService.DeleteSkill(id);
             return result ? Ok("Delete Successfully!") : BadRequest("Delete Failed!");
+        }
+        [HttpGet("project/{projectId}")]
+        public async Task<IActionResult> GetProjectSkills([FromRoute] Guid projectId)
+        {
+            try
+            {
+                var listSkill = await _skillService.GetProjectSkills2(projectId);
+                return Ok(new OkObjectResult(new
+                {
+                    message = "Get Project Skills Successfully!",
+                    data = listSkill
+                }));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new OkObjectResult(new
+                {
+                    message = ex.Message
+                }));
+            }
         }
     }
 }

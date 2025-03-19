@@ -3,7 +3,6 @@ using ChillLancer.BusinessService.Extensions.Exceptions;
 using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
-using ChillLancer.Repository.Repositories;
 using Mapster;
 
 namespace ChillLancer.BusinessService.Services

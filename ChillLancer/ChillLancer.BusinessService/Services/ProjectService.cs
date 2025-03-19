@@ -21,9 +21,9 @@ namespace ChillLancer.BusinessService.Services
         private readonly ICategoryRepository _categoryRepository;
         private readonly IAccountRepository _accountRepository;
         private readonly ISkillRepository _skillRepository;
-        public ProjectService(IProjectRepository projectRepository, 
-            ICategoryRepository categoryRepository, 
-            IAccountRepository accountRepository, 
+        public ProjectService(IProjectRepository projectRepository,
+            ICategoryRepository categoryRepository,
+            IAccountRepository accountRepository,
             ISkillRepository skillRepository)
         {
             _projectRepository = projectRepository;
@@ -59,7 +59,7 @@ namespace ChillLancer.BusinessService.Services
                 }
                 project.Employer = employer;
                 //Category
-                var category = await _categoryRepository.GetByIdAsync(projectModel.categoryId);
+                var category = await _categoryRepository.GetByIdAsync(projectModel.CategoryId);
                 if (category == null)
                 {
                     throw new NotFoundException("Category is not found");
@@ -148,12 +148,12 @@ namespace ChillLancer.BusinessService.Services
         {
             try
             {
-                var projects = await _projectRepository.GetListAsync(p => p.Employer.Id == employerId);
+                var projects = await _projectRepository.GetProjectsByEmployerId(employerId);
                 if (projects == null || projects.Count == 0) 
                 {
                     throw new NotFoundException("");
                 }
-                return projects.Adapt<List<ProjectBM>> ();
+                return projects.Adapt<List<ProjectBM>>();
             }
             catch (Exception ex)
             {
@@ -189,7 +189,7 @@ namespace ChillLancer.BusinessService.Services
                 }
                 project.Employer = employer;
                 //Category
-                var category = await _categoryRepository.GetByIdAsync(projectModel.categoryId);
+                var category = await _categoryRepository.GetByIdAsync(projectModel.CategoryId);
                 if (category == null)
                 {
                     throw new NotFoundException("Category is not found");
@@ -215,7 +215,7 @@ namespace ChillLancer.BusinessService.Services
                 await _projectRepository.SaveChangeAsync();
                 return true;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 await _projectRepository.RollbackAsync();
                 throw new BadRequestException(ex.Message);
@@ -268,6 +268,16 @@ namespace ChillLancer.BusinessService.Services
                     .ToList();
             }
             return projectResponseList;
+        }
+
+        public async Task<List<ProjectBM>> GetListProjectsByCategory(string categoryName)
+        {
+            var existCategory = await _categoryRepository.GetOneAsync(cate => cate.SpecializedName.Equals(categoryName))
+                ?? throw new NotFoundException("Not found this category!");
+
+            var projects = await _projectRepository.GetListAsync(proj => proj.Category.SpecializedName.Equals(existCategory.SpecializedName))
+                ?? throw new NotFoundException("Not found any project!"); ;
+            return projects.Adapt<List<ProjectBM>>();
         }
     }
 }

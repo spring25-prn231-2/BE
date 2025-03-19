@@ -1,5 +1,7 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Middleware;
+using ChillLancer.BusinessService.Services.Auth;
 using ChillLancer.Repository;
 using ChillLancer.Repository.Models;
 using MapsterMapper;
@@ -35,7 +37,10 @@ namespace ChillLancer.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAccounts()
         {
-            return Ok(await _accountService.GetAccounts());
+            return Ok(new OkObjectResult(new
+            {
+                data = await _accountService.GetAccounts()
+            }));
         }
         [EnableQuery]
         [HttpGet("odata")]
@@ -45,26 +50,55 @@ namespace ChillLancer.API.Controllers
             var mappedAccount = _mapper.Map<IEnumerable<AccountBM>>(account);
             return mappedAccount;
         }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAccount(Guid id)
         {
             return Ok(await _accountService.GetAccount(id));
         }
+        [Protected]
         [HttpPost]
         public async Task<IActionResult> CreateAccount(AccountCreateBM account)
         {
             return Ok(await _accountService.CreateAccount(account));
         }
+        [Protected]
         [HttpPut]
         public async Task<IActionResult> UpdateAccount(AccountUpdateBM account)
         {
             return Ok(await _accountService.UpdateAccount(account));
         }
+        [Protected]
         [HttpDelete("{id}")]
+        [Permission("ACCOUNT.ALL")]
         public async Task<IActionResult> DeleteAccount(Guid id)
         {
             return Ok(await _accountService.DeleteAccount(id));
+        }
+        [Protected]
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetProfile()
+        {
+            try
+            {
+                var payload = HttpContext.Items["payload"] as Payload;
+                if (payload == null)
+                {
+                    return Unauthorized();
+                }
+                var account = await _accountService.GetAccount(payload.UserId);
+                return Ok(new OkObjectResult(new
+                {
+                    data = account
+                }));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new OkObjectResult(new
+                {
+                    message = ex.Message,
+                }));
+            }
         }
     }
 }

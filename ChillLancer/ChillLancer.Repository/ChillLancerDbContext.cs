@@ -32,6 +32,7 @@ namespace ChillLancer.Repository
         public virtual DbSet<ProjectSkill> ProjectSkills { get; set; }
         public virtual DbSet<ProposalSkill> ProposalSkills { get; set; }
         public virtual DbSet<ProposalImage> ProposalImages { get; set; }
+        public virtual DbSet<Process> Processes { get; set; }
         //public virtual DbSet<ProjectContract> ProjectContracts { get; set; }
 
         private string GetConnectionString()
@@ -116,6 +117,7 @@ namespace ChillLancer.Repository
                 entity.HasMany(pack => pack.Transactions)
                 .WithOne(trans => trans.Package)
                 .HasForeignKey("PackageId");
+                entity.HasData(GetPackages());
             });
 
             //optionsBuilder.Entity<ProjectContract>(entity =>
@@ -3764,6 +3766,83 @@ namespace ChillLancer.Repository
                 new Skill { Name = "AI Agents" }
             };
         }//End methods
+        private List<Package> GetPackages()
+        {
+            return new List<Package>
+            {
+            new Package { Code = "FREE", Name = "Free", Description = "Basic free plan", Price = 0, DayDuration = 30, Status = "Active" },
+            new Package { Code = "BUSINESS", Name = "Business", Description = "Best for small businesses", Price = 19, DayDuration = 30, Status = "Active" },
+            new Package { Code = "DEVELOPER", Name = "Developer", Description = "For professional developers", Price = 29, DayDuration = 30, Status = "Active" },
+            new Package { Code = "ULTIMATE", Name = "Ultimate", Description = "All features included", Price = 49, DayDuration = 30, Status = "Active" }
+            };
+        }
+        private static readonly Dictionary<string, List<string>> rolePermissions = new Dictionary<string, List<string>>
+        {
+            //admin
+            { "Admin", new List<string> { 
+                "ACCOUNT.ALL",
+                "ACCOUNTLANGUAGE.ALL",
+                "CATEGORY.ALL",
+                "CERTIFICATION.ALL",
+                "EDUCATION.ALL",
+                "IMAGE.ALL",
+                "PACKAGE.ALL",
+                "PROCESS.ALL",
+                "PROJECT.ALL",
+                "PROJECTSKILL.ALL",
+                "PROPOSAL.ALL",
+                "PROPOSALIMAGE.ALL",
+                "RATECODE.ALL",
+                "SKILL.ALL",
+                "TRANSACTION.ALL" } },
+            //employer
+            { "Employer", new List<string> { 
+                "ACCOUNT.READ",         // Xem thông tin tài khoản
+                "ACCOUNT.UPDATE",       // Chỉnh sửa thông tin tài khoản
+                "CATEGORY.READ",        // Xem danh mục
+                "PROJECT.CREATE",       // Tạo dự án
+                "PROJECT.READ",         // Xem dự án
+                "PROJECT.UPDATE",       // Chỉnh sửa dự án
+                "PROJECTSKILL.CREATE",  // Thêm kỹ năng cho dự án
+                "PROJECTSKILL.READ",    // Xem kỹ năng của dự án
+                "PROPOSAL.READ",        // Xem các đề xuất
+                "PROPOSALIMAGE.READ",   // Xem hình ảnh đề xuất
+                "SKILL.READ",           // Xem danh sách kỹ năng
+                "TRANSACTION.READ" } },
+            //freelancer
+            { "Freelancer", new List<string> { 
+                "ACCOUNT.READ",         // Xem thông tin tài khoản của chính mình
+                "ACCOUNT.UPDATE",       // Chỉnh sửa thông tin cá nhân
+                "CERTIFICATION.CREATE", // Thêm chứng chỉ
+                "CERTIFICATION.READ",   // Xem chứng chỉ
+                "EDUCATION.CREATE",     // Thêm học vấn
+                "EDUCATION.READ",       // Xem học vấn
+                "PROJECT.READ",         // Xem dự án
+                "PROPOSAL.CREATE",      // Tạo đề xuất
+                "PROPOSAL.READ",        // Xem đề xuất của mình
+                "SKILL.READ",           // Xem danh sách kỹ năng
+                "SKILL.CREATE",         // Thêm kỹ năng cho bản thân
+                "TRANSACTION.READ" } }
+        };
+        public static List<string> GetPermissionsById(string role)
+        {
+            var listPermissions = new List<string>();
+            try
+            {
+                var permissions = new List<string>();
+                if (rolePermissions.TryGetValue(role, out permissions))
+                {
+                    return permissions;
+                }
+                return new List<string>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error occurred: {ex.Message}");
+                return new List<string>();
+            }
+        }
+    };
+}
+        
 
-    }//End class
-}//End namespace

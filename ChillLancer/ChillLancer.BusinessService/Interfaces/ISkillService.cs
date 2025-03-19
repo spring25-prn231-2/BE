@@ -13,5 +13,6 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<List<SkillBM>> GetProposalSkills(Guid proposalId);
         Task<bool> UpdateSkill(SkillBM newData);
         Task<bool> DeleteSkill(Guid id);
+        Task<List<SkillBM>> GetProjectSkills2(Guid ProjectId);
     }
 }

@@ -18,7 +18,7 @@ namespace ChillLancer.API.Controllers
 
         //=================================[ Endpoints ]================================
         [HttpPost]
-        public async Task<IActionResult> CreateEducation([FromForm] EducationBM inputData)
+        public async Task<IActionResult> CreateEducation([FromBody] EducationBM inputData)
         {
             bool result = await _educationService.CreateEducation(inputData);
             return result ? Created(nameof(CreateEducation), "Create Successfully!") : BadRequest("Create Failed!");
@@ -39,7 +39,7 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> UpdateEducation([FromForm] EducationBM inputData)
+        public async Task<IActionResult> UpdateEducation([FromBody] EducationBM inputData)
         {
             bool result = await _educationService.UpdateEducation(inputData);
             return result ? Ok("Update Successfully!") : BadRequest("Update Failed!");

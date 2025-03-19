@@ -1,17 +1,11 @@
-﻿using ChillLancer.Repository.Models;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChillLancer.BusinessService.BusinessModels
 {
     public class ProjectBM
     {
         [Required(ErrorMessage ="Id is required")]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [MaxLength(150, ErrorMessage = "Title cannot exceed 150 characters.")]
         public string Title { get; set; } = null!;
@@ -56,7 +50,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         public Guid? EmployerId { get; set; }
 
         [Required(ErrorMessage = "category id is required.")]
-        public Guid? categoryId { get; set; }
+        public Guid? CategoryId { get; set; }
 
         public ICollection<Guid>? skillIds { get; set; }
     }

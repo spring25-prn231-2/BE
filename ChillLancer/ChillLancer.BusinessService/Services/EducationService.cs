@@ -67,7 +67,7 @@ namespace ChillLancer.BusinessService.Services
             var existCertificate = await _educationRepository.GetOneAsync(edu => edu.Id == id)
                 ?? throw new NotFoundException("This Certificate is not existed!");
 
-            await _educationRepository.DeleteAsync(existCertificate);
+            existCertificate.Status = "Deleted";
             return await _educationRepository.SaveChangeAsync();
         }
     }

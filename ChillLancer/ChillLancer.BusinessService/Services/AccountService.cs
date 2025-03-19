@@ -1,10 +1,12 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Extensions.Exceptions;
 using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Services.Auth;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
 using Mapster;
 using MapsterMapper;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ChillLancer.BusinessService.Services
 {
@@ -12,10 +14,12 @@ namespace ChillLancer.BusinessService.Services
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IMapper _mapper;
-        public AccountService(IAccountRepository accountRepository, IMapper mapper)
+        private readonly IJwtService _jwtService;
+        public AccountService(IAccountRepository accountRepository, IMapper mapper, IJwtService jwtService)
         {
             _accountRepository = accountRepository;
             _mapper = mapper;
+            _jwtService = jwtService;
         }
         //=============================================================================
 
@@ -27,6 +31,8 @@ namespace ChillLancer.BusinessService.Services
         public async Task<bool> CreateAccount(AccountCreateBM account)
         {
             var newAccount = _mapper.Map<Account>(account);
+            newAccount.Password = "123456";
+            newAccount.IsVerified = true;
             await _accountRepository.AddAsync(newAccount);
             return await _accountRepository.SaveChangeAsync();
         }
@@ -56,12 +62,61 @@ namespace ChillLancer.BusinessService.Services
             return mappedAccount;
         }
 
-        public async Task<AccountBM> Login(string email, string password)
+        public async Task<IActionResult> Login(string email, string password)
         {
             var loginedAccount = await _accountRepository.GetOneAsync(a => a.Email == email && a.Password == password);
             if (loginedAccount is null)
-                throw new NotFoundException("");
-            return loginedAccount.Adapt<AccountBM>();
+            {
+                return new BadRequestObjectResult("Email or password is incorrect");
+            }
+            var token = _jwtService.GenerateToken(loginedAccount.Id, loginedAccount.Role);
+            return new OkObjectResult(new
+            {
+                token = token //return token
+            });
+        }
+
+        public async Task<IActionResult> Register(RegisterRequestModel model)
+        {
+            try
+            {
+                var account = await _accountRepository.GetOneAsync(a => a.Email == model.Email);
+                if (account != null)
+                {
+                    return new BadRequestObjectResult(new
+                    {
+                        message = "Email is already in use"
+                    });
+                }
+                var user = new Account
+                {
+                    Email = model.Email,
+                    Password = model.Password,
+                    FullName = model.FullName,
+                    NameTag = ""
+                };
+                if (model.Role != "Employer" && model.Role != "Freelancer")
+                {
+                    return new BadRequestObjectResult(new
+                    {
+                        message = "Only Freelancer or Employer is valid for Role"
+                    });
+                }
+                user.Role = model.Role;
+                await _accountRepository.AddAsync(user);
+                await _accountRepository.SaveChangeAsync();
+                return new OkObjectResult(new
+                {
+                    message = "Register successfully"
+                });
+            }
+            catch (Exception ex)
+            {
+                return new BadRequestObjectResult(new
+                {
+                    message = ex.Message
+                });
+            }
         }
 
         public async Task<bool> UpdateAccount(AccountUpdateBM account)
