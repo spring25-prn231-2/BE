@@ -105,7 +105,7 @@ namespace ChillLancer.Repository.Repositories
                         break;
                 }
             }
-            return await SaveChangeAsync();
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }
