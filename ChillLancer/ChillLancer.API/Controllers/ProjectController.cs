@@ -57,7 +57,7 @@ namespace ChillLancer.API.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> PostEmployee(ProjectBM project)
+        public async Task<ActionResult> PostEmployee(ProjectCreateBM project)
         {
             bool result = await _projectService.CreateProject(project);
 

@@ -11,9 +11,11 @@ using MapsterMapper;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 using Newtonsoft.Json.Serialization;
 
-namespace ChillLancer.API
+namespace ChillLancer.Odata
 {
     public static class ServiceRegistration
     {
@@ -26,7 +28,7 @@ namespace ChillLancer.API
             services.ConfigCORS();
             services.ConfigKebabCase();
             services.ConfigMapster();
-            //services.ConfigOData();
+            services.ConfigOData();
 
             return services;
         }
@@ -109,16 +111,6 @@ namespace ChillLancer.API
             services.AddScoped<IMapper, Mapper>(); // ✅ Ensure IMapper is registered
 
             //========================[ Language ]========================
-            //Project
-            TypeAdapterConfig<Project, ProjectBM>.NewConfig()
-                .Map(dest =>dest.Id, src => src.Id)
-                .Map(dest => dest.Employer, src => src.Employer);
-
-            TypeAdapterConfig<Project, ProjectCreateBM>.NewConfig()
-                .Map(dest => dest.EmployerId, src => src.Employer.Id);
-
-            TypeAdapterConfig<ProjectSkill, SkillBM>.NewConfig()
-                .Map(dest => dest.Id, src => src.SkillId);
             //AccountLanguage => LanguageBM
             TypeAdapterConfig<AccountLanguage, LanguageBM>.NewConfig()
                 .Map(dest => dest.Id, src => src.LanguageId)
@@ -165,15 +157,28 @@ namespace ChillLancer.API
             //.IgnoreNullValues(true);
             return services;
         }
-        //Chua biet cau hinh nen tam thoi de day thoi
-        //private static IServiceCollection ConfigOData(this IServiceCollection services)
-        //{
-        //    services.AddControllers().AddOData(options =>
-        //    {
-        //        options.Select().Expand().Filter().OrderBy().Count().SkipToken().AddRouteComponents("odata", model);
-        //    }); 
 
-        //    return services;
-        //}
+        private static IServiceCollection ConfigOData(this IServiceCollection services)
+        {
+            services.AddControllers().AddOData(options =>
+            options
+            .Select()
+            .Filter()
+            .OrderBy()
+            .SetMaxTop(100)
+            .Count()
+            .Expand());
+            return services;
+        }
+        private static IEdmModel GetEdmModel()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+            builder.EntitySet<Category>("Categories");
+            builder.EntitySet<Skill>("Skills");
+            builder.EntitySet<Proposal>("Proposals");
+            builder.EntitySet<Project>("Projects");
+            builder.EntitySet<Process>("Processes");
+            return builder.GetEdmModel();
+        }
     }
 }

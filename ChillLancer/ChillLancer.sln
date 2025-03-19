@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLancer.API", "ChillLancer.API\ChillLancer.API.csproj", "{3E434067-E827-4DA0-85AA-515AEF34E610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChillLancer.API", "ChillLancer.API\ChillLancer.API.csproj", "{3E434067-E827-4DA0-85AA-515AEF34E610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLancer.BusinessService", "ChillLancer.BusinessService\ChillLancer.BusinessService.csproj", "{201407DA-22C0-47D6-979D-9DED062C1AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChillLancer.BusinessService", "ChillLancer.BusinessService\ChillLancer.BusinessService.csproj", "{201407DA-22C0-47D6-979D-9DED062C1AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLancer.Repository", "ChillLancer.Repository\ChillLancer.Repository.csproj", "{51EA0478-5382-46F0-929F-CCF29A98A70D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChillLancer.Repository", "ChillLancer.Repository\ChillLancer.Repository.csproj", "{51EA0478-5382-46F0-929F-CCF29A98A70D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillLanver.Odata", "ChillLanver.Odata\ChillLanver.Odata.csproj", "{EBB3712A-2D87-4587-9EA2-B48BAE005E4B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{201407DA-22C0-47D6-979D-9DED062C1AE5} = {201407DA-22C0-47D6-979D-9DED062C1AE5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +32,10 @@ Global
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51EA0478-5382-46F0-929F-CCF29A98A70D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB3712A-2D87-4587-9EA2-B48BAE005E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB3712A-2D87-4587-9EA2-B48BAE005E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB3712A-2D87-4587-9EA2-B48BAE005E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB3712A-2D87-4587-9EA2-B48BAE005E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
