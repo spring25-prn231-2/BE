@@ -48,20 +48,23 @@ namespace ChillLancer.BusinessService.Services
 
                 };
 
-                await _transactionRepository.AddAsync(payment);
+                _transactionRepository.AddAsync(payment);
                 return payment;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return null;
+                throw;
             }
         }
 
-        public async Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, Guid userId)
+        public async Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, string userId)
         {
             try
             {
-                var user = _accountRepository.GetAll().FirstOrDefault(e => e.Id == userId);
+                Guid userGuid;
+                var user = Guid.TryParse(userId, out userGuid)
+                        ? _accountRepository.GetAll().FirstOrDefault(e => e.Id == userGuid)
+                        : null;
                 var tick = DateTime.Now.Ticks.ToString();
                 var vnpay = new VnPayLibrary();
                 string payBackUrl = _configuration["VnPay:PaymentBackUrl"] + $"{user.Id}";
@@ -143,64 +146,6 @@ namespace ChillLancer.BusinessService.Services
                 /*Amount = parseSuccess ? amount : 0,*/ // Sử dụng giá trị được phân tích nếu thành công, ngược lại sử dụng 0
                 VnPayResponseCode = vnp_ResponseCode
             };
-        }
-        public string GetOrderId(string orderInfo)
-        {
-            string details = orderInfo.Substring(orderInfo.IndexOf(':') + 1);
-
-            // Tách các cặp khóa-giá trị
-            var keyValuePairs = details.Split(',');
-
-            // Dictionary để lưu các cặp khóa-giá trị
-            var dict = new Dictionary<string, string>();
-
-            foreach (var pair in keyValuePairs)
-            {
-                var keyValue = pair.Split(':');
-                if (keyValue.Length == 2)
-                {
-                    dict[keyValue[0].Trim()] = keyValue[1].Trim();
-                }
-            }
-
-            // Lấy UserID và Amount từ dictionary
-            if (dict.TryGetValue("OrderId", out string orderId))
-            {
-                return orderId;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        public string GetUserId(string orderInfo)
-        {
-            string details = orderInfo.Substring(orderInfo.IndexOf(':') + 1);
-
-            // Tách các cặp khóa-giá trị
-            var keyValuePairs = details.Split(',');
-
-            // Dictionary để lưu các cặp khóa-giá trị
-            var dict = new Dictionary<string, string>();
-
-            foreach (var pair in keyValuePairs)
-            {
-                var keyValue = pair.Split(':');
-                if (keyValue.Length == 2)
-                {
-                    dict[keyValue[0].Trim()] = keyValue[1].Trim();
-                }
-            }
-
-            // Lấy UserID và Amount từ dictionary
-            if (dict.TryGetValue("UserID", out string userId))
-            {
-                return userId;
-            }
-            else
-            {
-                return null;
-            }
         }
     }
 }

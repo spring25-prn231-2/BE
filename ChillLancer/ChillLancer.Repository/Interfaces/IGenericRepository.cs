@@ -28,7 +28,5 @@ namespace ChillLancer.Repository.Interfaces
         IQueryable<T> GetAll();
 
         Task<bool> SaveChangeAsync();
-
-        Task<bool> RollbackAsync();
     }
 }

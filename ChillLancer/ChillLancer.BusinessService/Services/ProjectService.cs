@@ -36,7 +36,7 @@ namespace ChillLancer.BusinessService.Services
             return await _projectRepository.CallDb();
         }
 
-        public async Task<bool> CreateProject(ProjectCreateBM projectModel)
+        public async Task<bool> CreateProject(ProjectBM projectModel)
         {
             try
             {
@@ -89,7 +89,7 @@ namespace ChillLancer.BusinessService.Services
             }
             catch (Exception ex)
             {
-                await _projectRepository.RollbackAsync();
+                //await _projectRepository.RollbackAsync();
                 throw new BadRequestException(ex.Message);
             }
         }
@@ -112,31 +112,16 @@ namespace ChillLancer.BusinessService.Services
             }
         }
 
-        public async Task<ProjectBM> GetProjectById(Guid id)
+        public async Task<Project> GetProjectById(Guid id)
         {
             try
             {
-                var project = _projectRepository.GetAll()
-                                                .AsNoTracking()
-                                                .Include(p => p.Employer)
-                                                .Include(p => p.Category)
-                                                .Include(p => p.ProjectSkills)
-                                                .ToList()
-                                                .FirstOrDefault(p => p.Id ==id);
-                if (project == null) {
+                var project = await _projectRepository.GetByIdAsync(id);
+                if (project == null)
+                {
                     throw new NotFoundException("");
                 }
-                var projectResponse = project.Adapt<ProjectBM>();
-
-                var skillIds = project.ProjectSkills
-                            .Select(ps => ps.SkillId)
-                            .Distinct()
-                            .ToList();
-
-                var skills = await _skillRepository.GetListAsync(s => skillIds.Contains(s.Id));
-
-                projectResponse.ProjectSkills = skills.Adapt<List<SkillBM>>();
-                return projectResponse;
+                return project;
             }
             catch (Exception ex)
             {
@@ -166,7 +151,7 @@ namespace ChillLancer.BusinessService.Services
             throw new NotImplementedException();
         }
 
-        public async Task<bool> UpdateProject(Guid id, ProjectCreateBM projectModel)
+        public async Task<bool> UpdateProject(Guid id, ProjectBM projectModel)
         {
             try
             {
@@ -217,7 +202,7 @@ namespace ChillLancer.BusinessService.Services
             }
             catch (Exception ex)
             {
-                await _projectRepository.RollbackAsync();
+                //await _projectRepository.RollbackAsync();
                 throw new BadRequestException(ex.Message);
             }
         }
@@ -237,37 +222,16 @@ namespace ChillLancer.BusinessService.Services
             }
             catch (Exception ex)
             {
-                await _projectRepository.RollbackAsync();
+                //await _projectRepository.RollbackAsync();
                 throw new BadRequestException(ex.Message);
             }
         }
 
         public async Task<List<ProjectBM>> GetProjects()
         {
-            var projects = await _projectRepository
-                .GetAll()
-                .AsNoTracking()
-                .Include(p => p.ProjectSkills)
-                .Include(p => p.Category)
-                .Include(p => p.Employer)
-                .ToListAsync<Project>();
-            var projectResponseList = projects.Adapt<List<ProjectBM>>();
-            var skillIds = projects
-                            .SelectMany(p => p.ProjectSkills) 
-                            .Select(ps => ps.SkillId)          
-                            .Distinct()                         
-                            .ToList();
-
-            var skills = await _skillRepository.GetListAsync(s => skillIds.Contains(s.Id));
-
-            foreach (var projectBM in projectResponseList)
-            {
-                projectBM.ProjectSkills = skills
-                    .Where(s => projectBM.ProjectSkills?.Any(ps => ps.Id == s.Id) ?? false)
-                    .Select(s => new SkillBM { Id = s.Id, Name = s.Name }) // Map to your `SkillBM`
-                    .ToList();
-            }
-            return projectResponseList;
+            var a = await _projectRepository.GetAll().AsNoTracking().ToListAsync<Project>();
+            //var a = await _projectRepository.GetListAsync(p => true);
+            return a.Adapt<List<ProjectBM>>();
         }
 
         public async Task<List<ProjectBM>> GetListProjectsByCategory(string categoryName)

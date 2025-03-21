@@ -16,7 +16,7 @@ namespace ChillLancer.BusinessService.BusinessModels.Transaction
         public string BriefDescribe { get; set; } = null!;
 
         [Required, MaxLength(30)]
-        public string Type { get; set; } = null!;
+        public string Type { get; set; } = null!;//ProjectContract | PersonalContract
         public bool IsActive = false;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
