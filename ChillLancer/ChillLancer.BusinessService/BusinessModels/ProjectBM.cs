@@ -1,16 +1,14 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ChillLancer.BusinessService.BusinessModels
 {
     public class ProjectBM
     {
-        [Required(ErrorMessage ="Id is required")]
         public Guid? Id { get; set; }
         [Required(ErrorMessage = "Title is required.")]
         [MaxLength(150, ErrorMessage = "Title cannot exceed 150 characters.")]
         public string Title { get; set; } = null!;
         public string? Description { get; set; }
-        public int Duration { get; set; }
         public string? Guidelines { get; set; }
         [Required(ErrorMessage = "Budget is required.")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Budget must be greater than 0.")]
@@ -19,6 +17,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         public DateTime? EndDate { get; set; }
         public string? RequirementNote { get; set; }
         public string Status { get; set; } = "Created";
+<<<<<<< HEAD
 
         [Required(ErrorMessage ="employer id is required.")]
         public AccountBM Employer { get; set; }
@@ -53,6 +52,8 @@ namespace ChillLancer.BusinessService.BusinessModels
         public string Status { get; set; } = "Created";
 
         [Required(ErrorMessage = "employer id is required.")]
+=======
+>>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
         public Guid? EmployerId { get; set; }
 
         [Required(ErrorMessage = "category id is required.")]

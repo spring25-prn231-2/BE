@@ -111,16 +111,6 @@ namespace ChillLancer.API
             services.AddScoped<IMapper, Mapper>(); // ✅ Ensure IMapper is registered
 
             //========================[ Language ]========================
-            //Project
-            TypeAdapterConfig<Project, ProjectBM>.NewConfig()
-                .Map(dest =>dest.Id, src => src.Id)
-                .Map(dest => dest.Employer, src => src.Employer);
-
-            TypeAdapterConfig<Project, ProjectCreateBM>.NewConfig()
-                .Map(dest => dest.EmployerId, src => src.Employer.Id);
-
-            TypeAdapterConfig<ProjectSkill, SkillBM>.NewConfig()
-                .Map(dest => dest.Id, src => src.SkillId);
             //AccountLanguage => LanguageBM
             TypeAdapterConfig<AccountLanguage, LanguageBM>.NewConfig()
                 .Map(dest => dest.Id, src => src.LanguageId)

@@ -1,14 +1,14 @@
-using ChillLancer.BusinessService.BusinessModels;
+﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChillLancer.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProcessController : Controller
+    public class ProcessController(IProcessService processService) : Controller
     {
+<<<<<<< HEAD
         private readonly IProcessService _processService;
         public ProcessController(IProcessService processService)
         {
@@ -37,6 +37,9 @@ namespace ChillLancer.API.Controllers
             }
             return Ok(process);
         }
+=======
+        private readonly IProcessService _processService = processService;
+>>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
 
         [HttpPut]
         public async Task<IActionResult> UpdateProcesses([FromBody] List<ProcessUpdateBM> inputData, Guid proposalId)

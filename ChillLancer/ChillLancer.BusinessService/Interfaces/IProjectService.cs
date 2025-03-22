@@ -12,13 +12,13 @@ namespace ChillLancer.BusinessService.Interfaces
     {
         Task<bool> CallRepository();
         Task<List<ProjectBM>> GetProjects();
-        Task<ProjectBM> GetProjectById(Guid id);
+        Task<Project> GetProjectById(Guid id);
         Task<List<ProjectBM>> GetProjectsByEmployerId(Guid employerId);
         Task<List<ProjectBM>> getProjectsByFreelancerId(Guid freelancerId);
         Task<bool> DeleteProject(Guid id);
-        Task<bool> UpdateProject(Guid id, ProjectCreateBM projectModel);
+        Task<bool> UpdateProject(Guid id, ProjectBM projectModel);
         Task<bool> UpdateProjectStatus(Guid id, string status);
-        Task<bool> CreateProject(ProjectCreateBM projectModel);
+        Task<bool> CreateProject(ProjectBM projectModel);
 
         Task<List<ProjectBM>> GetListProjectsByCategory(string categoryName);
     }

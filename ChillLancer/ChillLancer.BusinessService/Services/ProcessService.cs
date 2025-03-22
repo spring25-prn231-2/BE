@@ -27,6 +27,7 @@ namespace ChillLancer.BusinessService.Services
             }
             return await _processRepository.SaveChangeAsync();
         }
+<<<<<<< HEAD
 
         public Task<bool> DeleteProcess(Guid id)
         {
@@ -77,6 +78,8 @@ namespace ChillLancer.BusinessService.Services
                 throw new BadRequestException(ex.Message);
             }
         }
+=======
+>>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
         public async Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId)
         {
             List<Process> processes = await _processRepository.GetProcessesByProposalId(proposalId);
