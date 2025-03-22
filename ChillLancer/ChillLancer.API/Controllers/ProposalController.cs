@@ -28,10 +28,21 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpGet]
-        [EnableQuery]
         public async Task<IActionResult> GetAllProposals()
         {
             var payload = await _proposalService.GetAll();
+            if (!payload.Any())
+                return NotFound();
+
+            return Ok(payload);
+        }
+        [HttpGet("{projectId}")]
+        public async Task<IActionResult> GetProposalsByProjectId(Guid projectId)
+        {
+            var payload = await _proposalService.GetProposalsByProjectId(projectId);
+            if (!payload.Any())
+                return NotFound();
+
             return Ok(payload);
         }
     }
