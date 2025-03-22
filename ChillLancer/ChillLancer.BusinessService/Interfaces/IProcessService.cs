@@ -4,7 +4,7 @@ namespace ChillLancer.BusinessService.Interfaces
 {
     public interface IProcessService
     {
-        Task<bool> Add(List<ProcessBM> inputData);
+        Task<bool> Add(List<ProcessCreateBM> inputData);
         Task<List<ProcessBM>> GetAll();
         Task<ProcessBM> GetProcessById(Guid id);
         Task<bool> DeleteProcess(Guid id);

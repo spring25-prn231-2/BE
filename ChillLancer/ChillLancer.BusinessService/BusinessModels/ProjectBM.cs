@@ -26,6 +26,12 @@ namespace ChillLancer.BusinessService.BusinessModels
         [Required(ErrorMessage = "category id is required.")]
         public CategoryBM Category { get; set; } = null!;
         public ICollection<SkillBM>? ProjectSkills { get; set; }
+        public Guid? EmployerId { get; set; }
+
+        [Required(ErrorMessage = "category id is required.")]
+        public Guid? CategoryId { get; set; }
+
+        public ICollection<Guid>? skillIds { get; set; }
     }
 
     public class ProjectCreateBM

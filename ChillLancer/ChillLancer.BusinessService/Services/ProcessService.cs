@@ -40,7 +40,7 @@ namespace ChillLancer.BusinessService.Services
 
         public async Task<ProcessBM> GetProcessById(Guid id)
         {
-            var process = await _processRepository.GetProposalById(id);
+            var process = await _processRepository.GetByIdAsync(id);
             if (process == null) {
                 return null;
             }
@@ -76,6 +76,7 @@ namespace ChillLancer.BusinessService.Services
             {
                 throw new BadRequestException(ex.Message);
             }
+        }
         public async Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId)
         {
             List<Process> processes = await _processRepository.GetProcessesByProposalId(proposalId);

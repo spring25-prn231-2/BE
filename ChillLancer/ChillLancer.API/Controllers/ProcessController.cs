@@ -38,8 +38,6 @@ namespace ChillLancer.API.Controllers
             return Ok(process);
         }
 
-        private readonly IProcessService _processService = processService;
-
         [HttpPut]
         public async Task<IActionResult> UpdateProcesses([FromBody] List<ProcessUpdateBM> inputData, Guid proposalId)
         {
