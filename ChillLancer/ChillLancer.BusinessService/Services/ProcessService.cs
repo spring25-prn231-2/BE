@@ -27,6 +27,59 @@ namespace ChillLancer.BusinessService.Services
             }
             return await _processRepository.SaveChangeAsync();
         }
+<<<<<<< HEAD
+
+        public Task<bool> DeleteProcess(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ProcessBM>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<ProcessBM> GetProcessById(Guid id)
+        {
+            var process = await _processRepository.GetByIdAsync(id);
+            if (process == null) {
+                return null;
+            }
+            return process.Adapt<ProcessBM>();
+        }
+
+        public Task<bool> SubmitTask(Guid id, TaskSubmissionModel model)
+        {
+
+            throw new NotImplementedException();
+            //file-link-verbal
+        }
+
+        public Task<bool> UpdateProcess(ProcessBM process)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<bool> UpdateStatus(string status, Guid id)
+        {
+            try
+            {
+                var process = await _processRepository.GetByIdAsync(id);
+                if (process == null)
+                {
+                    throw new NotFoundException("");
+                }
+                process.Status = status;
+                await _processRepository.UpdateAsync(process);
+                return await _processRepository.SaveChangeAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new BadRequestException(ex.Message);
+            }
+        }
+=======
+>>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
         public async Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId)
         {
             List<Process> processes = await _processRepository.GetProcessesByProposalId(proposalId);
