@@ -73,5 +73,11 @@ namespace ChillLancer.BusinessService.Services
             }
             return await _processRepository.DeleteProcesses(selectedProcesses);
         }
+        public async Task<List<ProcessBM>> GetProcessbyProposalId(Guid proposalId)
+        {
+            var processes = await _processRepository.GetProcessesByProposalId(proposalId);
+            var processBms = processes.Adapt<List<ProcessBM>>();
+            return processBms;
+        }
     }
 }

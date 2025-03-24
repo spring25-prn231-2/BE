@@ -48,6 +48,22 @@ namespace ChillLancer.Repository.Repositories
             return hasTrackings ? await _context.Set<T>().FirstOrDefaultAsync(expression)
                                 : await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(expression);
         }
+        //support include
+        public async Task<T?> GetOneAsync(Expression<Func<T, bool>> expression, bool hasTrackings = true, Func<IQueryable<T>, IQueryable<T>>? include = null)
+        {
+            IQueryable<T> query = _context.Set<T>();
+
+            // Apply includes if provided
+            if (include != null)
+            {
+                query = include(query);
+            }
+
+            // Apply tracking if needed
+            query = hasTrackings ? query : query.AsNoTracking();
+
+            return await query.FirstOrDefaultAsync(expression);
+        }
 
         public async Task<T?> GetByIdAsync<Tkey>(Tkey id)
         {

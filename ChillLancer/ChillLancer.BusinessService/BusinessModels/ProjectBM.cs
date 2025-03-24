@@ -15,6 +15,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         public decimal Budget { get; set; } = 0;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public int Duration { get; set; } = 1;
         public string? RequirementNote { get; set; }
         public string Status { get; set; } = "Created";
         public Guid? EmployerId { get; set; }

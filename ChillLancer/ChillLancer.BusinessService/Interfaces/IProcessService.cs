@@ -7,5 +7,6 @@ namespace ChillLancer.BusinessService.Interfaces
         //Task<bool> Add(List<ProcessBM> inputData);
         Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId);
         Task<bool> Delete(List<ProcessUpdateBM> inputData, Guid proposalId);
+        Task<List<ProcessBM>> GetProcessbyProposalId(Guid proposalId);
     }
 }
