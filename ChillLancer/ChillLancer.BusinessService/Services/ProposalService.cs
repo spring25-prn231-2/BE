@@ -15,11 +15,12 @@ namespace ChillLancer.BusinessService.Services
             var existProposals = await _proposalRepository.GetProposalsByAccount(inputData.AccountId);
             Account currentACC = await _proposalRepository.GetAccountById(inputData.AccountId);
             Project currentPRO = await _proposalRepository.GetProjectById(inputData.ProjectId);
+            if (currentPRO.Employer.Id == currentACC.Id)
+                throw new ConflictException("You cannot send proposal to your own project!");
             if (inputData.ProjectId != Guid.Empty)
                 foreach (var proposal in existProposals)
                     if (inputData.ProjectId == proposal.Project!.Id)
-                        throw new ConflictException("You have sent proposal for this project!");
-
+                        throw new ConflictException("You have sent proposal for this project already!");
             foreach (var proposal in existProposals)
             {
                 if (inputData.Title == proposal.Title) 
@@ -60,6 +61,21 @@ namespace ChillLancer.BusinessService.Services
             var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new NotFoundException("Proposal is not selected yet!");
             await _proposalRepository.DeleteAsync(selectedProposal);
             return await _proposalRepository.SaveChangeAsync();
+        }
+        public async Task<bool> AcceptProposal(Guid proposalId)
+        {
+            var proposal = await _proposalRepository.GetProposalById(proposalId);
+            proposal.Status = "ACCEPTED";
+            await _proposalRepository.UpdateAsync(proposal);
+            return await _proposalRepository.SaveChangeAsync();
+        }
+        public async Task<bool> CheckAcceptedProposal(Guid projectId)
+        {
+            var proposals = await _proposalRepository.GetProposalsByProjectId(projectId);
+            foreach (Proposal proposal in proposals)
+                if (proposal.Status == "ACCEPTED")
+                    return true;
+            return false;
         }
     }
 }

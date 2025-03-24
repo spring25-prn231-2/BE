@@ -45,5 +45,19 @@ namespace ChillLancer.API.Controllers
 
             return Ok(payload);
         }
+        [HttpPatch("{proposalId}")]
+        public async Task<IActionResult> AcceptProposal(Guid proposalId)
+        {
+            bool result = await _proposalService.AcceptProposal(proposalId);
+            return result ? Ok("Accepted proposal successfully!") : BadRequest("Accepting proposal failed!");
+        }
+        [HttpGet("checkAcceptedProposal/{projectId}")]
+        public async Task<IActionResult> CheckAcceptedProposal(Guid projectId)
+        {
+            var payload = await _proposalService.CheckAcceptedProposal(projectId);
+            if (!payload)
+                return NotFound(payload);
+            return Ok(payload);
+        }
     }
 }

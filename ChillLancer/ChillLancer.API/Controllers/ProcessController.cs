@@ -1,5 +1,6 @@
 ﻿using ChillLancer.BusinessService.BusinessModels;
 using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChillLancer.API.Controllers
@@ -35,6 +36,15 @@ namespace ChillLancer.API.Controllers
             {
                 return BadRequest(new { error = "Failed to delete processes. Please check the input data." });
             }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetProcessesByProposalId(Guid id)
+        {
+            var payload = await _processService.GetProcessbyProposalId(id);
+            if (payload.Count == 0)
+                return NotFound();
+
+            return Ok(payload);
         }
     }
 }

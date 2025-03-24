@@ -1,5 +1,6 @@
 ﻿using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChillLancer.Repository.Repositories
 {
@@ -18,6 +19,10 @@ namespace ChillLancer.Repository.Repositories
         public IQueryable<Account> GetAccountsQuery()
         {
             return _context.Accounts.AsQueryable();
+        }
+        public async Task<Account> GetAccountByProjectId(Guid id)
+        {
+            return await _context.Accounts.FirstOrDefaultAsync(acc => acc.Projects.Any(p => p.Id == id));
         }
     }
 }

@@ -15,5 +15,6 @@ namespace ChillLancer.BusinessService.Interfaces
         IQueryable<AccountBM> GetAccountsOdata();
         Task<IActionResult> Login(string email, string password);
         Task<IActionResult> Register(RegisterRequestModel model);
+        Task<AccountBM> GetAccountByProjectId(Guid id);
     }
 }
