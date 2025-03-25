@@ -8,7 +8,7 @@ namespace ChillLancer.BusinessService.BusinessModels.Transaction
 {
     public class VnPaymentRequestModel
     {
-        public int OrderId { get; set; }
+        public Guid OrderId { get; set; }
         public decimal Amount { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }

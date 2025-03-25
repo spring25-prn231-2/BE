@@ -37,7 +37,7 @@ namespace ChillLancer.API.Controllers
                 return BadRequest(new { error = "Failed to delete processes. Please check the input data." });
             }
         }
-        [HttpGet]
+        [HttpGet("proposalId/{id}")]
         public async Task<IActionResult> GetProcessesByProposalId(Guid id)
         {
             var payload = await _processService.GetProcessbyProposalId(id);
@@ -45,6 +45,27 @@ namespace ChillLancer.API.Controllers
                 return NotFound();
 
             return Ok(payload);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> getById(Guid id)
+        {
+            var process = await _processService.GetProcessById(id);
+            if (process is null)
+            {
+                return NotFound();
+            }
+            return Ok(process);
+        }
+        [HttpPut("{id}/status")]
+        public async Task<IActionResult> updateStatus(Guid id, string status)
+        {
+            var process = await _processService.UpdateStatus(status, id);
+            if (!process)
+            {
+                return NotFound();
+            }
+            return Ok(process);
         }
     }
 }
