@@ -31,7 +31,7 @@ namespace ChillLancer.API.Controllers
         public async Task<IActionResult> GetAllProposals()
         {
             var payload = await _proposalService.GetAll();
-            if (!payload.Any())
+            if (payload.Count == 0)
                 return NotFound();
 
             return Ok(payload);
@@ -40,9 +40,16 @@ namespace ChillLancer.API.Controllers
         public async Task<IActionResult> GetProposalsByProjectId(Guid projectId)
         {
             var payload = await _proposalService.GetProposalsByProjectId(projectId);
-            if (!payload.Any())
+            if (payload.Count == 0)
                 return NotFound();
-
+            return Ok(payload);
+        }
+        [HttpGet("account/{accountId}")]
+        public async Task<IActionResult> getALlProposalsByAccountId(Guid accountId)
+        {
+            var payload = await _proposalService.getALlProposalsByAccountId(accountId);
+            if (payload.Count == 0)
+                return NotFound();
             return Ok(payload);
         }
         [HttpPatch("{proposalId}")]

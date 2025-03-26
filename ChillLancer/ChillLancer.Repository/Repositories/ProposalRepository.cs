@@ -14,6 +14,8 @@ namespace ChillLancer.Repository.Repositories
         {
             return await context.Proposals
                 .Include(x => x.Freelancer)
+                .Include(x => x.Processes)
+                .Include(x => x.Project)
                 .Where(x => x.Freelancer.Id == accountId).ToListAsync();
         }
         public async Task<List<Proposal>> GetProposalsByProjectId(Guid projectId)
@@ -23,7 +25,8 @@ namespace ChillLancer.Repository.Repositories
                 .Where(x => x.Project.Id == projectId).ToListAsync();
         }
         public async Task<Project> GetProjectById(Guid projectId) 
-            => await context.Projects.FirstOrDefaultAsync(p => p.Id == projectId);
+            => await context.Projects.Include( x => x.Employer).FirstOrDefaultAsync
+            (p => p.Id == projectId);
         public async Task<Account> GetAccountById(Guid accountId)
             => await context.Accounts.FirstOrDefaultAsync(a => a.Id == accountId);
         public async Task<Proposal> GetProposalById(Guid proposalId)
