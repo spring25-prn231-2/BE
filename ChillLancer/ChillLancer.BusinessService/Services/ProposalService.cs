@@ -7,9 +7,10 @@ using Mapster;
 
 namespace ChillLancer.BusinessService.Services
 {
-    public class ProposalService(IProposalRepository proposalRepository) : IProposalService
+    public class ProposalService(IProposalRepository proposalRepository, IProjectRepository projectRepository) : IProposalService
     {
         private readonly IProposalRepository _proposalRepository = proposalRepository;
+        private readonly IProjectRepository _projectRepository = projectRepository;
         public async Task<bool> Add(ProposalBM inputData)
         {
             var existProposals = await _proposalRepository.GetProposalsByAccount(inputData.AccountId);
@@ -56,6 +57,12 @@ namespace ChillLancer.BusinessService.Services
             var proposalBms = proposals.Adapt<List<ProposalBM>>();
             return proposalBms;
         }
+        public async Task<List<ProposalBM>> getALlProposalsByAccountId(Guid accountId)
+        {
+            var proposals = await _proposalRepository.GetProposalsByAccount(accountId);
+            var proposalBms = proposals.Adapt<List<ProposalBM>>();
+            return proposalBms;
+        }
         public async Task<bool> Delete(Guid proposalId)
         {
             var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new NotFoundException("Proposal is not selected yet!");
@@ -65,8 +72,12 @@ namespace ChillLancer.BusinessService.Services
         public async Task<bool> AcceptProposal(Guid proposalId)
         {
             var proposal = await _proposalRepository.GetProposalById(proposalId);
+            //var project = await _projectRepository.GetByIdAsync(proposal.Project.Id);
             proposal.Status = "ACCEPTED";
+            //project.Status = "CLOSED";
             await _proposalRepository.UpdateAsync(proposal);
+            //await _projectRepository.UpdateAsync(project);
+            //await _projectRepository.SaveChangeAsync();
             return await _proposalRepository.SaveChangeAsync();
         }
         public async Task<bool> CheckAcceptedProposal(Guid projectId)

@@ -10,5 +10,6 @@ namespace ChillLancer.BusinessService.Interfaces
         Task<bool> Delete(Guid proposalId);
         Task<bool> AcceptProposal(Guid proposalId);
         Task<bool> CheckAcceptedProposal(Guid projectId);
+        Task<List<ProposalBM>> getALlProposalsByAccountId(Guid accountId);
     }
 }
