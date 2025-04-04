@@ -9,7 +9,8 @@ namespace ChillLancer.BusinessService.BusinessModels
 {
     public class TaskSubmissionModel
     {
-        public IFormFile? formFile;
-        public string? link = string.Empty;
+        public string? Link {get; set;}
+        public string? Text {get; set;}
+        public IFormFile? Image { get; set;}
     }
 }

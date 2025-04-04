@@ -36,7 +36,7 @@ namespace ChillLancer.BusinessService.Services
             return await _projectRepository.CallDb();
         }
 
-        public async Task<bool> CreateProject(ProjectBM projectModel)
+        public async Task<bool> CreateProject(ProjectCreateBM projectModel)
         {
             try
             {
