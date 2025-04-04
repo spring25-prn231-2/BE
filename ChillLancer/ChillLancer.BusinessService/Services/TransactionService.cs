@@ -1,8 +1,10 @@
 ﻿using ChillLancer.BusinessService.BusinessModels.Transaction;
 using ChillLancer.BusinessService.Interfaces;
+using ChillLancer.BusinessService.Service;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -14,15 +16,18 @@ namespace ChillLancer.BusinessService.Services
         private readonly ILogger<TransactionService> _logger;
         private readonly ITransactionRepository _transactionRepository;
         private readonly IAccountRepository _accountRepository;
+        private readonly IPackageRepository _packageRepository;
+        private readonly IProcessRepository _processRepository;
 
 
-        public TransactionService(IConfiguration configuration, ITransactionRepository transactionRepository, 
-            ILogger<TransactionService> logger, IAccountRepository accountRepository)
+        public TransactionService(IConfiguration configuration, ITransactionRepository transactionRepository,
+            ILogger<TransactionService> logger, IAccountRepository accountRepository, IProcessRepository processRepository)
         {
             _configuration = configuration;
             _logger = logger;
             _transactionRepository = transactionRepository;
             _accountRepository = accountRepository;
+            _processRepository = processRepository;
         }
         public async Task<Transaction> AddPayment(TransactionResponseDTO paymentResponseDto)
         {
@@ -32,63 +37,71 @@ namespace ChillLancer.BusinessService.Services
                 {
                     return null;
                 }
+                var existingEmployer = await _accountRepository.GetByIdAsync(paymentResponseDto.Employer?.Id);
                 Transaction payment = new Transaction()
                 {
-                    Code = paymentResponseDto.Code,
-                    BriefDescribe = paymentResponseDto.BriefDescribe,
+                    Code = paymentResponseDto.Code ?? "",
+                    BriefDescribe = paymentResponseDto.BriefDescribe ?? "",
                     StartDate = paymentResponseDto.StartDate == null ? null : paymentResponseDto.StartDate,
                     EndDate = paymentResponseDto.EndDate == null ? null : paymentResponseDto.EndDate,
                     HandleDate = DateTime.UtcNow,
-                    Status = paymentResponseDto.Status,
+                    Status = paymentResponseDto.Status ?? "",
                     FeePrice = paymentResponseDto.FeePrice,
                     TotalPrice = paymentResponseDto.TotalPrice,
-                    Employer = paymentResponseDto.Employer == null ? null : paymentResponseDto.Employer,
-                    Freelancer = paymentResponseDto.Freelancer == null ? null : paymentResponseDto.Freelancer,
-                    Package = paymentResponseDto.Package == null ? null : paymentResponseDto.Package
+                    Employer = existingEmployer ?? paymentResponseDto.Employer,
+                    Type = "",
+                    SystemFee =  new RateCode()
+                    {
+                        Id = new Guid(),
+                        Code = "RC001",
+                        Description = "Standard Rate",
+                        Type = "Fixed",
+                        Percentage=10.00M,
+                        Status = "Active"
+                    },
+                    Freelancer = null,
+                    Package = null
 
                 };
 
-                _transactionRepository.AddAsync(payment);
+                await _transactionRepository.AddAsync(payment);
+                await _transactionRepository.SaveChangeAsync();
                 return payment;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return null;
             }
         }
 
-        public async Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, string userId)
+        public async Task<string> CreatePaymentUrl(HttpContext context, VnPaymentRequestModel model, Guid userId)
         {
             try
             {
-                Guid userGuid;
-                var user = Guid.TryParse(userId, out userGuid)
-                        ? _accountRepository.GetAll().FirstOrDefault(e => e.Id == userGuid)
-                        : null;
+                var user = _accountRepository.GetAll().FirstOrDefault(e => e.Id == userId);
                 var tick = DateTime.Now.Ticks.ToString();
                 var vnpay = new VnPayLibrary();
-                string payBackUrl = _configuration["VnPay:PaymentBackUrl"] + $"{user.Id}";
+                string payBackUrl = _configuration["VnPay:PaymentBackUrl"];
 
                 vnpay.AddRequestData("vnp_Version", _configuration["VnPay:Version"]);
                 vnpay.AddRequestData("vnp_Command", "pay");
                 vnpay.AddRequestData("vnp_TmnCode", _configuration["VnPay:TmnCode"]);
-                vnpay.AddRequestData("vnp_Amount", (model.Amount * 100).ToString());
+                vnpay.AddRequestData("vnp_Amount", ((int)model.Amount * 100).ToString());
 
                 vnpay.AddRequestData("vnp_CreateDate", model.CreatedDate.ToString("yyyyMMddHHmmss"));
                 vnpay.AddRequestData("vnp_CurrCode", _configuration["VnPay:CurrCode"]);
                 vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(context));
                 vnpay.AddRequestData("vnp_Locale", _configuration["VnPay:Locale"]);
                 vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan don hang:" + $"OrderId:{model.OrderId},Type:{model.Description},UserID:{userId},Amount:{model.Amount}");
-                vnpay.AddRequestData("vnp_OrderType", "other"); //default value: other
+                vnpay.AddRequestData("vnp_OrderType", "other");
                 vnpay.AddRequestData("vnp_ReturnUrl", _configuration["VnPay:PaymentBackUrl"]);
-                _logger.LogInformation($"Next mid night: {payBackUrl}.");
                 vnpay.AddRequestData("vnp_TxnRef", model.OrderId.ToString());
-                //vnpay.AddRequestData("vnp_BankCode","ACB");
+                vnpay.AddRequestData("vnp_BankCode","NCB");
 
                 TimeZoneInfo timeZone = TimeZoneInfo.Utc;
                 DateTime utcTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, timeZone);
                 // Thêm 7 giờ và 15 phút vào thời gian hiện tại
-                DateTime expireTime = utcTime.AddHours(7).AddMinutes(1);
+                DateTime expireTime = utcTime.AddHours(14).AddMinutes(1);
                 // Định dạng thời gian theo yêu cầu
                 string vnp_ExpireDate = expireTime.ToString("yyyyMMddHHmmss");
                 vnpay.AddRequestData("vnp_ExpireDate", vnp_ExpireDate);
@@ -143,9 +156,67 @@ namespace ChillLancer.BusinessService.Services
                 OrderId = vnp_OrderId,
                 TransactionId = vnp_TransactionId,
                 Token = vnp_SecureHash,
-                /*Amount = parseSuccess ? amount : 0,*/ // Sử dụng giá trị được phân tích nếu thành công, ngược lại sử dụng 0
+                Amount = (double)(parseSuccess ? amount : 0), // Sử dụng giá trị được phân tích nếu thành công, ngược lại sử dụng 0
                 VnPayResponseCode = vnp_ResponseCode
             };
+        }
+        public string GetOrderId(string orderInfo)
+        {
+            string details = orderInfo.Substring(orderInfo.IndexOf(':') + 1);
+
+            // Tách các cặp khóa-giá trị
+            var keyValuePairs = details.Split(',');
+
+            // Dictionary để lưu các cặp khóa-giá trị
+            var dict = new Dictionary<string, string>();
+
+            foreach (var pair in keyValuePairs)
+            {
+                var keyValue = pair.Split(':');
+                if (keyValue.Length == 2)
+                {
+                    dict[keyValue[0].Trim()] = keyValue[1].Trim();
+                }
+            }
+
+            // Lấy UserID và Amount từ dictionary
+            if (dict.TryGetValue("OrderId", out string orderId))
+            {
+                return orderId;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public string GetUserId(string orderInfo)
+        {
+            string details = orderInfo.Substring(orderInfo.IndexOf(':') + 1);
+
+            // Tách các cặp khóa-giá trị
+            var keyValuePairs = details.Split(',');
+
+            // Dictionary để lưu các cặp khóa-giá trị
+            var dict = new Dictionary<string, string>();
+
+            foreach (var pair in keyValuePairs)
+            {
+                var keyValue = pair.Split(':');
+                if (keyValue.Length == 2)
+                {
+                    dict[keyValue[0].Trim()] = keyValue[1].Trim();
+                }
+            }
+
+            // Lấy UserID và Amount từ dictionary
+            if (dict.TryGetValue("UserID", out string userId))
+            {
+                return userId;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

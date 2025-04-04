@@ -13,11 +13,13 @@ namespace ChillLancer.BusinessService.Services
     public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IProjectRepository _projectRepository;
         private readonly IMapper _mapper;
         private readonly IJwtService _jwtService;
-        public AccountService(IAccountRepository accountRepository, IMapper mapper, IJwtService jwtService)
+        public AccountService(IAccountRepository accountRepository, IMapper mapper, IJwtService jwtService, IProjectRepository projectRepository)
         {
             _accountRepository = accountRepository;
+            _projectRepository = projectRepository;
             _mapper = mapper;
             _jwtService = jwtService;
         }
@@ -60,6 +62,14 @@ namespace ChillLancer.BusinessService.Services
             var accounts = _accountRepository.GetAccountsQuery() ?? throw new Exception("Account not found");
             var mappedAccount = _mapper.Map<IQueryable<AccountBM>>(accounts);
             return mappedAccount;
+        }
+        public async Task<AccountBM> GetAccountByProjectId(Guid id)
+        {
+            //        var project = await _projectRepository.GetOneAsync(a => a.Id == id, query => query.Include(p => p.Employer)
+            //) ?? throw new Exception("Project not found");
+            var account = await _accountRepository.GetAccountByProjectId(id) ?? throw new Exception("Account not found");
+            //var account = await _accountRepository.GetOneAsync(a => a.Id == project.Employer.Id) ?? throw new Exception("Account not found");
+            return _mapper.Map<AccountBM>(account);
         }
 
         public async Task<IActionResult> Login(string email, string password)

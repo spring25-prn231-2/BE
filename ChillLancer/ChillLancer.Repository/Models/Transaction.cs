@@ -13,7 +13,7 @@ namespace ChillLancer.Repository.Models
         public string BriefDescribe { get; set; } = null!;
 
         [Required, MaxLength(30)]
-        public string Type { get; set; } = null!;//ProjectContract | PersonalContract
+        public string Type { get; set; } = null!;
         public bool IsActive = false;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }

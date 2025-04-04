@@ -7,19 +7,21 @@ using Mapster;
 
 namespace ChillLancer.BusinessService.Services
 {
-    public class ProposalService(IProposalRepository proposalRepository) : IProposalService
+    public class ProposalService(IProposalRepository proposalRepository, IProjectRepository projectRepository) : IProposalService
     {
         private readonly IProposalRepository _proposalRepository = proposalRepository;
+        private readonly IProjectRepository _projectRepository = projectRepository;
         public async Task<bool> Add(ProposalBM inputData)
         {
             var existProposals = await _proposalRepository.GetProposalsByAccount(inputData.AccountId);
             Account currentACC = await _proposalRepository.GetAccountById(inputData.AccountId);
             Project currentPRO = await _proposalRepository.GetProjectById(inputData.ProjectId);
+            if (currentPRO.Employer.Id == currentACC.Id)
+                throw new ConflictException("You cannot send proposal to your own project!");
             if (inputData.ProjectId != Guid.Empty)
                 foreach (var proposal in existProposals)
                     if (inputData.ProjectId == proposal.Project!.Id)
-                        throw new ConflictException("You have sent proposal for this project!");
-
+                        throw new ConflictException("You have sent proposal for this project already!");
             foreach (var proposal in existProposals)
             {
                 if (inputData.Title == proposal.Title) 
@@ -55,11 +57,36 @@ namespace ChillLancer.BusinessService.Services
             var proposalBms = proposals.Adapt<List<ProposalBM>>();
             return proposalBms;
         }
+        public async Task<List<ProposalBM>> getALlProposalsByAccountId(Guid accountId)
+        {
+            var proposals = await _proposalRepository.GetProposalsByAccount(accountId);
+            var proposalBms = proposals.Adapt<List<ProposalBM>>();
+            return proposalBms;
+        }
         public async Task<bool> Delete(Guid proposalId)
         {
             var selectedProposal = await _proposalRepository.GetByIdAsync(proposalId) ?? throw new NotFoundException("Proposal is not selected yet!");
             await _proposalRepository.DeleteAsync(selectedProposal);
             return await _proposalRepository.SaveChangeAsync();
+        }
+        public async Task<bool> AcceptProposal(Guid proposalId)
+        {
+            var proposal = await _proposalRepository.GetProposalById(proposalId);
+            //var project = await _projectRepository.GetByIdAsync(proposal.Project.Id);
+            proposal.Status = "ACCEPTED";
+            //project.Status = "CLOSED";
+            await _proposalRepository.UpdateAsync(proposal);
+            //await _projectRepository.UpdateAsync(project);
+            //await _projectRepository.SaveChangeAsync();
+            return await _proposalRepository.SaveChangeAsync();
+        }
+        public async Task<bool> CheckAcceptedProposal(Guid projectId)
+        {
+            var proposals = await _proposalRepository.GetProposalsByProjectId(projectId);
+            foreach (Proposal proposal in proposals)
+                if (proposal.Status == "ACCEPTED")
+                    return true;
+            return false;
         }
     }
 }

@@ -52,6 +52,7 @@ namespace ChillLancer.API
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IPackageService, PackageService>();
+            services.AddScoped<ITransactionService, TransactionService>();
 
             //Add other BusinessServices here...
 
@@ -73,6 +74,7 @@ namespace ChillLancer.API
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IPackageRepository, PackageRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             //Add other Repository here...
 

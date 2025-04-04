@@ -83,6 +83,7 @@ namespace ChillLancer.API.Controllers
         //[ProducesResponseType(StatusCodes.Status200OK)]
         //[ProducesResponseType(StatusCodes.Status400BadRequest)]
         //public async Task<ActionResult> PostEmployee(ProjectCreateBM project)
+
         //    return result ? Ok("created") : BadRequest("create failed");
         //}
         [Protected]
@@ -112,7 +113,7 @@ namespace ChillLancer.API.Controllers
         }
         [Protected]
         [HttpPost]
-        public async Task<IActionResult> CreateProject(ProjectCreateBM project)
+        public async Task<IActionResult> CreateProject(ProjectBM project)
         {
             try
             {

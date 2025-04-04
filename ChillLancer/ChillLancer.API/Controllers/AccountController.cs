@@ -100,5 +100,13 @@ namespace ChillLancer.API.Controllers
                 }));
             }
         }
+        [HttpGet("project/{projectId}")]
+        public async Task<IActionResult> GetAccountByProjectId(Guid projectId)
+        {
+            var payload = await _accountService.GetAccountByProjectId(projectId);
+            if (payload == null)
+                return NotFound();
+            return Ok(payload);
+        }
     }
 }

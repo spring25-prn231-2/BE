@@ -7,5 +7,6 @@ namespace ChillLancer.Repository.Interfaces
         Task<bool> CallDb();
 
         public IQueryable<Account> GetAccountsQuery();
+        Task<Account> GetAccountByProjectId(Guid id);
     }
 }

@@ -28,10 +28,42 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpGet]
-        [EnableQuery]
         public async Task<IActionResult> GetAllProposals()
         {
             var payload = await _proposalService.GetAll();
+            if (payload.Count == 0)
+                return NotFound();
+
+            return Ok(payload);
+        }
+        [HttpGet("{projectId}")]
+        public async Task<IActionResult> GetProposalsByProjectId(Guid projectId)
+        {
+            var payload = await _proposalService.GetProposalsByProjectId(projectId);
+            if (payload.Count == 0)
+                return NotFound();
+            return Ok(payload);
+        }
+        [HttpGet("account/{accountId}")]
+        public async Task<IActionResult> getALlProposalsByAccountId(Guid accountId)
+        {
+            var payload = await _proposalService.getALlProposalsByAccountId(accountId);
+            if (payload.Count == 0)
+                return NotFound();
+            return Ok(payload);
+        }
+        [HttpPatch("{proposalId}")]
+        public async Task<IActionResult> AcceptProposal(Guid proposalId)
+        {
+            bool result = await _proposalService.AcceptProposal(proposalId);
+            return result ? Ok("Accepted proposal successfully!") : BadRequest("Accepting proposal failed!");
+        }
+        [HttpGet("checkAcceptedProposal/{projectId}")]
+        public async Task<IActionResult> CheckAcceptedProposal(Guid projectId)
+        {
+            var payload = await _proposalService.CheckAcceptedProposal(projectId);
+            if (!payload)
+                return NotFound(payload);
             return Ok(payload);
         }
     }

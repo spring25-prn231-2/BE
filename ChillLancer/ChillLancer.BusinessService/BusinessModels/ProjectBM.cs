@@ -15,9 +15,10 @@ namespace ChillLancer.BusinessService.BusinessModels
         public decimal Budget { get; set; } = 0;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public int Duration { get; set; } = 1;
         public string? RequirementNote { get; set; }
         public string Status { get; set; } = "Created";
-
+      
         [Required(ErrorMessage ="employer id is required.")]
         public AccountBM Employer { get; set; }
 
@@ -51,6 +52,7 @@ namespace ChillLancer.BusinessService.BusinessModels
         public string Status { get; set; } = "Created";
 
         [Required(ErrorMessage = "employer id is required.")]
+
         public Guid? EmployerId { get; set; }
 
         [Required(ErrorMessage = "category id is required.")]
