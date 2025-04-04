@@ -6,9 +6,8 @@ namespace ChillLancer.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProcessController(IProcessService processService) : Controller
+    public class ProcessController : Controller
     {
-<<<<<<< HEAD
         private readonly IProcessService _processService;
         public ProcessController(IProcessService processService)
         {
@@ -16,13 +15,20 @@ namespace ChillLancer.API.Controllers
         }
 
         [HttpPost("{id}/submitTask")]
-        public async Task<ActionResult> SubmitTask(Guid id, IFormFile? file, string? url)
+        public async Task<ActionResult> SubmitTask(Guid id, IFormFile? file, string? url, string? text)
         {
-            TaskSubmissionModel model = new TaskSubmissionModel()
+            if (file is null && file.Length == 0 
+                && url is null && url == "" 
+                && text is null && text == "")
             {
-                formFile = file,
-                link = url
-            };
+                return BadRequest("file, url, text must not all be null");
+            }
+
+            TaskSubmissionModel model = new TaskSubmissionModel();
+            model.Text = text;
+            model.Link = url;
+            model.Image = file;
+
             return await _processService.SubmitTask(id, model) ? Ok("test") : BadRequest();
             
         }
@@ -30,16 +36,13 @@ namespace ChillLancer.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ProcessBM>> getById(Guid id)
         {
-            var process = _processService.GetProcessById(id);
+            var process = await _processService.GetProcessById(id);
             if (process is null)
             {
                 return NotFound();
             }
             return Ok(process);
         }
-=======
-        private readonly IProcessService _processService = processService;
->>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
 
         [HttpPut]
         public async Task<IActionResult> UpdateProcesses([FromBody] List<ProcessUpdateBM> inputData, Guid proposalId)

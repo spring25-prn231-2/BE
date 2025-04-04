@@ -27,7 +27,6 @@ namespace ChillLancer.BusinessService.Services
             }
             return await _processRepository.SaveChangeAsync();
         }
-<<<<<<< HEAD
 
         public Task<bool> DeleteProcess(Guid id)
         {
@@ -48,11 +47,40 @@ namespace ChillLancer.BusinessService.Services
             return process.Adapt<ProcessBM>();
         }
 
-        public Task<bool> SubmitTask(Guid id, TaskSubmissionModel model)
+        public async Task<bool> SubmitTask(Guid id, TaskSubmissionModel model)
         {
+            try { 
+                var process = await _processRepository.GetByIdAsync(id);
+                if (process == null) 
+                    {
+                        return false;
+                    }
 
-            throw new NotImplementedException();
-            //file-link-verbal
+                if (model.Link != null) 
+                {
+                    if (model.Link == "") { return false; }
+                    process.Note = "Link: " + model.Link;
+                }
+                else if (model.Text != null) 
+                {
+                    if (model.Text == "") { return false; }
+                    process.Note = "Text: " + model.Link;
+                }
+                else {
+
+                    using var memoryStream = new MemoryStream();
+                    await model.Image.CopyToAsync(memoryStream);
+                    string base64String = Convert.ToBase64String(memoryStream.ToArray());
+                    process.Note = "Image: " + base64String;
+                }
+                await _processRepository.UpdateAsync(process);
+
+                return await _processRepository.SaveChangeAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public Task<bool> UpdateProcess(ProcessBM process)
@@ -78,8 +106,6 @@ namespace ChillLancer.BusinessService.Services
                 throw new BadRequestException(ex.Message);
             }
         }
-=======
->>>>>>> a66a21bd2063b3cca3d8475db107af1341883cf9
         public async Task<bool> Update(List<ProcessUpdateBM> inputData, Guid proposalId)
         {
             List<Process> processes = await _processRepository.GetProcessesByProposalId(proposalId);

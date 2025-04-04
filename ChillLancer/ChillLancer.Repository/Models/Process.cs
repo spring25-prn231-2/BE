@@ -14,7 +14,6 @@ namespace ChillLancer.Repository.Models
         public decimal Cost { get; set; } = 0;
         public bool IsPaid { get; set; } = false;
         public string? Note { get; set; }
-        [MaxLength(30)]
         public string Status { get; set; } = "Draft";
 
         //======================[ Foreign Key ]======================
