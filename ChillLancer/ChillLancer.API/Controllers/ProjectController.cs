@@ -113,7 +113,7 @@ namespace ChillLancer.API.Controllers
         }
         [Protected]
         [HttpPost]
-        public async Task<IActionResult> CreateProject(ProjectBM project)
+        public async Task<IActionResult> CreateProject(ProjectCreateBM project)
         {
             try
             {

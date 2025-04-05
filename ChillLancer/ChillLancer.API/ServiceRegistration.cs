@@ -160,9 +160,9 @@ namespace ChillLancer.API
                 .Map(dest => dest.EmployerId, src => src.Employer.Id)
                 .Map(dest => dest.skillIds, src => src.ProjectSkills != null ? src.ProjectSkills.Select(ps => ps.SkillId).ToList() : new List<Guid>())
                 .IgnoreNullValues(true);
-            //TypeAdapterConfig<Process, ProcessBM>.NewConfig()
-            //.Map(dest => dest.ProposalId, src => src.Proposal.Id)
-            //.IgnoreNullValues(true);
+            TypeAdapterConfig<Process, ProcessBM>.NewConfig()
+            .Map(dest => dest.ProposalId, src => src.Proposal.Id)
+            .IgnoreNullValues(true);
             TypeAdapterConfig<Skill, SkillBM>.NewConfig()
                 .IgnoreNullValues(true);
             return services;

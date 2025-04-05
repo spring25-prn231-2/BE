@@ -116,7 +116,7 @@ namespace ChillLancer.BusinessService.Services
         {
             try
             {
-                var project = await _projectRepository.GetByIdAsync(id);
+                var project = await _projectRepository.GetAll().AsNoTracking().Include(p => p.Proposals).FirstOrDefaultAsync(p => p.Id == id);
                 if (project == null)
                 {
                     throw new NotFoundException("");

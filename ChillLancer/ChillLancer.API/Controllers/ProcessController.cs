@@ -18,9 +18,9 @@ namespace ChillLancer.API.Controllers
         [HttpPost("{id}/submitTask")]
         public async Task<ActionResult> SubmitTask(Guid id, IFormFile? file, string? url, string? text)
         {
-            if (file is null && file.Length == 0 
-                && url is null && url == "" 
-                && text is null && text == "")
+            if ((file == null || file.Length == 0) &&
+                (string.IsNullOrWhiteSpace(url)) &&
+                (string.IsNullOrWhiteSpace(text)))
             {
                 return BadRequest("file, url, text must not all be null");
             }
@@ -81,16 +81,6 @@ namespace ChillLancer.API.Controllers
             return Ok(payload);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> getById(Guid id)
-        {
-            var process = await _processService.GetProcessById(id);
-            if (process is null)
-            {
-                return NotFound();
-            }
-            return Ok(process);
-        }
         [HttpPut("{id}/status")]
         public async Task<IActionResult> updateStatus(Guid id, string status)
         {
