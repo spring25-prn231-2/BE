@@ -4,6 +4,7 @@ using ChillLancer.BusinessService.Interfaces;
 using ChillLancer.Repository.Interfaces;
 using ChillLancer.Repository.Models;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChillLancer.BusinessService.Services
 {
@@ -40,7 +41,7 @@ namespace ChillLancer.BusinessService.Services
 
         public async Task<ProcessBM> GetProcessById(Guid id)
         {
-            var process = await _processRepository.GetByIdAsync(id);
+            var process = await _processRepository.GetAll().AsNoTracking().Include(p => p.Proposal).FirstOrDefaultAsync(p => p.Id == id);
             if (process == null) {
                 return null;
             }
@@ -64,7 +65,7 @@ namespace ChillLancer.BusinessService.Services
                 else if (model.Text != null) 
                 {
                     if (model.Text == "") { return false; }
-                    process.Note = "Text: " + model.Link;
+                    process.Note = "Text: " + model.Text;
                 }
                 else {
 
@@ -162,46 +163,6 @@ namespace ChillLancer.BusinessService.Services
         public Task<bool> Add(List<ProcessBM> inputData)
         {
             throw new NotImplementedException();
-        }
-
-        public Task<List<ProcessBM>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<ProcessBM> GetProcessById(Guid id)
-        {
-            var process = await _processRepository.GetByIdAsync(id);
-            if (process == null)
-            {
-                return null;
-            }
-            var a = process.Adapt<ProcessBM>();
-            return process.Adapt<ProcessBM>();
-        }
-
-        public Task<bool> SubmitTask(Guid id, TaskSubmissionModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<bool> UpdateStatus(string status, Guid id)
-        {
-            try
-            {
-                var process = await _processRepository.GetByIdAsync(id);
-                if (process == null)
-                {
-                    throw new NotFoundException("");
-                }
-                process.Status = status;
-                await _processRepository.UpdateAsync(process);
-                return await _processRepository.SaveChangeAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new BadRequestException(ex.Message);
-            }
         }
     }
 }

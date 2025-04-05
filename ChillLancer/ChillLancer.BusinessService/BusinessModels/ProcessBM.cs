@@ -11,7 +11,7 @@
         public bool IsPaid { get; set; } = false;
         public string? Note { get; set; }
         public string Status { get; set; } = "Draft";
-        //public Guid ProposalId { get; set; }
+        public Guid ProposalId { get; set; }
 
     }
     public class ProcessUpdateBM
